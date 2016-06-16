@@ -47,6 +47,13 @@ class Manager {
         }
     }
     
+    func deActivateCurrentCharacter() {
+        if active_pc != nil {
+            saveActiveCharacter()
+        }
+        active_pc = nil
+    }
+    
     func loadCharacters() {
         realm.refresh()
     }
@@ -54,6 +61,7 @@ class Manager {
     func clearAllData() {
         try! realm.write {
             realm.deleteAll()
+            active_pc = nil
         }
     }
     

@@ -34,9 +34,8 @@ class PlayerCharacter: Object {
     // MARK: Setter functions
     func setName(newName: String) {
         try! realm!.write {
-            self.pc_race = newName
+            self.pc_name = newName
         }
-        self.pc_name = newName
     }
     
     func setRace(newRace: String) {
@@ -102,7 +101,6 @@ class PlayerCharacter: Object {
     func modifySkill(skillToModify: String, byAmount: Int) {
         
         try! realm!.write {
-            
             pc_skills!.modifySkill(skillToModify, amountToModify: byAmount, isClassSkill: isClassSkill(skillToModify))
             pc_skills!.numRanks += byAmount
         }
@@ -112,7 +110,8 @@ class PlayerCharacter: Object {
         
         var classesArray: [String]
         
-        let skill = pc_skills!.findSkillWithName(skillToCheck).skillsEnum()
+        //let skill = pc_skills!.findSkillWithName(skillToCheck).skillsEnum()
+        let skill = Skills.skillsFromString(skillToCheck)
         classesArray = skill!.classesFavoringSkill()
         
         for className in classesArray {

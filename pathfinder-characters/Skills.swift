@@ -278,6 +278,15 @@ enum Skills: Int {
             return array
         }
     }
+    
+    static func skillsFromString(string: String) -> Skills? {
+        for skill in self.allValues {
+            if skill.name() == string {
+                return skill
+            }
+        }
+        return nil
+    }
 }
 
 class SkillList: Object {

@@ -24,7 +24,7 @@ class Manager {
     
     init() {
         
-        let URL: NSURL = NSURL(string: "file:///Users/adrpadua/xCodeProjects/pathfinder-alpha/Realm/default.realm")!
+        let URL: NSURL = NSURL(string: "file:///Users/adrpadua/Desktop/pathfinder-characters/Realm/default.realm")!
         var config = Realm.Configuration(fileURL: URL)
         config.schemaVersion = 1
         

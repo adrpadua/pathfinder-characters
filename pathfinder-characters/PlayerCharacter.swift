@@ -21,10 +21,17 @@ class PlayerCharacter: Object {
     //  }
     
     // Properties
-    dynamic var pc_name = ""
-    dynamic var pc_race = ""
-    dynamic var pc_class = ""
-    dynamic var pc_level = 1
+        dynamic var pc_name = ""
+        dynamic var pc_race = ""
+        dynamic var pc_class = ""
+        dynamic var pc_level = 1
+        dynamic var pc_hitPoints = 1
+        dynamic var pc_maxHitPoints = 1
+    
+        // Saving Throws
+        dynamic var pc_fortitude = 0
+        dynamic var pc_reflex = 0
+        dynamic var pc_willpower = 0
     
     // MARK: To-one relationships
     dynamic var pc_abilityScores: AbilityScoreList?
@@ -48,6 +55,7 @@ class PlayerCharacter: Object {
         try! realm!.write {
             self.pc_class = newClass
         }
+        setMaxHitPoints()
     }
     
     func setLevel(newLevel: Int) {
@@ -81,12 +89,41 @@ class PlayerCharacter: Object {
         }
     }
     
+    func setMaxHitPoints() {
+        if pc_level == 1 && pc_class != "" {
+            try! realm!.write {
+                pc_maxHitPoints = Classes.classesFromString(pc_class)!.hitDie()
+            }
+            setHitPoints(pc_maxHitPoints)
+        }
+    }
     
+    func setHitPoints(newHP: Int) {
+        try! realm!.write {
+            pc_hitPoints = newHP
+        }
+    }
     
-    
-    
-    
-    
+    func setSavingThrows() {
+        
+        guard pc_abilityScores != nil else {
+            print("Error, no ability scores")
+            return
+        }
+        
+        try! realm!.write {
+            
+            let classObj = Classes.classesFromString(pc_class)!
+            
+            let conMod = pc_abilityScores!.getModifierFromName("CON")
+            let dexMod = pc_abilityScores!.getModifierFromName("DEX")
+            let wisMod = pc_abilityScores!.getModifierFromName("WIS")
+            
+            pc_fortitude = conMod + classObj.baseSavingThrows(pc_level)["Fort"]!
+            pc_reflex = dexMod + classObj.baseSavingThrows(pc_level)["Ref"]!
+            pc_willpower = wisMod + classObj.baseSavingThrows(pc_level)["Will"]!
+        }
+    }
     
     
     

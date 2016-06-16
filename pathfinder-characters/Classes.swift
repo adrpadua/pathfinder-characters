@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import Darwin
 
 enum Classes: String {
     
     case Cleric, Fighter, Rogue, Wizard
+    
+    static let allValues = [Cleric, Fighter, Rogue, Wizard]
     
     func name() -> String {
         return self.rawValue
@@ -55,6 +58,55 @@ enum Classes: String {
         case .Wizard:
             return 6
         }
+    }
+    
+    func startingGold() -> Int {
+        
+        switch self {
+        case .Cleric:
+            return 140
+        case .Fighter:
+            return 175
+        case .Rogue:
+            return 140
+        case .Wizard:
+            return 70
+        }
+    }
+    
+    func baseSavingThrows(level: Int) -> [String : Int] {
+    
+        var savingThrows: [String : Int]
+        
+        switch self {
+        case .Cleric:
+            savingThrows = ["Fort" : 2 + Int(floor(Double(level / 2))),
+                            "Ref" : 0 + Int(floor(Double(level / 3))),
+                            "Will" : 2 + Int(floor(Double(level / 2))),]
+        case .Fighter:
+            savingThrows = ["Fort" : 2 + Int(floor(Double(level / 2))),
+                            "Ref" : 0 + Int(floor(Double(level / 3))),
+                            "Will" : 0 + Int(floor(Double(level / 3))),]
+        case .Rogue:
+            savingThrows = ["Fort" : 0 + Int(floor(Double(level / 3))),
+                            "Ref" : 2 + Int(floor(Double(level / 2))),
+                            "Will" : 0 + Int(floor(Double(level / 3))),]
+        case .Wizard:
+            savingThrows = ["Fort" : 0 + Int(floor(Double(level / 3))),
+                            "Ref" : 0 + Int(floor(Double(level / 3))),
+                            "Will" : 2 + Int(floor(Double(level / 2))),]
+        }
+        
+        return savingThrows
+    }
+    
+    static func classesFromString(string: String) -> Classes? {
+        for aClass in self.allValues {
+            if aClass.name() == string {
+                return aClass
+            }
+        }
+        return nil
     }
 }
 

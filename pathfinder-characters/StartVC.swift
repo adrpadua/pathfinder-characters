@@ -37,6 +37,8 @@ class StartVC: UIViewController {
             character.setEmptyFeatsList()
             character.addFeat("Alignment Channel")
             character.addFeat("Penetrating Strike")
+            character.setMaxHitPoints()
+            character.setSavingThrows()
         }
         
         print(Manager.instance.active_pc!)
@@ -62,6 +64,8 @@ class StartVC: UIViewController {
             character.setEmptyFeatsList()
             character.addFeat("Acrobatic")
             character.addFeat("Shatter Defenses")
+            character.setMaxHitPoints()
+            character.setSavingThrows()
         }
         
         print(Manager.instance.active_pc!)

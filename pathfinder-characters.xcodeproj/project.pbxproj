@@ -23,6 +23,7 @@
 		A0BB93BB1D12840700FCA996 /* Spellcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB93AC1D12840700FCA996 /* Spellcaster.swift */; };
 		A0BB93BC1D12840700FCA996 /* Spells_PFRPG_Core.json in Resources */ = {isa = PBXBuildFile; fileRef = A0BB93AD1D12840700FCA996 /* Spells_PFRPG_Core.json */; };
 		A0BB93BD1D12840700FCA996 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB93AE1D12840700FCA996 /* StartVC.swift */; };
+		A0BB93C61D129DB700FCA996 /* CustomRealmList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB93C51D129DB700FCA996 /* CustomRealmList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		A0BB93AD1D12840700FCA996 /* Spells_PFRPG_Core.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Spells_PFRPG_Core.json; sourceTree = "<group>"; };
 		A0BB93AE1D12840700FCA996 /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		A0BB93C41D1287E100FCA996 /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = default.realm; path = Realm/default.realm; sourceTree = SOURCE_ROOT; };
+		A0BB93C51D129DB700FCA996 /* CustomRealmList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRealmList.swift; sourceTree = "<group>"; };
 		D76B410E28751C084F82C917 /* Pods-pathfinder-characters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pathfinder-characters.release.xcconfig"; path = "Pods/Target Support Files/Pods-pathfinder-characters/Pods-pathfinder-characters.release.xcconfig"; sourceTree = "<group>"; };
 		E40ADF857B9607952FB617F9 /* Pods_pathfinder_characters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pathfinder_characters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -134,6 +136,7 @@
 				A0BB93A01D12840700FCA996 /* AbilityScores.swift */,
 				A0BB93AA1D12840700FCA996 /* Skills.swift */,
 				A0BB93A51D12840700FCA996 /* Feats.swift */,
+				A0BB93C51D129DB700FCA996 /* CustomRealmList.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				A0BB93AF1D12840700FCA996 /* AbilityScores.swift in Sources */,
 				A0BB93BD1D12840700FCA996 /* StartVC.swift in Sources */,
 				A0BB93B71D12840700FCA996 /* Races.swift in Sources */,
+				A0BB93C61D129DB700FCA996 /* CustomRealmList.swift in Sources */,
 				A0BB93B51D12840700FCA996 /* Manager.swift in Sources */,
 				A0BB93B11D12840700FCA996 /* Classes.swift in Sources */,
 				A0BB938F1D12837300FCA996 /* AppDelegate.swift in Sources */,

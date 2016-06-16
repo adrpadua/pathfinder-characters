@@ -63,9 +63,14 @@ class AbilityScoreList: Object {
         }
     }
     
-    func findAbilityWithName(name: String) -> AbilityScore {
+    func getAbilityFromName(name: String) -> AbilityScore {
         let abilityScore = abilityScores.filter("name == %@", "\(name)")[0]
         return abilityScore
+    }
+    
+    func getModifierFromName(name: String) -> Int {
+        let abilityMod = abilityScores.filter("name == %@", "\(name)")[0].modifier
+        return abilityMod
     }
 }
 

@@ -307,7 +307,7 @@ class SkillList: Object {
             let keyAbility = Skills(rawValue: index)?.keyAbility()
             
             // Get AbilityScore from parent PC
-            let charAbility = parentPlayerCharacter!.pc_abilityScores!.findAbilityWithName(keyAbility!.name())
+            let charAbility = parentPlayerCharacter!.pc_abilityScores!.getAbilityFromName(keyAbility!.name())
             
             addSkill(skillName!, ranks: 0, ability: keyAbility!, charAbilMod: charAbility.modifier)
         }

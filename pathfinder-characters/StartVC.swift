@@ -79,9 +79,9 @@ class StartVC: UIViewController {
 
     @IBAction func spellsTest(sender: UIButton) {
         
-        let spell = SpellsDB.getElementFromName("Animate Dead")
+        let _ = SpellsDB.getElementFromName("Animate Dead")
         
-        let feat = FeatsDB.getElementFromName("Acrobatic")
+        let _ = FeatsDB.getElementFromName("Acrobatic")
         
         
     }

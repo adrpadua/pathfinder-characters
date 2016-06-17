@@ -31,6 +31,7 @@ func indexOf(name: String, insideDB: JSON) -> Int {
     return -1
 }
 
+
 class FeatsDB: Database {
     
     typealias ItemType = Feat

@@ -32,6 +32,7 @@ enum Ability: Int {
     }
 }
 
+/*
 class AbilityScoreList: Object {
     
     dynamic var parentPlayerCharacter: PlayerCharacter?
@@ -73,10 +74,11 @@ class AbilityScoreList: Object {
         return abilityMod
     }
 }
+ */
 
 class AbilityScore: Object {
     
-    let partOfList = LinkingObjects(fromType: AbilityScoreList.self, property: "abilityScores")
+    let partOfList = LinkingObjects(fromType: AbilityScoreList.self, property: "list")
     
     dynamic var name = ""
     dynamic var value = 10

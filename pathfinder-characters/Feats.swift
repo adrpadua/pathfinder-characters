@@ -8,9 +8,6 @@
 
 import Foundation
 import RealmSwift
-import SwiftyJSON
-
-
 
 class FeatsList: Object {
     

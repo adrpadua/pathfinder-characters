@@ -29,13 +29,10 @@ class FeatsList: Object {
     }
     
     func addFeat(featName: String) {
-        
-        let db = FeatsDB()
-        
-        if let feat = db.getFeatFromDB(featName) {
+        if let feat = FeatsDB.getElementFromName(featName) {
             feats.append(feat)
         } else {
-            print("addFeat() error")
+           print("addFeat() error")
         }
         
     }

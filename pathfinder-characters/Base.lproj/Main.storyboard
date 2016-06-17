@@ -38,15 +38,24 @@
                                     <action selector="char_1_BtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nv9-s2-vL6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mc-lu-Dg6">
+                                <rect key="frame" x="279" y="361" width="42" height="30"/>
+                                <state key="normal" title="Spells"/>
+                                <connections>
+                                    <action selector="spellsTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KpV-Bz-ZXp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WoK-xj-RT6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1aj-DX-Nw6"/>
                             <constraint firstItem="xVG-li-RCJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="44d-Ob-PdF"/>
+                            <constraint firstItem="7mc-lu-Dg6" firstAttribute="centerX" secondItem="WoK-xj-RT6" secondAttribute="centerX" id="BqR-BI-C6s"/>
                             <constraint firstItem="xVG-li-RCJ" firstAttribute="top" secondItem="vVR-Zz-TYK" secondAttribute="bottom" constant="8" id="CH5-Nk-diI"/>
                             <constraint firstItem="xVG-li-RCJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FoE-Je-RXM"/>
                             <constraint firstItem="vVR-Zz-TYK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VXc-9J-Mgx"/>
                             <constraint firstItem="WoK-xj-RT6" firstAttribute="top" secondItem="xVG-li-RCJ" secondAttribute="bottom" constant="8" id="seq-s9-guk"/>
+                            <constraint firstItem="7mc-lu-Dg6" firstAttribute="top" secondItem="WoK-xj-RT6" secondAttribute="bottom" constant="8" id="tmA-rb-o0a"/>
                         </constraints>
                     </view>
                 </viewController>

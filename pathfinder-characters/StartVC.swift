@@ -77,6 +77,11 @@ class StartVC: UIViewController {
         print("# of characters in database = \(Manager.instance.characters.count)")
     }
 
+    @IBAction func spellsTest(sender: UIButton) {
+        
+        let spell = SpellsDB.getElementFromName("Animate Dead")
+        print(spell?.classLevels)
+    }
     
 }
 

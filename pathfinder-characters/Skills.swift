@@ -166,6 +166,117 @@ enum Skills: Int {
             return Ability.CHA
         }
     }
+    func classesFavoringSkill() -> [String] {
+        let array: [String]
+        
+        switch self {
+        case .Acrobatics:
+            array = ["Rogue"]
+            return array
+        case .Appraise:
+            array = ["Cleric", "Rogue", "Wizard"]
+            return array
+        case .Bluff:
+            array = ["Rogue"]
+            return array
+        case .Climb:
+            array = ["Fighter", "Rogue"]
+            return array
+        case .Craft:
+            array = ["Cleric", "Fighter", "Rogue", "Wizard"]
+            return array
+        case .Diplomacy:
+            array = ["Cleric", "Rogue"]
+            return array
+        case .DisableDevice:
+            array = ["Rogue"]
+            return array
+        case .Disguise:
+            array = ["Rogue"]
+            return array
+        case .EscapeArtist:
+            array = ["Rogue"]
+            return array
+        case .Fly:
+            array = ["Wizard"]
+            return array
+        case .HandleAnimal:
+            array = ["Fighter"]
+            return array
+        case .Heal:
+            array = ["Cleric"]
+            return array
+        case .Intimidate:
+            array = ["Fighter", "Rogue"]
+            return array
+        case .KnowledgeArcana:
+            array = ["Cleric", "Wizard"]
+            return array
+        case .KnowledgeDungeoneering:
+            array = ["Fighter", "Rogue", "Wizard"]
+            return array
+        case .KnowledgeEngineering:
+            array = ["Fighter", "Wizard"]
+            return array
+        case .KnowledgeHistory:
+            array = ["Cleric", "Wizard"]
+            return array
+        case .KnowledgeGeography:
+            array = ["Wizard"]
+            return array
+        case .KnowledgeLocal:
+            array = ["Rogue", "Wizrd"]
+            return array
+        case .KnowledgeNature:
+            array = ["Wizard"]
+            return array
+        case .KnowledgeNobility:
+            array = ["Cleric", "Wizard"]
+            return array
+        case .KnowledgePlanes:
+            array = ["Cleric", "Wizard"]
+            return array
+        case .KnowledgeReligion:
+            array = ["Cleric", "Wizard"]
+            return array
+        case .Linguistics:
+            array = ["Cleric", "Rogue", "Wizard"]
+            return array
+        case .Perception:
+            array = ["Rogue"]
+            return array
+        case .Perform:
+            array = ["Rogue"]
+            return array
+        case .Profession:
+            array = ["Cleric", "Fighter", "Rogue", "Wizard"]
+            return array
+        case .Ride:
+            array = ["Fighter"]
+            return array
+        case .SenseMotive:
+            array = ["Cleric", "Rogue"]
+            return array
+        case .SleightOfHand:
+            array = ["Rogue"]
+            return array
+        case .Spellcraft:
+            array = ["Cleric", "Wizard"]
+            return array
+        case .Stealth:
+            array = ["Rogue"]
+            return array
+        case .Survival:
+            array = ["Fighter"]
+            return array
+        case .Swim:
+            array = ["Fighter", "Rogue"]
+            return array
+        case .UseMagicDevice:
+            array = ["Rogue"]
+            return array
+        }
+    }
     
     static func skillsFromString(string: String) -> Skills? {
         for skill in self.allValues {
@@ -222,6 +333,7 @@ class SkillList: Object {
         skill.addRanks(amountToModify)
         skill.refreshTotal()
     }
+    
 }
 
 class Skill: Object {

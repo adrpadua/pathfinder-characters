@@ -54,7 +54,6 @@ class SkillList: Object, TraitList {
         
         let skill = Skill(name: name, ranks: ranks, ability: ability)
         skill.baseValue = charAbilMod
-        skill.refreshTotal()
         list.append(skill)
         numRanks += ranks
         
@@ -69,7 +68,6 @@ class SkillList: Object, TraitList {
         }
         
         skill.addRanks(amountToModify)
-        skill.refreshTotal()
     }
     
 }

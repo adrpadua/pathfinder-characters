@@ -180,14 +180,14 @@ enum Skills: Int {
 
 class Skill: Object {
     
-    let partOfList = LinkingObjects(fromType: SkillList.self, property: "list")
     
+    // REALM-PERSISTED ITEMS
+    let partOfList = LinkingObjects(fromType: SkillList.self, property: "list")
     dynamic var name = ""
     dynamic var keyAbility = ""
     dynamic var classSkillBonus = 0
     dynamic var baseValue = 0
     dynamic var ranks = 0
-    dynamic var total = 0
     
     convenience init(name: String, ranks: Int, ability: Ability) {
         self.init()
@@ -196,21 +196,27 @@ class Skill: Object {
         self.keyAbility = ability.name()
     }
     
+    
+    // OTHER STUFF
+    
+    var parentPlayerCharacter: PlayerCharacter {
+        get {
+            return (partOfList.first!.parentPlayerCharacter!)
+        }
+    }
+    
+    var total: Int {
+        get {
+            return baseValue + classSkillBonus + ranks
+        }
+    }
+    
     func addRanks(num: Int) {
         ranks += num
     }
     
-    func refreshTotal() {
-        total = baseValue + ranks + classSkillBonus
-    }
-    
-    func parentPlayerCharacter() -> PlayerCharacter {
-        let list = partOfList.first!
-        return list.parentPlayerCharacter!
-    }
-    
     func isClassSkill() -> Bool {
-        let classObj = classObjFromString(parentPlayerCharacter().pc_class, level: parentPlayerCharacter().pc_level)
+        let classObj = classObjFromString(parentPlayerCharacter.pc_class, level: parentPlayerCharacter.pc_level)
         for classSkill in (classObj!.classSkills) {
             if classSkill == self.name {
                 return true

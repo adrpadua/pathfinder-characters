@@ -38,6 +38,20 @@ class PlayerCharacter: Object {
     dynamic var pc_skills: SkillList?
     dynamic var pc_feats: FeatsList?
     
+    // MARK: Reference Objects
+    var classObject: CharacterClass? {
+        get {
+            guard pc_class != "" else {
+                return nil
+            }
+            return classObjFromString(pc_class, level: pc_level)
+        }
+    }
+    
+    
+    
+    
+    
     // MARK: Setter functions
     func setName(newName: String) {
         try! realm!.write {
@@ -92,7 +106,7 @@ class PlayerCharacter: Object {
     func setMaxHitPoints() {
         if pc_level == 1 && pc_class != "" {
             try! realm!.write {
-                pc_maxHitPoints = Classes.classesFromString(pc_class)!.hitDie()
+                pc_maxHitPoints = classObject!.hitDie
             }
             setHitPoints(pc_maxHitPoints)
         }
@@ -113,15 +127,17 @@ class PlayerCharacter: Object {
         
         try! realm!.write {
             
-            let classObj = Classes.classesFromString(pc_class)!
-            
             let conMod = pc_abilityScores!.getModifierFromName("CON")
             let dexMod = pc_abilityScores!.getModifierFromName("DEX")
             let wisMod = pc_abilityScores!.getModifierFromName("WIS")
             
-            pc_fortitude = conMod + classObj.baseSavingThrows(pc_level)["Fort"]!
-            pc_reflex = dexMod + classObj.baseSavingThrows(pc_level)["Ref"]!
-            pc_willpower = wisMod + classObj.baseSavingThrows(pc_level)["Will"]!
+            guard classObject != nil else {
+                print("Error in setSavingThrows()")
+                return
+            }
+            pc_fortitude = conMod + classObject!.savingThrows!["Fort"]!
+            pc_reflex = dexMod + classObject!.savingThrows!["Ref"]!
+            pc_willpower = wisMod + classObject!.savingThrows!["Will"]!
         }
     }
     

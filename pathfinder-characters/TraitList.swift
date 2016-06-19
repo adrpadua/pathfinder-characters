@@ -19,9 +19,14 @@ protocol TraitList {
     func getElementFromName(name: String) -> ItemType
 }
 
+
+
+
+
+
 class AbilityScoreList: Object, TraitList {
     
-    // MARK: TraitList Stuff
+    // MARK: TraitList Protocol
     typealias ItemType = AbilityScore
     
     dynamic var parentPlayerCharacter: PlayerCharacter?
@@ -40,10 +45,8 @@ class AbilityScoreList: Object, TraitList {
             
             for index in 1...6 {
                 
-                let pc_race = Races.racesFromString(parentPlayerCharacter!.pc_race)
-                
                 let abilityName = Ability(rawValue:  index)?.name()
-                let raceBonus = pc_race!.getAbilityScoreBonuses()[abilityName!]!
+                let raceBonus = getRaceBonus(abilityName!)
                 let abilityValue = scores[index - 1] + raceBonus
                 let abilityObj = AbilityScore(name: abilityName!, value: abilityValue)
                 list.append(abilityObj)
@@ -57,5 +60,12 @@ class AbilityScoreList: Object, TraitList {
     func getModifierFromName(name: String) -> Int {
         let abilityMod = list.filter("name == %@", "\(name)")[0].modifier
         return abilityMod
+    }
+    
+    func getRaceBonus(abilityName: String) -> Int {
+        let pc_race = Races.racesFromString(parentPlayerCharacter!.pc_race)
+        let raceBonus = pc_race!.getAbilityScoreBonuses()[abilityName]!
+        
+        return raceBonus
     }
 }

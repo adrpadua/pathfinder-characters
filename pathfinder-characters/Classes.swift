@@ -9,6 +9,7 @@
 import Foundation
 import Darwin
 
+/*
 enum Classes: String {
     
     case Cleric, Fighter, Rogue, Wizard
@@ -108,5 +109,56 @@ enum Classes: String {
         }
         return nil
     }
+}
+ */
+
+func classObjFromString(className: String, level: Int) -> CharacterClass? {
+    
+    switch className {
+    case "Cleric":
+        return Cleric(level: level)
+    default:
+        return nil
+    }
+}
+
+protocol CharacterClass {
+    
+    var name: String { get }
+    var spellcaster: Bool { get }
+    var startingGold: Int { get }
+    var hitDie: Int { get }
+    var skillRanksPerLevel: Int { get }
+    var classSkills: [String] { get }
+    var savingThrows: [String : Int]? { get }
+    
+    
+//    func setSavingThrows(level: Int)
+}
+
+class Cleric: CharacterClass {
+    
+    let name = "Cleric"
+    let spellcaster = true
+    let startingGold = 140
+    let hitDie = 8
+    let skillRanksPerLevel = 2 // + INT Modifier
+    let classSkills = ["Appraise", "Craft", "Diplomacy", "Heal", "Knowlege (Arcana)", "Knowlege (History)", "Knowlege (Nobility)", "Knowlege (Planes)", "Knowlege (Religion)", "Linguistics", "Profession", "Sense Motive", "Spellcraft"]
+    var level: Int
+    var savingThrows: [String : Int]? {
+        get {
+            return ["Fort" : 2 + Int(floor(Double(level / 2))),
+             "Ref" : 0 + Int(floor(Double(level / 3))),
+             "Will" : 2 + Int(floor(Double(level / 2))),]
+        }
+    }
+    
+    init(level: Int) {
+        self.level = level
+    }
+    
+    // CLASS-SPECIFIC
+    
+    
 }
 

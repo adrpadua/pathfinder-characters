@@ -21,6 +21,65 @@ protocol TraitList {
 
 
 
+class SkillList: Object, TraitList {
+    
+    // MARK: TraitList Protocol
+    typealias ItemType = Skill
+    
+    dynamic var parentPlayerCharacter: PlayerCharacter?
+    let list = List<Skill>()
+    
+    func getElementFromName(name: String) -> SkillList.ItemType {
+        let skill = list.filter("name == %@", "\(name)")[0]
+        return skill
+    }
+    
+    
+    // MARK: Custom Stuff
+    dynamic var numRanks = 0
+    
+    func generateBaseSkillList() {
+        for index in 1...numSkills {
+            let skillName = Skills(rawValue: index)?.name()
+            let keyAbility = Skills(rawValue: index)?.keyAbility()
+            
+            // Get AbilityScore from parent PC
+            let charAbility = parentPlayerCharacter!.pc_abilityScores!.getElementFromName(keyAbility!.name())
+            
+            addSkill(skillName!, ranks: 0, ability: keyAbility!, charAbilMod: charAbility.modifier)
+        }
+    }
+    
+    func addSkill(name: String, ranks: Int, ability: Ability, charAbilMod: Int) {
+        
+        let skill = Skill(name: name, ranks: ranks, ability: ability)
+        skill.baseValue = charAbilMod
+        skill.refreshTotal()
+        list.append(skill)
+        numRanks += ranks
+        
+    }
+    
+    func modifySkill(skillName: String, amountToModify: Int, isClassSkill: Bool) {
+        
+        let skill = getElementFromName(skillName)
+        
+        if isClassSkill {
+            skill.classSkillBonus = 3
+        }
+        
+        skill.addRanks(amountToModify)
+        skill.refreshTotal()
+    }
+    
+}
+
+
+
+
+
+
+
 
 
 

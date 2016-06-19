@@ -289,57 +289,9 @@ enum Skills: Int {
     }
 }
 
-class SkillList: Object {
-    
-    dynamic var numRanks = 0
-    dynamic var parentPlayerCharacter: PlayerCharacter?
-    
-    let skills = List<Skill>()
-    
-    func findSkillWithName(name: String) -> Skill {
-        let skill = skills.filter("name == %@", "\(name)")[0]
-        return skill
-    }
-    
-    func generateBaseSkillList() {
-        for index in 1...numSkills {
-            let skillName = Skills(rawValue: index)?.name()
-            let keyAbility = Skills(rawValue: index)?.keyAbility()
-            
-            // Get AbilityScore from parent PC
-            let charAbility = parentPlayerCharacter!.pc_abilityScores!.getElementFromName(keyAbility!.name())
-            
-            addSkill(skillName!, ranks: 0, ability: keyAbility!, charAbilMod: charAbility.modifier)
-        }
-    }
-    
-    func addSkill(name: String, ranks: Int, ability: Ability, charAbilMod: Int) {
-        
-        let skill = Skill(name: name, ranks: ranks, ability: ability)
-        skill.baseValue = charAbilMod
-        skill.refreshTotal()
-        skills.append(skill)
-        numRanks += ranks
-        
-    }
-    
-    func modifySkill(skillName: String, amountToModify: Int, isClassSkill: Bool) {
-        
-        let skill = findSkillWithName(skillName)
-        
-        if isClassSkill {
-            skill.classSkillBonus = 3
-        }
-        
-        skill.addRanks(amountToModify)
-        skill.refreshTotal()
-    }
-    
-}
-
 class Skill: Object {
     
-    let partOfList = LinkingObjects(fromType: SkillList.self, property: "skills")
+    let partOfList = LinkingObjects(fromType: SkillList.self, property: "list")
     
     dynamic var name = ""
     dynamic var keyAbility = ""

@@ -42,20 +42,11 @@ class FeatsDB: Database {
     static var database = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)["Feats"]
     static var count = database.count
     
-    
-    
-    
-    
-    
     static func getElementFromName(elementName: String) -> FeatsDB.ItemType? {
         
         return extractDataAt(indexOf(elementName, insideDB: database))
     }
     
-    
-    
-    
-    // Create Data based on JSON Index
     static func extractDataAt(index: Int) -> FeatsDB.ItemType? {var prereqs: String
         
         let name = database["\(index)", "name"].stringValue

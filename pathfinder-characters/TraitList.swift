@@ -32,8 +32,6 @@ class AbilityScoreList: Object, TraitList {
         return ability
     }
     
-    
-    
     // MARK: Custom Stuff
     
     func generateAbilityScores(scores: [Int]) {

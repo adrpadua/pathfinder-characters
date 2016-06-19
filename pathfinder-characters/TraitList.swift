@@ -9,15 +9,60 @@
 import Foundation
 import RealmSwift
 
+/*
+ CURRENT LISTS
+ Feats
+ AbilityScores
+ Skills
+ */
+
 protocol TraitList {
     
     associatedtype ItemType: Object
 
-    var parentPlayerCharacter: PlayerCharacter? { get set }
+    var linkedTo: LinkingObjects<PlayerCharacter> { get }
     var list: List<ItemType> { get }
     
     func getElementFromName(name: String) -> ItemType
 }
+
+
+
+
+
+
+
+class FeatsList: Object {
+    
+    
+    // MARK: TraitList Protocol
+    typealias ItemType = Feat
+    
+    let linkedTo = LinkingObjects(fromType: PlayerCharacter.self, property: "pc_feats")
+    let list = List<Feat>()
+    
+    func getElementFromName(name: String) -> FeatsList.ItemType {
+        let feat = list.filter("name == %@", "\(name)")[0]
+        return feat
+    }
+    
+    var parentPlayerCharacter: PlayerCharacter {
+        return linkedTo.first!
+    }
+    
+    func addFeat(featName: String) {
+        if let feat = FeatsDB.getElementFromName(featName) {
+            list.append(feat)
+        } else {
+            print("addFeat() error")
+        }
+        
+    }
+}
+
+
+
+
 
 
 
@@ -26,7 +71,7 @@ class SkillList: Object, TraitList {
     // MARK: TraitList Protocol
     typealias ItemType = Skill
     
-    dynamic var parentPlayerCharacter: PlayerCharacter?
+    let linkedTo = LinkingObjects(fromType: PlayerCharacter.self, property: "pc_skills")
     let list = List<Skill>()
     
     func getElementFromName(name: String) -> SkillList.ItemType {
@@ -34,29 +79,21 @@ class SkillList: Object, TraitList {
         return skill
     }
     
+    var parentPlayerCharacter: PlayerCharacter {
+        return linkedTo.first!
+    }
+    
+    
+    
     
     // MARK: Custom Stuff
     dynamic var numRanks = 0
     
     func generateBaseSkillList() {
-        for index in 1...numSkills {
-            let skillName = Skills(rawValue: index)?.name()
-            let keyAbility = Skills(rawValue: index)?.keyAbility()
-            
-            // Get AbilityScore from parent PC
-            let charAbility = parentPlayerCharacter!.pc_abilityScores!.getElementFromName(keyAbility!.name())
-            
-            addSkill(skillName!, ranks: 0, ability: keyAbility!, charAbilMod: charAbility.modifier)
+        for index in 1...35 {
+            let skill = SkillsDB.getElementFromNumber(index)!
+            list.append(skill)
         }
-    }
-    
-    func addSkill(name: String, ranks: Int, ability: Ability, charAbilMod: Int) {
-        
-        let skill = Skill(name: name, ranks: ranks, ability: ability)
-        skill.baseValue = charAbilMod
-        list.append(skill)
-        numRanks += ranks
-        
     }
     
     func modifySkill(skillName: String, amountToModify: Int, isClassSkill: Bool) {
@@ -86,13 +123,19 @@ class AbilityScoreList: Object, TraitList {
     // MARK: TraitList Protocol
     typealias ItemType = AbilityScore
     
-    dynamic var parentPlayerCharacter: PlayerCharacter?
+    let linkedTo = LinkingObjects(fromType: PlayerCharacter.self, property: "pc_abilityScores")
     let list = List<AbilityScore>()
     
     func getElementFromName(name: String) -> AbilityScoreList.ItemType {
         let ability = list.filter("name == %@", "\(name)")[0]
         return ability
     }
+    
+    var parentPlayerCharacter: PlayerCharacter {
+        return linkedTo.first!
+    }
+    
+    
     
     // MARK: Custom Stuff
     
@@ -114,13 +157,13 @@ class AbilityScoreList: Object, TraitList {
         }
     }
     
-    func getModifierFromName(name: String) -> Int {
+    func modifierFromName(name: String) -> Int {
         let abilityMod = list.filter("name == %@", "\(name)")[0].modifier
         return abilityMod
     }
     
     func getRaceBonus(abilityName: String) -> Int {
-        let pc_race = Races.racesFromString(parentPlayerCharacter!.pc_race)
+        let pc_race = Races.racesFromString(parentPlayerCharacter.pc_race)
         let raceBonus = pc_race!.getAbilityScoreBonuses()[abilityName]!
         
         return raceBonus

@@ -9,32 +9,6 @@
 import Foundation
 import RealmSwift
 
-class FeatsList: Object {
-    
-    dynamic var parentPlayerCharacter: PlayerCharacter?
-    
-    let feats = List<Feat>()
-    
-    func findFeatWithName(name: String) -> Feat? {
-        let featResults = feats.filter("name == %@", "\(name)")
-        
-        if featResults.isEmpty {
-            return nil
-        } else {
-            return featResults[0]
-        }
-    }
-    
-    func addFeat(featName: String) {
-        if let feat = FeatsDB.getElementFromName(featName) {
-            feats.append(feat)
-        } else {
-           print("addFeat() error")
-        }
-        
-    }
-}
-
 class Feat: Object {
     
     dynamic var name = ""

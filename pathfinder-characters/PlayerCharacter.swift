@@ -81,7 +81,6 @@ class PlayerCharacter: Object {
     func setAbilityScores(newScores: [Int]) {
         try! realm!.write {
             pc_abilityScores = AbilityScoreList()
-            pc_abilityScores!.parentPlayerCharacter = self
             pc_abilityScores!.generateAbilityScores(newScores)
         }
     }
@@ -90,7 +89,6 @@ class PlayerCharacter: Object {
         
         try! realm!.write {
             pc_skills = SkillList()
-            pc_skills!.parentPlayerCharacter = self
             pc_skills!.generateBaseSkillList()
         }
     }
@@ -99,7 +97,6 @@ class PlayerCharacter: Object {
         
         try! realm!.write {
             pc_feats = FeatsList()
-            pc_feats!.parentPlayerCharacter = self
         }
     }
     
@@ -127,9 +124,9 @@ class PlayerCharacter: Object {
         
         try! realm!.write {
             
-            let conMod = pc_abilityScores!.getModifierFromName("CON")
-            let dexMod = pc_abilityScores!.getModifierFromName("DEX")
-            let wisMod = pc_abilityScores!.getModifierFromName("WIS")
+            let conMod = self.CON.modifier
+            let dexMod = self.DEX.modifier
+            let wisMod = self.WIS.modifier
             
             guard classObject != nil else {
                 print("Error in setSavingThrows()")
@@ -159,6 +156,28 @@ class PlayerCharacter: Object {
         }
     }
     
+}
+
+
+extension PlayerCharacter {
+    var STR: AbilityScore {
+        return pc_abilityScores!.getElementFromName("STR")
+    }
+    var DEX: AbilityScore {
+        return pc_abilityScores!.getElementFromName("DEX")
+    }
+    var CON: AbilityScore {
+        return pc_abilityScores!.getElementFromName("CON")
+    }
+    var INT: AbilityScore {
+        return pc_abilityScores!.getElementFromName("INT")
+    }
+    var WIS: AbilityScore {
+        return pc_abilityScores!.getElementFromName("WIS")
+    }
+    var CHA: AbilityScore {
+        return pc_abilityScores!.getElementFromName("CHA")
+    }
 }
 
 

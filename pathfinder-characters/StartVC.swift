@@ -34,6 +34,7 @@ class StartVC: UIViewController {
             character.modifySkill("Climb", byAmount: 1)
             character.modifySkill("Perception", byAmount: 1)
             character.modifySkill("Acrobatics", byAmount: 1)
+            print(character.pc_skills?.getElementFromName("Acrobatics").total)
             character.setEmptyFeatsList()
             character.addFeat("Alignment Channel")
             character.addFeat("Penetrating Strike")

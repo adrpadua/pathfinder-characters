@@ -32,50 +32,6 @@ enum Ability: Int {
     }
 }
 
-/*
-class AbilityScoreList: Object {
-    
-    dynamic var parentPlayerCharacter: PlayerCharacter?
-    
-    let abilityScores = List<AbilityScore>()
-    
-    func findSkillWithName(name: String) -> AbilityScore {
-        let ability = abilityScores.filter("name == %@", "\(name)")[0]
-        return ability
-    }
-    
-    func generateAbilityScores(scores: [Int]) {
-        
-        if scores.count == 6 {
-            
-            for index in 1...6 {
-                
-                let pc_race = Races.racesFromString(parentPlayerCharacter!.pc_race)
-                
-                let abilityName = Ability(rawValue:  index)?.name()
-                let raceBonus = pc_race!.getAbilityScoreBonuses()[abilityName!]!
-                let abilityValue = scores[index - 1] + raceBonus
-                let abilityObj = AbilityScore(name: abilityName!, value: abilityValue)
-                abilityScores.append(abilityObj)
-            }
-            
-        } else {
-            print("Error setting scores")
-        }
-    }
-    
-    func getAbilityFromName(name: String) -> AbilityScore {
-        let abilityScore = abilityScores.filter("name == %@", "\(name)")[0]
-        return abilityScore
-    }
-    
-    func getModifierFromName(name: String) -> Int {
-        let abilityMod = abilityScores.filter("name == %@", "\(name)")[0].modifier
-        return abilityMod
-    }
-}
- */
-
 class AbilityScore: Object {
     
     let partOfList = LinkingObjects(fromType: AbilityScoreList.self, property: "list")

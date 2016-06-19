@@ -9,6 +9,13 @@
 import Foundation
 import SwiftyJSON
 
+/*
+ CURRENT DATABASES:
+ Skills
+ Feats
+ Spells
+ */
+
 protocol Database {
     
     associatedtype ItemType
@@ -19,7 +26,7 @@ protocol Database {
     static var count: Int { get set }
     
     static func getElementFromName(elementName: String) -> ItemType?
-    static func extractDataAt(index: Int) -> ItemType?
+    static func getElementFromNumber(index: Int) -> ItemType?
 }
 
 func indexOf(name: String, insideDB: JSON) -> Int {
@@ -30,6 +37,34 @@ func indexOf(name: String, insideDB: JSON) -> Int {
     }
     return -1
 }
+
+
+
+class SkillsDB: Database {
+    
+    typealias ItemType = Skill
+    
+    static var fileName = "Skills_PFRPG_Master"
+    static var path = NSBundle.mainBundle().pathForResource(fileName, ofType: "json")! as String
+    static var jsonData = NSData(data: NSData(contentsOfFile: path)!)
+    static var database = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)["Skills"]
+    static var count = database.count
+    
+    static func getElementFromName(elementName: String) -> SkillsDB.ItemType? {
+        
+        return getElementFromNumber(indexOf(elementName, insideDB: database))
+    }
+    
+    static func getElementFromNumber(index: Int) -> SkillsDB.ItemType? {
+        
+        let name = database["\(index)", "name"].stringValue
+        let keyAbility = database["\(index)", "key_ability"].stringValue
+        
+        return Skill(name: name, ability: keyAbility)
+    }
+}
+
+
 
 
 class FeatsDB: Database {
@@ -44,10 +79,11 @@ class FeatsDB: Database {
     
     static func getElementFromName(elementName: String) -> FeatsDB.ItemType? {
         
-        return extractDataAt(indexOf(elementName, insideDB: database))
+        return getElementFromNumber(indexOf(elementName, insideDB: database))
     }
     
-    static func extractDataAt(index: Int) -> FeatsDB.ItemType? {var prereqs: String
+    static func getElementFromNumber(index: Int) -> FeatsDB.ItemType? {
+        var prereqs: String
         
         let name = database["\(index)", "name"].stringValue
         if  database["\(index)", "prerequisites"].stringValue == "" {
@@ -64,6 +100,11 @@ class FeatsDB: Database {
     
     
 }
+
+
+
+
+
 
 class SpellsDB: Database {
     
@@ -83,14 +124,11 @@ class SpellsDB: Database {
     
     static func getElementFromName(elementName: String) -> SpellsDB.ItemType? {
         
-        return extractDataAt(indexOf(elementName, insideDB: database))
+        return getElementFromNumber(indexOf(elementName, insideDB: database))
     }
     
     
-    
-    
-    // Create Data based on JSON Index
-    static func extractDataAt(index: Int) -> SpellsDB.ItemType? {
+    static func getElementFromNumber(index: Int) -> SpellsDB.ItemType? {
         
         let name = database["\(index)", "name"].stringValue
         let school = database["\(index)", "school"].stringValue
@@ -114,4 +152,5 @@ class SpellsDB: Database {
         return Spell(name: name, school: school, classLevels: classLevels, short_description: short_description)
     }
 }
+
 

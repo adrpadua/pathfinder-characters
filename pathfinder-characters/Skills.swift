@@ -186,30 +186,41 @@ class Skill: Object {
     dynamic var name = ""
     dynamic var keyAbility = ""
     dynamic var classSkillBonus = 0
-    dynamic var baseValue = 0
     dynamic var ranks = 0
     
-    convenience init(name: String, ranks: Int, ability: Ability) {
+    convenience init(name: String, ability: String) {
         self.init()
         self.name = name
-        self.ranks = ranks
-        self.keyAbility = ability.name()
+        self.keyAbility = ability
     }
     
-    
     // OTHER STUFF
-    
     var parentPlayerCharacter: PlayerCharacter {
         get {
-            return (partOfList.first!.parentPlayerCharacter!)
+            return (partOfList.first!.parentPlayerCharacter)
+        }
+    }
+    
+    var abilityModifierBonus: Int {
+        get {
+            return parentPlayerCharacter.pc_abilityScores!.getElementFromName(keyAbility).modifier
         }
     }
     
     var total: Int {
         get {
-            return baseValue + classSkillBonus + ranks
+            return classSkillBonus + ranks + abilityModifierBonus
         }
     }
+    
+    var short_description: String {
+        return SkillsDB.getElementFromName(self.name)!.short_description
+    }
+    
+    
+    
+    
+    
     
     func addRanks(num: Int) {
         ranks += num

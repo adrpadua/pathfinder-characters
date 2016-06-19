@@ -12,6 +12,7 @@
 		A0277C811D149F3000D833DA /* Spells_PFRPG_Core.json in Resources */ = {isa = PBXBuildFile; fileRef = A0277C801D149F3000D833DA /* Spells_PFRPG_Core.json */; };
 		A0277C841D14A6A400D833DA /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0277C831D14A6A400D833DA /* Database.swift */; };
 		A0277C861D14BC9F00D833DA /* TraitList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0277C851D14BC9F00D833DA /* TraitList.swift */; };
+		A0837CA51D1652B10070DD1F /* Skills_PFRPG_Master.json in Resources */ = {isa = PBXBuildFile; fileRef = A0837CA41D1652B10070DD1F /* Skills_PFRPG_Master.json */; };
 		A0BB938F1D12837300FCA996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB938E1D12837300FCA996 /* AppDelegate.swift */; };
 		A0BB93941D12837300FCA996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0BB93921D12837300FCA996 /* Main.storyboard */; };
 		A0BB93961D12837300FCA996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0BB93951D12837300FCA996 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		A0277C831D14A6A400D833DA /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		A0277C851D14BC9F00D833DA /* TraitList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitList.swift; sourceTree = "<group>"; };
 		A0277C881D14C0DD00D833DA /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = default.realm; path = Realm/default.realm; sourceTree = SOURCE_ROOT; };
+		A0837CA41D1652B10070DD1F /* Skills_PFRPG_Master.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Skills_PFRPG_Master.json; sourceTree = "<group>"; };
 		A0BB938B1D12837300FCA996 /* pathfinder-characters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pathfinder-characters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0BB938E1D12837300FCA996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0BB93931D12837300FCA996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		A0BB93C21D12842900FCA996 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A0837CA41D1652B10070DD1F /* Skills_PFRPG_Master.json */,
 				A00EF2CC1D148E6600833E91 /* Weapons_PFRPG_Core.json */,
 				A0BB93A41D12840700FCA996 /* Feats_PFRPG_Core.json */,
 				A0277C801D149F3000D833DA /* Spells_PFRPG_Core.json */,
@@ -242,6 +245,7 @@
 				A0BB93961D12837300FCA996 /* Assets.xcassets in Resources */,
 				A0BB93B31D12840700FCA996 /* Feats_PFRPG_Core.json in Resources */,
 				A00EF2CD1D148E6600833E91 /* Weapons_PFRPG_Core.json in Resources */,
+				A0837CA51D1652B10070DD1F /* Skills_PFRPG_Master.json in Resources */,
 				A0BB93941D12837300FCA996 /* Main.storyboard in Resources */,
 				A0277C811D149F3000D833DA /* Spells_PFRPG_Core.json in Resources */,
 			);

@@ -1,0 +1,420 @@
+{ 
+  "Skills" : {
+    
+    "1" : {
+        "name" : "Acrobatics",
+        "key_ability" : "DEX",
+        "trained_only" : "0",
+        "armor_check_penalty" : "1",
+        "description" : "You can keep your balance while traversing narrow or treacherous surfaces. You can also dive, flip, jump, and roll to avoid attacks and overcome obstacles.",
+        "featBonus" : "Acrobatic" ,
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "2" : {
+        "name" : "Appraise",
+        "key_ability" : "INT",
+        "trained_only" : "0",
+        "armor_check_penalty" : "0",
+        "description" : "You can evaluate the monetary value of an object.",
+        "featBonus" : "NULL",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" :
+        {
+          "Raven" : 3
+        }
+    },
+    
+    "3" : {
+        "name" : "Bluff",
+        "key_ability" : "CHA",
+        "trained_only" : "0",
+        "armor_check_penalty" : "0",
+        "description" : "You know how to tell a lie.",
+        "featBonus" : "Deceitful",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" :
+        {
+          "Viper" : 3
+        }
+    },
+    
+    "4" : {
+        "name" : "Climb",
+        "key_ability" : "STR",
+        "trained_only" : "0",
+        "armor_check_penalty" : "1",
+        "description" : "You are skilled at scaling vertical surfaces, from smooth city walls to rocky cliffs.",
+        "featBonus" : "Athletic",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "5" : {
+        "name" : "Craft",
+        "key_ability" : "INT",
+        "trained_only" : "0",
+        "armor_check_penalty" : "0",
+        "description" : "You are skilled in the creation of a specific group of items, such as armor or weapons. Like Knowledge, Perform, and Profession, Craft is actually a number of separate skills. You could have several Craft skills, each with its own ranks. The most common Craft skills are alchemy, armor, baskets, books, bows, calligraphy, carpentry, cloth, clothing, glass, jewelry, leather, locks, paintings, pottery, sculptures, ships, shoes, stonemasonry, traps, and weapons.\nA Craft skill is specifically focused on creating something. If nothing is created by the endeavor, it probably falls under the heading of a Profession skill.",
+        "featBonus" : "NULL",        
+        "raceBonuses" : 
+        {
+          "Gnome" : 2
+        },        
+        "familiarBonuses" : "NULL"
+    },
+    
+    "6" : {
+        "name" : "Diplomacy",
+        "key_ability" : "CHA",
+        "trained_only" : "0",
+        "armor_check_penalty" : "0",
+        "description" : "You can use this skill to persuade others to agree with your arguments, to resolve differences, and to gather valuable information or rumors from people.",
+        "featBonus" : "Persuasive",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "7" : {
+        "name" : "Disable Device",
+        "key_ability" : "DEX",
+        "trained_only" : "1",
+        "armor_check_penalty" : "1",
+        "description" : "You are skilled at disarming traps and opening locks. In addition, this skill lets you sabotage simple mechanical devices, such as catapults, wagon wheels, and doors.",
+        "featBonus" : "Deft Hands",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "8" : {
+        "name" : "Disguise",
+        "key_ability" : "CHA",
+        "trained_only" : "0",
+        "armor_check_penalty" : "0",
+        "description" : "You are skilled at changing your appearance.",
+        "featBonus" : "Deceitful",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "9" : {
+        "name" : "Escape Artist",
+        "key_ability" : "DEX",
+        "trained_only" : "0",
+        "armor_check_penalty" : "1",
+        "description" : "Your training allows you to slip out of bonds and escape from grapples.",
+        "featBonus" : "Stealthy",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "10" : {
+        "name" : "Fly",
+        "key_ability" : "DEX",
+        "trained_only" : "0",
+        "armor_check_penalty" : "1",
+        "description" : "You are skilled at flying, through either the use of wings or magic, and can perform daring or complex maneuvers while airborne. Note that this skill does not give you the ability to f ly.",
+        "featBonus" : "Acrobatic",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" :
+        {
+          "Bat" : 3
+        }
+    },
+    
+    "11" : {
+        "name" : "Handle Animal",
+        "key_ability" : "CHA",
+        "trained_only" : "1",
+        "armor_check_penalty" : "0",
+        "description" : "You are trained at working with animals, and can teach them tricks, get them to follow your simple commands, or\neven domesticate them.",
+        "featBonus" : "Animal Affinity",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "12" : {
+        "name" : "Heal",
+        "key_ability" : "WIS",
+        "trained_only" : "0",
+        "armor_check_penalty" : "0",
+        "description" : "You are skilled at tending to wounds and ailments.",
+        "featBonus" : "Self-Sufficient",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "13" : {
+        "name" : "Intimidate",
+        "key_ability" : "CHA",
+        "trained_only" : "0",
+        "armor_check_penalty" : "0",
+        "description" : "You can use this skill to frighten your opponents or to get them to act in a way that benefits you. This skill includes verbal threats and displays of prowess.",
+        "featBonus" : "Persuasive",        
+        "raceBonuses" : 
+        {
+          "Half-Orc" : 2
+        },        
+        "familiarBonuses" : "NULL"
+    },
+    
+    "14" : {
+        "name" : "Knowledge (Arcana)",
+        "key_ability" : "INT",
+        "trained_only" : "1",
+        "armor_check_penalty" : "0",
+        "description" : "You are educated in a field of study and can answer both simple and complex questions. (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)",
+        "featBonus" : "NULL",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "15" : {
+        "name" : "Knowledge (Dungeoneering",
+        "key_ability" : "INT",
+        "trained_only" : "1",
+        "armor_check_penalty" : "0",
+        "description" : "You are educated in a field of study and can answer both simple and complex questions.  (aberrations, caverns, oozes, spelunking)",
+        "featBonus" : "NULL",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "16" : {
+        "name" : "Knowledge (Engineering)",
+        "key_ability" : "INT",
+        "trained_only" : "1",
+        "armor_check_penalty" : "0",
+        "description" : "You are educated in a field of study and can answer both simple and complex questions.  (buildings, aqueducts, bridges, fortifications)",
+        "featBonus" : "NULL",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "17" : {
+        "name" : "Knowledge (Geography)",
+        "key_ability" : "INT",
+        "trained_only" : "1",
+        "armor_check_penalty" : "0",
+        "description" : "You are educated in a field of study and can answer both simple and complex questions.  (lands, terrain, climate, people)",
+        "featBonus" : "NULL",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "18" : {
+        "name" : "Knowledge (History)",
+        "key_ability" : "INT",
+        "trained_only" : "1",
+        "armor_check_penalty" : "0",
+        "description" : "You are educated in a field of study and can answer both simple and complex questions. (wars, colonies, migrations, founding of cities)",
+        "featBonus" : "NULL",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "19" : {
+        "name" : "Knowledge (Local)",
+        "key_ability" : "INT",
+        "trained_only" : "1",
+        "armor_check_penalty" : "0",
+        "description" : "You are educated in a field of study and can answer both simple and complex questions.  (legends, personalities, inhabitants, laws, customs, traditions, humanoids)",
+        "featBonus" : "NULL",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "20" : {
+        "name" : "Knowledge (Nature)",
+        "key_ability" : "INT",
+        "trained_only" : "1",
+        "armor_check_penalty" : "0",
+        "description" : "You are educated in a field of study and can answer both simple and complex questions. (animals, fey, monstrous humanoids, plants, seasons and cycles, weather, vermin)",
+        "featBonus" : "NULL",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "21" : {
+        "name" : "Knowledge (Nobility)",
+        "key_ability" : "INT",
+        "trained_only" : "1",
+        "armor_check_penalty" : "0",
+        "description" : "You are educated in a field of study and can answer both simple and complex questions. (lineages, heraldry, personalities, royalty)",
+        "featBonus" : "NULL",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "22" : {
+        "name" : "Knowledge (Planes)",
+        "key_ability" : "INT",
+        "trained_only" : "1",
+        "armor_check_penalty" : "0",
+        "description" : "You are educated in a field of study and can answer both simple and complex questions. (the Inner Planes, the Outer Planes, the Astral Plane, the Ethereal Plane, outsiders, planar magic)",
+        "featBonus" : "NULL",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "23" : {
+        "name" : "Knowledge (Religion)",
+        "key_ability" : "INT",
+        "trained_only" : "1",
+        "armor_check_penalty" : "0",
+        "description" : "You are educated in a field of study and can answer both simple and complex questions. (gods and goddesses, mythic history, ecclesiastic tradition, holy symbols, undead)",
+        "featBonus" : "NULL",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "24" : {
+        "name" : "Linguistics",
+        "key_ability" : "INT",
+        "trained_only" : "1",
+        "armor_check_penalty" : "0",
+        "description" : "You are skilled at working with language, in both its spoken and written forms. You can speak multiple languages, and can decipher nearly any tongue given enough time. Your skill in writing allows you to create and detect forgeries as well.",
+        "featBonus" : "NULL",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "25" : {
+        "name" : "Perception",
+        "key_ability" : "WIS",
+        "trained_only" : "0",
+        "armor_check_penalty" : "0",
+        "description" : "Your senses allow you to notice fine details and alert you to danger. Perception covers all five senses, including sight, hearing, touch, taste, and smell.",
+        "featBonus" : "Alertness",        
+        "raceBonuses" : 
+        {
+          "Elf" : 2,
+          "Half-Elf" : 2,
+          "Gnome" : 2,
+          "Halfling" : 2
+        },        
+        "familiarBonuses" :
+        {
+          "Hawk" : 3,
+          "Owl" : 3
+        }
+    },
+    
+    "26" : {
+        "name" : "Perform",
+        "key_ability" : "CHA",
+        "trained_only" : "0",
+        "armor_check_penalty" : "0",
+        "description" : "You are skilled at one form of entertainment, from singing to acting to playing an instrument.",
+        "featBonus" : "NULL",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "27" : {
+        "name" : "Profession",
+        "key_ability" : "WIS",
+        "trained_only" : "1",
+        "armor_check_penalty" : "0",
+        "description" : "You are skilled at a specific job. The most common Profession skills are architect, baker, barrister, brewer, butcher, clerk, cook, courtesan, driver, engineer, farmer, f isherman, gambler, gardener, herbalist, innkeeper, librarian, merchant, midwife, miller, miner, porter, sailor, scribe, shepherd, stable master, soldier, tanner, trapper, and woodcutter.",
+        "featBonus" : "NULL",        
+        "raceBonuses" : 
+        {
+          "Gnome" : 2
+        },        
+        "familiarBonuses" : "NULL"
+    },
+    
+    "28" : {
+        "name" : "Ride",
+        "key_ability" : "DEX",
+        "trained_only" : "0",
+        "armor_check_penalty" : "1",
+        "description" : "You are skilled at riding mounts, usually a horse, but possibly something more exotic, like a griffon or pegasus.",
+        "featBonus" : "Animal Affinity",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "29" : {
+        "name" : "Sense Motive",
+        "key_ability" : "WIS",
+        "trained_only" : "0",
+        "armor_check_penalty" : "0",
+        "description" : "You are skilled at detecting falsehoods and true intentions.",
+        "featBonus" : "NULL",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "30" : {
+        "name" : "Sleight of Hand",
+        "key_ability" : "DEX",
+        "trained_only" : "1",
+        "armor_check_penalty" : "1",
+        "description" : "Your training allows you to pick pockets, draw hidden weapons, and take a variety of actions without being noticed.",
+        "featBonus" : "NULL",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "31" : {
+        "name" : "Spellcraft",
+        "key_ability" : "INT",
+        "trained_only" : "1",
+        "armor_check_penalty" : "0",
+        "description" : "You are skilled at the art of casting spells, identifying magic items, crafting magic items, and identifying spells as they are being cast.",
+        "featBonus" : "Magical Aptitude",        
+        "raceBonuses" : 
+        {
+          "Elf" : 2
+        },        
+        "familiarBonuses" : "NULL"
+    },
+    
+    "32" : {
+        "name" : "Stealth",
+        "key_ability" : "DEX",
+        "trained_only" : "0",
+        "armor_check_penalty" : "1",
+        "description" : "You are skilled at avoiding detection, allowing you to slip past foes or strike from an unseen position. This skill covers hiding and moving silently.",
+        "featBonus" : "Stealthy",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "33" : {
+        "name" : "Survival",
+        "key_ability" : "WIS",
+        "trained_only" : "0",
+        "armor_check_penalty" : "0",
+        "description" : "You are skilled at surviving in the wild and at navigating in the wilderness. You also excel at following trails and tracks left by others.",
+        "featBonus" : "Self-Sufficient",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "34" : {
+        "name" : "Swim",
+        "key_ability" : "STR",
+        "trained_only" : "0",
+        "armor_check_penalty" : "1",
+        "description" : "You know how to swim and can do so even in stormy water.",
+        "featBonus" : "Athletic",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    },
+    
+    "35" : {
+        "name" : "Use Magic Device",
+        "key_ability" : "CHA",
+        "trained_only" : "1",
+        "armor_check_penalty" : "0",
+        "description" : "You are skilled at activating magic items, even if you are not otherwise trained in their use.",
+        "featBonus" : "Magical Aptitude",        
+        "raceBonuses" : "NULL",      
+        "familiarBonuses" : "NULL"
+    }
+  }
+}

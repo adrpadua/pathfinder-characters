@@ -152,27 +152,13 @@ class PlayerCharacter: Object {
     
     func modifySkill(skillToModify: String, byAmount: Int) {
         
+        let skillObj = pc_skills?.getElementFromName(skillToModify)
         try! realm!.write {
-            pc_skills!.modifySkill(skillToModify, amountToModify: byAmount, isClassSkill: isClassSkill(skillToModify))
+            pc_skills!.modifySkill(skillToModify, amountToModify: byAmount, isClassSkill: skillObj!.isClassSkill())
             pc_skills!.numRanks += byAmount
         }
     }
     
-    func isClassSkill(skillToCheck: String) -> Bool {
-        
-        var classesArray: [String]
-        
-        //let skill = pc_skills!.findSkillWithName(skillToCheck).skillsEnum()
-        let skill = Skills.skillsFromString(skillToCheck)
-        classesArray = skill!.classesFavoringSkill()
-        
-        for className in classesArray {
-            if pc_class == className {
-                return true
-            }
-        }
-        return false
-    }
 }
 
 

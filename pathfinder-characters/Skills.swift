@@ -16,6 +16,8 @@ enum Skills: Int {
     case Acrobatics = 1, Appraise, Bluff, Climb, Craft, Diplomacy, DisableDevice, Disguise, EscapeArtist, Fly, HandleAnimal, Heal, Intimidate, KnowledgeArcana, KnowledgeDungeoneering, KnowledgeEngineering, KnowledgeHistory, KnowledgeGeography, KnowledgeLocal, KnowledgeNature, KnowledgeNobility, KnowledgePlanes, KnowledgeReligion, Linguistics, Perception, Perform, Profession, Ride, SenseMotive, SleightOfHand, Spellcraft, Stealth, Survival, Swim, UseMagicDevice
     
     static let allValues = [Acrobatics, Appraise, Bluff, Climb, Craft, Diplomacy, DisableDevice, Disguise, EscapeArtist, Fly, HandleAnimal, Heal, Intimidate, KnowledgeArcana, KnowledgeDungeoneering, KnowledgeEngineering, KnowledgeHistory, KnowledgeGeography, KnowledgeLocal, KnowledgeNature, KnowledgeNobility, KnowledgePlanes, KnowledgeReligion, Linguistics, Perception, Perform, Profession, Ride, SenseMotive, SleightOfHand, Spellcraft, Stealth, Survival, Swim, UseMagicDevice]
+    
+    /*
     func classesFavoringSkill() -> [String] {
         let array: [String]
         
@@ -127,7 +129,8 @@ enum Skills: Int {
             return array
         }
     }
-    
+ */   
+ 
     func name() -> String {
         switch self {
         case .Acrobatics:
@@ -315,15 +318,18 @@ class Skill: Object {
         total = baseValue + ranks + classSkillBonus
     }
     
-    func skillsEnum() -> Skills? {
-        for index in 0...numSkills {
-            
-            let skill = Skills(rawValue: index + 1)!
-            if self.name == skill.name() {
-                return skill
+    func parentPlayerCharacter() -> PlayerCharacter {
+        let list = partOfList.first!
+        return list.parentPlayerCharacter!
+    }
+    
+    func isClassSkill() -> Bool {
+        let classObj = classObjFromString(parentPlayerCharacter().pc_class, level: parentPlayerCharacter().pc_level)
+        for classSkill in (classObj!.classSkills) {
+            if classSkill == self.name {
+                return true
             }
         }
-        // Case not found, should never happen.
-        return nil
+        return false
     }
 }

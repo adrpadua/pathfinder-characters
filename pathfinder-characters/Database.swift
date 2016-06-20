@@ -9,6 +9,17 @@
 import Foundation
 import SwiftyJSON
 
+
+protocol Database {
+    
+    static var fileName: String { get set }
+    static var path: String { get set }
+    static var jsonData: NSData { get set }
+    static var database: JSON { get set }
+    static var count: Int { get set }
+    
+}
+
 extension Database {
     
     static func indexOf(name: String) -> Int {
@@ -27,16 +38,6 @@ extension Database {
         return json
     }
     
-    
-}
-
-protocol Database {
-    
-    static var fileName: String { get set }
-    static var path: String { get set }
-    static var jsonData: NSData { get set }
-    static var database: JSON { get set }
-    static var count: Int { get set }
     
 }
 

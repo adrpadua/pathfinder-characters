@@ -11,28 +11,30 @@ import SwiftyJSON
 
 class FeatsDB: Database {
     
-    typealias ItemType = Feat
-    
     static var fileName = "Feats_PFRPG_Core"
     static var path = NSBundle.mainBundle().pathForResource(fileName, ofType: "json")! as String
     static var jsonData = NSData(data: NSData(contentsOfFile: path)!)
     static var database = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)["Feats"]
     static var count = database.count
     
+    // GETTERS
+    static func getName(json: JSON) -> String {
+        return json["name"].stringValue
+    }
     
-    static func getElementFromNumber(index: Int) -> FeatsDB.ItemType? {
-        var prereqs: String
-        
-        let name = database["\(index)", "name"].stringValue
-        if  database["\(index)", "prerequisites"].stringValue == "" {
-            prereqs = "None"
+    static func getPrerequisites(json: JSON) -> String {
+        if  json["prerequisites"].stringValue == "" {
+            return "None"
         } else {
-            prereqs = database["\(index)", "prerequisites"].stringValue
+            return json["prerequisites"].stringValue
         }
-        let type = database["\(index)", "type"].stringValue
-        let benefit = database["\(index)", "benefit"].stringValue
-        
-        print("Found \(name)")
-        return Feat(name: name, prereqs: prereqs, type: type , benefits: benefit)
+    }
+    
+    static func getType(json: JSON) -> String {
+        return json["type"].stringValue
+    }
+    
+    static func getBenefit(json: JSON) -> String {
+        return json["benefit"].stringValue
     }
 }

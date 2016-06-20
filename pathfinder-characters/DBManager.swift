@@ -26,18 +26,40 @@ class DBManager {
         return classObj
     }
     
-    static func parseJSONStringValue(json: JSON, subJSON: String) -> String {
+    static func getSkillObject(name: String) -> Skill {
+        let jsonLocation = SkillsDB.getJSONDirectoryOf(name)
         
-        let value = json["\(subJSON)"].stringValue
+        let skillObj = Skill()
         
-        return value
+        skillObj.name = SkillsDB.getName(jsonLocation)
+        skillObj.keyAbility = SkillsDB.getKeyAbility(jsonLocation)
+        
+        return skillObj
     }
     
+    static func getFeatObject(name: String) -> Feat {
+        let jsonLocation = FeatsDB.getJSONDirectoryOf(name)
+        
+        let featObj = Feat()
+        
+        featObj.name = FeatsDB.getName(jsonLocation)
+        featObj.prereqs = FeatsDB.getPrerequisites(jsonLocation)
+        featObj.type = FeatsDB.getType(jsonLocation)
+        featObj.benefits = FeatsDB.getBenefit(jsonLocation)
+        
+        return featObj
+    }
     
-    static func parseJSONIntValue(json: JSON, subJSON: String) -> Int {
+    static func getSpellObject(name: String) -> Spell {
+        let jsonLocation = SpellsDB.getJSONDirectoryOf(name)
         
-        let value = json["\(subJSON)"].intValue
+        let spellObj = Spell()
         
-        return value
+        spellObj.name = SpellsDB.getName(jsonLocation)
+        spellObj.school = SpellsDB.getSchool(jsonLocation)
+        spellObj.short_description = SpellsDB.getShortDescription(jsonLocation)
+        spellObj.classLevels = SpellsDB.getClassLevels(jsonLocation)
+        
+        return spellObj
     }
 }

@@ -80,9 +80,9 @@ class StartVC: UIViewController {
 
     @IBAction func spellsTest(sender: UIButton) {
         
-        let _ = SpellsDB.getElementFromName("Animate Dead")
+        let _ = DBManager.getSpellObject("Animate Dead")
         
-        let _ = FeatsDB.getElementFromName("Acrobatic")
+        let _ = DBManager.getFeatObject("Acrobatic")
         
         
     }

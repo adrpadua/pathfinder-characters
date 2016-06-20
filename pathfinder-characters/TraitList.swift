@@ -46,17 +46,14 @@ class FeatsList: Object {
         return feat
     }
     
+    
     var parentPlayerCharacter: PlayerCharacter {
         return linkedTo.first!
     }
     
     func addFeat(featName: String) {
-        if let feat = FeatsDB.getElementFromName(featName) {
-            list.append(feat)
-        } else {
-            print("addFeat() error")
-        }
-        
+        let feat = DBManager.getFeatObject(featName)
+        list.append(feat)
     }
 }
 
@@ -90,8 +87,11 @@ class SkillList: Object, TraitList {
     dynamic var numRanks = 0
     
     func generateBaseSkillList() {
+        
+        let skillNames = ["Acrobatics", "Appraise", "Bluff", "Climb", "Craft", "Diplomacy", "DisableDevice", "Disguise", "EscapeArtist", "Fly", "HandleAnimal", "Heal", "Intimidate", "Knowledge (Arcana)", "Knowledge (Dungeoneering)", "Knowledge (Engineering)", "Knowledge (History)", "Knowledge (Geography)", "Knowledge (Local)", "Knowledge (Nature)", "Knowledge (Nobility)", "Knowledge (Planes)", "Knowledge (Religion)", "Linguistics", "Perception", "Perform", "Profession", "Ride", "Sense Motive", "Sleight Of Hand", "Spellcraft", "Stealth", "Survival", "Swim", "Use Magic Device"]
+        
         for index in 1...35 {
-            let skill = SkillsDB.getElementFromNumber(index)!
+            let skill = DBManager.getSkillObject(skillNames[index - 1])
             list.append(skill)
         }
     }

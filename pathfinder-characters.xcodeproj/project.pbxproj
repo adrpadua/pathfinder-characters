@@ -122,6 +122,7 @@
 				A0277C881D14C0DD00D833DA /* default.realm */,
 				A0BB93C31D12843200FCA996 /* Storyboard */,
 				A0BB93C21D12842900FCA996 /* Resources */,
+				A0CA508D1D1853F100EC5EF7 /* JSON Parsing Databases */,
 				A0BB93C11D12842000FCA996 /* Utilities */,
 				A0BB93C01D12841C00FCA996 /* Model */,
 				A0BB93BF1D12841700FCA996 /* View */,
@@ -163,8 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				A0BB93A61D12840700FCA996 /* Manager.swift */,
+				A0CA50981D1859A800EC5EF7 /* DBManager.swift */,
 				A0277C851D14BC9F00D833DA /* TraitList.swift */,
-				A0CA508D1D1853F100EC5EF7 /* Databases */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -193,17 +194,16 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
-		A0CA508D1D1853F100EC5EF7 /* Databases */ = {
+		A0CA508D1D1853F100EC5EF7 /* JSON Parsing Databases */ = {
 			isa = PBXGroup;
 			children = (
 				A0277C831D14A6A400D833DA /* Database.swift */,
-				A0CA50981D1859A800EC5EF7 /* DBManager.swift */,
 				A0CA508E1D18540D00EC5EF7 /* ClassDB.swift */,
 				A0CA50901D18543500EC5EF7 /* SpellsDB.swift */,
 				A0CA50921D18545D00EC5EF7 /* FeatsDB.swift */,
 				A0CA50941D18546C00EC5EF7 /* SkillsDB.swift */,
 			);
-			name = Databases;
+			name = "JSON Parsing Databases";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

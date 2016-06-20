@@ -17,6 +17,13 @@ class Spell {
     var classLevels: [String : Int]?
     var short_description: String?
     
+    init() {
+        self.name = ""
+        self.school = ""
+        self.classLevels = [String : Int]()
+        self.short_description = ""
+    }
+    
     init(name: String, school: String, classLevels: [String : Int], short_description: String) {
         self.name = name
         self.school = school

@@ -11,8 +11,6 @@ import SwiftyJSON
 
 class ClassDB: Database {
     
-    typealias ItemType = CharacterClass
-    
     static var fileName = "Classes_PFRPG_Core"
     static var path = NSBundle.mainBundle().pathForResource(fileName, ofType: "json")! as String
     static var jsonData = NSData(data: NSData(contentsOfFile: path)!)
@@ -21,7 +19,7 @@ class ClassDB: Database {
     
     
     
-    
+    // GETTERS
     static func getName(json: JSON) -> String {
         return json["name"].stringValue
     }

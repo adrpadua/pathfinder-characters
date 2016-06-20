@@ -11,8 +11,6 @@ import SwiftyJSON
 
 class SkillsDB: Database {
     
-    typealias ItemType = Skill
-    
     static var fileName = "Skills_PFRPG_Master"
     static var path = NSBundle.mainBundle().pathForResource(fileName, ofType: "json")! as String
     static var jsonData = NSData(data: NSData(contentsOfFile: path)!)
@@ -20,11 +18,12 @@ class SkillsDB: Database {
     static var count = database.count
     
     
-    static func getElementFromNumber(index: Int) -> SkillsDB.ItemType? {
-        
-        let name = database["\(index)", "name"].stringValue
-        let keyAbility = database["\(index)", "key_ability"].stringValue
-        
-        return Skill(name: name, ability: keyAbility)
+    // GETTERS
+    static func getName(json: JSON) -> String {
+        return json["name"].stringValue
+    }
+    
+    static func getKeyAbility(json: JSON) -> String {
+        return json["key_ability"].stringValue
     }
 }

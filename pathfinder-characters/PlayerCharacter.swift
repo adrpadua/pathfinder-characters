@@ -29,8 +29,9 @@ class PlayerCharacter: Object {
     private dynamic var pc_maxHitPoints = 1
     
     // MARK: To-one relationships
+    let pc_skills = List<Skill>()
+    
     dynamic var pc_abilityScores: AbilityScoreList?
-    dynamic var pc_skills: SkillList?
     dynamic var pc_feats: FeatsList?
     
     // MARK: Reference Objects
@@ -43,8 +44,11 @@ class PlayerCharacter: Object {
         }
     }
     
+    // MARK: Computed Properties
     var pc_savingThrows: [String : Int] {
     
+        var pc_savingThrows = [String : Int]()
+        
         let conMod = self.CON.modifier
         let dexMod = self.DEX.modifier
         let wisMod = self.WIS.modifier
@@ -54,52 +58,66 @@ class PlayerCharacter: Object {
             return [String : Int]()
         }
         
-        self["Fortitude"] = conMod + classObject!.savingThrows!["Fort"]!
-        self["Reflex"] = dexMod + classObject!.savingThrows!["Ref"]!
-        self["Willpower"] = wisMod + classObject!.savingThrows!["Will"]!
+        pc_savingThrows["Fortitude"] = conMod + classObject!.savingThrows!["Fort"]!
+        pc_savingThrows["Reflex"] = dexMod + classObject!.savingThrows!["Ref"]!
+        pc_savingThrows["Willpower"] = wisMod + classObject!.savingThrows!["Will"]!
         
+        return pc_savingThrows
     }
     
+    
+    
+    
+    
+    
+    // MARK: Getter functions
+    var name: String {
+        return pc_name
+    }
     
     
     // MARK: Setter functions
-    func setName(newName: String) {
+    func setName(name: String) {
         try! realm!.write {
-            self.pc_name = newName
+            self.pc_name = name
         }
     }
     
-    func setRace(newRace: String) {
+    func setRace(named: String) {
         try! realm!.write {
-            self.pc_race = newRace
+            self.pc_race = named
         }
     }
     
-    func setClass(newClass: String) {
+    func setClass(named: String) {
         try! realm!.write {
-            self.pc_class = newClass
+            self.pc_class = named
         }
         setMaxHitPoints()
     }
     
-    func setLevel(newLevel: Int) {
+    func setLevel(value: Int) {
         try! realm!.write {
-            self.pc_level = newLevel
+            self.pc_level = value
         }
     }
     
-    func setAbilityScores(newScores: [Int]) {
+    func setAbilityScores(values: [Int]) {
         try! realm!.write {
             pc_abilityScores = AbilityScoreList()
-            pc_abilityScores!.generateAbilityScores(newScores)
+            pc_abilityScores!.generateAbilityScores(values)
         }
     }
     
     func setBaseSkills() {
         
+        let skillNames = ["Acrobatics", "Appraise", "Bluff", "Climb", "Craft", "Diplomacy", "DisableDevice", "Disguise", "EscapeArtist", "Fly", "HandleAnimal", "Heal", "Intimidate", "Knowledge (Arcana)", "Knowledge (Dungeoneering)", "Knowledge (Engineering)", "Knowledge (History)", "Knowledge (Geography)", "Knowledge (Local)", "Knowledge (Nature)", "Knowledge (Nobility)", "Knowledge (Planes)", "Knowledge (Religion)", "Linguistics", "Perception", "Perform", "Profession", "Ride", "Sense Motive", "Sleight Of Hand", "Spellcraft", "Stealth", "Survival", "Swim", "Use Magic Device"]
+        
         try! realm!.write {
-            pc_skills = SkillList()
-            pc_skills!.generateBaseSkillList()
+            for index in 1...35 {
+                let skill = DBManager.getSkillObject(skillNames[index - 1])
+                pc_skills.append(skill)
+            }
         }
     }
     
@@ -136,18 +154,20 @@ class PlayerCharacter: Object {
         }
     }
     
-    func modifySkill(skillToModify: String, byAmount: Int) {
+    func modifySkill(name: String, byAmount: Int) {
         
-        let skillObj = pc_skills?.getElementFromName(skillToModify)
+        let skillObj = pc_skills.getItemNamed(name)
+        
         try! realm!.write {
-            pc_skills!.modifySkill(skillToModify, amountToModify: byAmount, isClassSkill: skillObj!.isClassSkill())
-            pc_skills!.numRanks += byAmount
+            skillObj.addRanks(byAmount)
         }
     }
     
+
 }
 
 
+// MARK: Extensions
 extension PlayerCharacter {
     var STR: AbilityScore {
         return pc_abilityScores!.getElementFromName("STR")
@@ -178,6 +198,14 @@ extension PlayerCharacter {
     }
 }
 
+extension List where T:Skill {
+    func getItemNamed(name: String) -> T {
+        
+        let object = self.filter("name == %@", "\(name)")[0]
+        
+        return object
+    }
+}
 
 
 

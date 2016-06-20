@@ -57,66 +57,6 @@ class FeatsList: Object {
 }
 
 
-
-
-
-
-
-class SkillList: Object, TraitList {
-    
-    // MARK: TraitList Protocol
-    typealias ItemType = Skill
-    
-    let linkedTo = LinkingObjects(fromType: PlayerCharacter.self, property: "pc_skills")
-    let list = List<Skill>()
-    
-    func getElementFromName(name: String) -> SkillList.ItemType {
-        let skill = list.filter("name == %@", "\(name)")[0]
-        return skill
-    }
-    
-    var parentPlayerCharacter: PlayerCharacter {
-        return linkedTo.first!
-    }
-    
-    
-    
-    
-    // MARK: Custom Stuff
-    dynamic var numRanks = 0
-    
-    func generateBaseSkillList() {
-        
-        let skillNames = ["Acrobatics", "Appraise", "Bluff", "Climb", "Craft", "Diplomacy", "DisableDevice", "Disguise", "EscapeArtist", "Fly", "HandleAnimal", "Heal", "Intimidate", "Knowledge (Arcana)", "Knowledge (Dungeoneering)", "Knowledge (Engineering)", "Knowledge (History)", "Knowledge (Geography)", "Knowledge (Local)", "Knowledge (Nature)", "Knowledge (Nobility)", "Knowledge (Planes)", "Knowledge (Religion)", "Linguistics", "Perception", "Perform", "Profession", "Ride", "Sense Motive", "Sleight Of Hand", "Spellcraft", "Stealth", "Survival", "Swim", "Use Magic Device"]
-        
-        for index in 1...35 {
-            let skill = DBManager.getSkillObject(skillNames[index - 1])
-            list.append(skill)
-        }
-    }
-    
-    func modifySkill(skillName: String, amountToModify: Int, isClassSkill: Bool) {
-        
-        let skill = getElementFromName(skillName)
-        
-        if isClassSkill {
-            skill.classSkillBonus = 3
-        }
-        
-        skill.addRanks(amountToModify)
-    }
-    
-}
-
-
-
-
-
-
-
-
-
-
 class AbilityScoreList: Object, TraitList {
     
     // MARK: TraitList Protocol

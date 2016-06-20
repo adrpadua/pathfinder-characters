@@ -13,7 +13,7 @@ class Skill: Object {
     
     
     // REALM-PERSISTED ITEMS
-    let partOfList = LinkingObjects(fromType: SkillList.self, property: "list")
+    let partOfCharacter = LinkingObjects(fromType: PlayerCharacter.self, property: "pc_skills")
     dynamic var name = ""
     dynamic var keyAbility = ""
     dynamic var classSkillBonus = 0
@@ -28,7 +28,7 @@ class Skill: Object {
     // OTHER STUFF
     var parentPlayerCharacter: PlayerCharacter {
         get {
-            return (partOfList.first!.parentPlayerCharacter)
+            return (partOfCharacter.first!)
         }
     }
     

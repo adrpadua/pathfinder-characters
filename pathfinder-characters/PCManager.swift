@@ -26,7 +26,7 @@ class Manager {
         
         let URL: NSURL = NSURL(string: "file:///Users/adrpadua/Desktop/pathfinder-characters/Realm/default.realm")!
         var config = Realm.Configuration(fileURL: URL)
-        config.schemaVersion = 11
+        config.schemaVersion = 14
         
         realm = try! Realm(configuration: config)
         
@@ -38,7 +38,7 @@ class Manager {
     
     func createNewCharacter() {
         active_pc = PlayerCharacter()
-        active_pc!.pc_name = String(NSDate().timeIntervalSince1970)
+        print(active_pc)
     }
     
     func saveActiveCharacter() {

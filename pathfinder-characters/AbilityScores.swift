@@ -10,28 +10,6 @@ import Foundation
 import RealmSwift
 import Darwin
 
-enum Ability: Int {
-    
-    case STR = 1, DEX, CON, INT, WIS, CHA
-    
-    func name() -> String {
-        switch self {
-        case .STR:
-            return "STR"
-        case .DEX:
-            return "DEX"
-        case .CON:
-            return "CON"
-        case .INT:
-            return "INT"
-        case .WIS:
-            return "WIS"
-        case .CHA:
-            return "CHA"
-        }
-    }
-}
-
 class AbilityScore: Object {
     
     let partOfList = LinkingObjects(fromType: AbilityScoreList.self, property: "list")

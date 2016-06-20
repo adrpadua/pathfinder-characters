@@ -8,6 +8,87 @@
 
 import Foundation
 
+enum Size: String {
+    case Tiny, Small, Medium, Large, Huge, Gargantuan
+}
+
+enum Speed: String {
+    case Slow, SlowSteady, Normal
+}
+
+protocol Race {
+    
+    var name: String { get }
+    var size: Size { get }
+    var speed: Speed { get }
+    var startingLanguages: [String] { get }
+    var abilityScoreBonuses: [String : Int] { get set }
+    
+}
+
+class Dwarf: Race {
+    
+    let name = "Dwarf"
+    let size = Size.Medium
+    let speed = Speed.SlowSteady
+    let startingLanguages = ["Common", "Dwarven"]
+    var abilityScoreBonuses = ["STR" : 0,
+                               "DEX" : 0,
+                               "CON" : 2,
+                               "INT" : 0,
+                               "WIS" : 2,
+                               "CHA" : -2]
+}
+
+class Elf: Race {
+    
+    let name = "Elf"
+    let size = Size.Medium
+    let speed = Speed.Normal
+    let startingLanguages = ["Common", "Elven"]
+    var abilityScoreBonuses = ["STR" : 0,
+                               "DEX" : 2,
+                               "CON" : -2,
+                               "INT" : 2,
+                               "WIS" : 0,
+                               "CHA" : 0]
+}
+
+class Halfling: Race {
+    
+    let name = "Halfling"
+    let size = Size.Small
+    let speed = Speed.Slow
+    let startingLanguages = ["Common", "Halfling"]
+    var abilityScoreBonuses = ["STR" : -2,
+                               "DEX" : 2,
+                               "CON" : 0,
+                               "INT" : 0,
+                               "WIS" : 0,
+                               "CHA" : 2]
+}
+
+class Human: Race {
+    
+    let name = "Human"
+    let size = Size.Medium
+    let speed = Speed.Normal
+    let startingLanguages = ["Common"]
+    var abilityScoreBonuses = ["STR" : 0,
+                               "DEX" : 0,
+                               "CON" : 0,
+                               "INT" : 0,
+                               "WIS" : 0,
+                               "CHA" : 0]
+    
+    // HUMAN EXCLUSIVE
+    func setBonusAbilityScore(name: String) {
+        abilityScoreBonuses[name]! += 2
+    }
+    
+    
+}
+/*
 enum Races: Int {
     
     case Dwarf, Elf, Halfling, Human
@@ -64,5 +145,6 @@ enum Races: Int {
         }
         return nil
     }
-    
 }
+*/
+

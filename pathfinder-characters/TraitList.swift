@@ -143,12 +143,17 @@ class AbilityScoreList: Object, TraitList {
         
         if scores.count == 6 {
             
+            let names = ["STR", "DEX", "CON", "INT", "WIS", "CHA"]
+            
             for index in 1...6 {
                 
-                let abilityName = Ability(rawValue:  index)?.name()
-                let raceBonus = getRaceBonus(abilityName!)
-                let abilityValue = scores[index - 1] + raceBonus
-                let abilityObj = AbilityScore(name: abilityName!, value: abilityValue)
+                // TODO: Fix this
+                let abilityName = names[index - 1]
+                
+//                let raceBonus = Race,(abilityName)
+//                
+                let abilityValue = scores[index - 1]
+                let abilityObj = AbilityScore(name: abilityName, value: abilityValue)
                 list.append(abilityObj)
             }
             
@@ -162,10 +167,10 @@ class AbilityScoreList: Object, TraitList {
         return abilityMod
     }
     
-    func getRaceBonus(abilityName: String) -> Int {
-        let pc_race = Races.racesFromString(parentPlayerCharacter.pc_race)
-        let raceBonus = pc_race!.getAbilityScoreBonuses()[abilityName]!
-        
-        return raceBonus
-    }
+//    func getRaceBonus(abilityName: String) -> Int {
+//        let pc_race = Races.racesFromString(parentPlayerCharacter.pc_race)
+//        let raceBonus = pc_race!.getAbilityScoreBonuses()[abilityName]!
+//        
+//        return raceBonus
+//    }
 }

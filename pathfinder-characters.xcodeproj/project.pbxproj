@@ -27,6 +27,7 @@
 		A0BB93B91D12840700FCA996 /* Skills.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB93AA1D12840700FCA996 /* Skills.swift */; };
 		A0BB93BB1D12840700FCA996 /* Spellcasting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB93AC1D12840700FCA996 /* Spellcasting.swift */; };
 		A0BB93BD1D12840700FCA996 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB93AE1D12840700FCA996 /* StartVC.swift */; };
+		A0CA508C1D1775ED00EC5EF7 /* Classes_PFRPG_Core.json in Resources */ = {isa = PBXBuildFile; fileRef = A0CA508B1D1775ED00EC5EF7 /* Classes_PFRPG_Core.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		A0BB93AA1D12840700FCA996 /* Skills.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skills.swift; sourceTree = "<group>"; };
 		A0BB93AC1D12840700FCA996 /* Spellcasting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spellcasting.swift; sourceTree = "<group>"; };
 		A0BB93AE1D12840700FCA996 /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
+		A0CA508B1D1775ED00EC5EF7 /* Classes_PFRPG_Core.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Classes_PFRPG_Core.json; sourceTree = "<group>"; };
 		D76B410E28751C084F82C917 /* Pods-pathfinder-characters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pathfinder-characters.release.xcconfig"; path = "Pods/Target Support Files/Pods-pathfinder-characters/Pods-pathfinder-characters.release.xcconfig"; sourceTree = "<group>"; };
 		E40ADF857B9607952FB617F9 /* Pods_pathfinder_characters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pathfinder_characters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -160,6 +162,7 @@
 		A0BB93C21D12842900FCA996 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A0CA508B1D1775ED00EC5EF7 /* Classes_PFRPG_Core.json */,
 				A0837CA41D1652B10070DD1F /* Skills_PFRPG_Master.json */,
 				A00EF2CC1D148E6600833E91 /* Weapons_PFRPG_Core.json */,
 				A0BB93A41D12840700FCA996 /* Feats_PFRPG_Core.json */,
@@ -244,6 +247,7 @@
 				A0BB93991D12837300FCA996 /* LaunchScreen.storyboard in Resources */,
 				A0BB93961D12837300FCA996 /* Assets.xcassets in Resources */,
 				A0BB93B31D12840700FCA996 /* Feats_PFRPG_Core.json in Resources */,
+				A0CA508C1D1775ED00EC5EF7 /* Classes_PFRPG_Core.json in Resources */,
 				A00EF2CD1D148E6600833E91 /* Weapons_PFRPG_Core.json in Resources */,
 				A0837CA51D1652B10070DD1F /* Skills_PFRPG_Master.json in Resources */,
 				A0BB93941D12837300FCA996 /* Main.storyboard in Resources */,

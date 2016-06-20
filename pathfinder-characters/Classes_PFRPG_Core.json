@@ -1,0 +1,116 @@
+{
+	"Classes" : {
+
+		"1" : {
+			"name" : "Cleric",
+			"description" : "",
+			"starting_gold" : 140,
+			"hit_die" : 8,
+			"skill_ranks_per_level" : 2,
+			"class_skills" : {
+				"Acrobatics" : "0"
+				, "Appraise" : "1"
+				, "Bluff" : "0"
+				, "Climb" : "0"
+				, "Craft" : "1"
+				, "Diplomacy" : "1"
+				, "Disable Device" : "0"
+				, "Disguise" : "0"
+				, "Escape Artist" : "0"
+				, "Fly" : "0"
+				, "Handle Animal" : "0"
+				, "Heal" : "1"
+				, "Intimidate" : "0"
+				, "Knowlege (Arcana)" : "1"
+				, "Knowlege (Dungeoneering)" : "0"
+				, "Knowlege (Engineering)" : "0"
+				, "Knowlege (Geography)" : "0"
+				, "Knowlege (History)" : "1"
+				, "Knowlege (Local)" : "0"
+				, "Knowlege (Nature)" : "0"
+				, "Knowlege (Nobility)" : "1"
+				, "Knowlege (Planes)" : "1"
+				, "Knowlege (Religion)" : "1"
+				, "Linguistics" : "1"
+				, "Perception" : "0"
+				, "Perform" : "0"
+				, "Profession" : "1"
+				, "Ride" : "0"
+				, "Sense Motive" : "1"
+				, "Sleight of Hand" : "0"
+				, "Spellcraft" : "1"
+				, "Stealth" : "0"
+				, "Survival" : "0"
+				, "Swim" : "0"
+				, "Use Magic Device" : "0"
+			},
+			"proficiencies" : "Clerics are proficient with all simple weapons, light armor, medium armor, and shields (except tower shields). Clerics are also proficient with the favored weapon of their deities.",
+			"base_attack_bonus" : {
+				"1" : {
+					"bonuses" : [0]
+				}
+				,"2" : {
+					"bonuses" : [1]
+				} 
+				,"3" : {
+					"bonuses" : [2]
+				} 
+				,"4" : {
+					"bonuses" : [3]
+				} 
+				,"5" : {
+					"bonuses" : [3]
+				} 
+				,"6" : {
+					"bonuses" : [4]
+				} 
+				,"7" : {
+					"bonuses" : [5]
+				} 
+				,"8" : {
+					"bonuses" : [6, 1]
+				} 
+				,"9" : {
+					"bonuses" : [6, 1]
+				} 
+				,"10" : {
+					"bonuses" : [7, 2]
+				} 
+				,"11" : {
+					"bonuses" : [8, 3]
+				} 
+				,"12" : {
+					"bonuses" : [9, 4]
+				} 
+				,"13" : {
+					"bonuses" : [9, 4]
+				} 
+				,"14" : {
+					"bonuses" : [10, 5]
+				} 
+				,"15" : {
+					"bonuses" : [11, 6, 1]
+				} 
+				,"16" : {
+					"bonuses" : [12, 7, 2]
+				} 
+				,"17" : {
+					"bonuses" : [12, 7, 2]
+				} 
+				,"18" : {
+					"bonuses" : [13, 8, 3]
+				} 
+				,"19" : {
+					"bonuses" : [14, 9, 4]
+				} 
+				,"20" : {
+					"bonuses" : [15, 10, 5]
+				}
+			}
+		},
+
+		"2" : {
+
+		}
+	}
+}

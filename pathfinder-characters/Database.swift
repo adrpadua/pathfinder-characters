@@ -14,7 +14,27 @@ import SwiftyJSON
  Skills
  Feats
  Spells
+ Classes
  */
+
+extension Database {
+    static func indexOf(name: String) -> Int {
+        for index in 1...self.database.count {
+            if name == self.database["\(index)", "name"].stringValue {
+                return index
+            }
+        }
+        return -1
+    }
+    static func getElementFromName(elementName: String) -> Self.ItemType? {
+        
+        return getElementFromNumber(indexOf(elementName))
+    }
+}
+
+
+
+
 
 protocol Database {
     
@@ -25,18 +45,63 @@ protocol Database {
     static var database: JSON { get set }
     static var count: Int { get set }
     
-    static func getElementFromName(elementName: String) -> ItemType?
     static func getElementFromNumber(index: Int) -> ItemType?
 }
 
-func indexOf(name: String, insideDB: JSON) -> Int {
-    for index in 1...insideDB.count {
-        if name == insideDB["\(index)", "name"].stringValue {
-            return index
-        }
+
+
+
+
+
+
+
+
+class ClassDB: Database {
+    
+    typealias ItemType = CharacterClass
+    
+    static var fileName = "Classes_PFRPG_Core"
+    static var path = NSBundle.mainBundle().pathForResource(fileName, ofType: "json")! as String
+    static var jsonData = NSData(data: NSData(contentsOfFile: path)!)
+    static var database = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)["Classes"]
+    static var count = database.count
+    
+    static func getElementFromNumber(index: Int) -> ClassDB.ItemType? {
+        
+        let name = database["\(index)", "name"].stringValue
+        let gold = database["\(index)", "starting_gold"].intValue
+        let hitDie = database["\(index)", "hit_die"].intValue
+        let skillRanks = database["\(index)", "skill_ranks_per_level"].intValue
+        let classSkills = getClassSkills(index)
+        
+        return CharacterClass(name: name, gold: gold, hitDie: hitDie, level: 1, skillRanks: skillRanks, classSkills: classSkills)
+        
     }
-    return -1
+    
+    static func getClassSkills(index: Int) -> [String] {
+        
+        var classSkills = [String]()
+        
+        // Create subJSON to get the thing
+        let classSkillsJSON = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)["Classes", "\(index)", "class_skills"]
+        
+        // Do the thing
+        for (key, _):(String, JSON) in classSkillsJSON {
+            
+            guard classSkillsJSON[key].intValue != 0 else {
+                continue
+            }
+            
+            classSkills.append(key)
+        }
+        
+        return classSkills
+    }
 }
+
+
+
+
 
 
 
@@ -50,10 +115,6 @@ class SkillsDB: Database {
     static var database = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)["Skills"]
     static var count = database.count
     
-    static func getElementFromName(elementName: String) -> SkillsDB.ItemType? {
-        
-        return getElementFromNumber(indexOf(elementName, insideDB: database))
-    }
     
     static func getElementFromNumber(index: Int) -> SkillsDB.ItemType? {
         
@@ -63,6 +124,10 @@ class SkillsDB: Database {
         return Skill(name: name, ability: keyAbility)
     }
 }
+
+
+
+
 
 
 
@@ -77,10 +142,6 @@ class FeatsDB: Database {
     static var database = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)["Feats"]
     static var count = database.count
     
-    static func getElementFromName(elementName: String) -> FeatsDB.ItemType? {
-        
-        return getElementFromNumber(indexOf(elementName, insideDB: database))
-    }
     
     static func getElementFromNumber(index: Int) -> FeatsDB.ItemType? {
         var prereqs: String
@@ -118,28 +179,24 @@ class SpellsDB: Database {
     static var database = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)["Spells"]
     static var count = database.count
     
-    
-    
-    
-    
-    static func getElementFromName(elementName: String) -> SpellsDB.ItemType? {
-        
-        return getElementFromNumber(indexOf(elementName, insideDB: database))
-    }
-    
-    
     static func getElementFromNumber(index: Int) -> SpellsDB.ItemType? {
         
         let name = database["\(index)", "name"].stringValue
         let school = database["\(index)", "school"].stringValue
         let short_description = database["(index)", "short_description"].stringValue
+        let classLevels = getClasslevels(index)
+        
+        
+        print("Found \(name)")
+        return Spell(name: name, school: school, classLevels: classLevels, short_description: short_description)
+    }
+    
+    static func getClasslevels(index: Int) -> [String : Int] {
         
         var classLevels = [String : Int]()
         
-        // Create subJSON to get the thing
         let classLevelsJSON = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)["Spells", "\(index)", "spell_level"]
         
-        // Do the thing
         for (key, _):(String, JSON) in classLevelsJSON {
             
             guard classLevelsJSON[key].stringValue != "NULL" else {
@@ -148,8 +205,7 @@ class SpellsDB: Database {
             classLevels[key] = classLevelsJSON[key].intValue
         }
         
-        print("Found \(name)")
-        return Spell(name: name, school: school, classLevels: classLevels, short_description: short_description)
+        return classLevels
     }
 }
 

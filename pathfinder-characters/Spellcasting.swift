@@ -31,19 +31,3 @@ class Spell {
         self.short_description = short_description
     }
 }
-
-
-class SpellList {
-    
-    var parentPlayerCharacter: PlayerCharacter?
-    
-}
-
-class PreparedSpells: SpellList {
-    
-}
-
-class KnownSpells: SpellList {
-    
-}
-

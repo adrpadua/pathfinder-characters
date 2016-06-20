@@ -12,7 +12,6 @@ import RealmSwift
 class Skill: Object {
     
     
-    // REALM-PERSISTED ITEMS
     let partOfCharacter = LinkingObjects(fromType: PlayerCharacter.self, property: "pc_skills")
     dynamic var name = ""
     dynamic var keyAbility = ""

@@ -21,17 +21,12 @@ class PlayerCharacter: Object {
     //  }
     
     // Properties
-        dynamic var pc_name = ""
-        dynamic var pc_race = ""
-        dynamic var pc_class = ""
-        dynamic var pc_level = 1
-        dynamic var pc_hitPoints = 1
-        dynamic var pc_maxHitPoints = 1
-    
-        // Saving Throws
-        dynamic var pc_fortitude = 0
-        dynamic var pc_reflex = 0
-        dynamic var pc_willpower = 0
+    private dynamic var pc_name = ""
+    private dynamic var pc_race = ""
+    private dynamic var pc_class = ""
+    private dynamic var pc_level = 1
+    private dynamic var pc_hitPoints = 1
+    private dynamic var pc_maxHitPoints = 1
     
     // MARK: To-one relationships
     dynamic var pc_abilityScores: AbilityScoreList?
@@ -48,7 +43,22 @@ class PlayerCharacter: Object {
         }
     }
     
+    var pc_savingThrows: [String : Int] {
     
+        let conMod = self.CON.modifier
+        let dexMod = self.DEX.modifier
+        let wisMod = self.WIS.modifier
+    
+        guard classObject != nil else {
+            print("Error in setSavingThrows()")
+            return [String : Int]()
+        }
+        
+        self["Fortitude"] = conMod + classObject!.savingThrows!["Fort"]!
+        self["Reflex"] = dexMod + classObject!.savingThrows!["Ref"]!
+        self["Willpower"] = wisMod + classObject!.savingThrows!["Will"]!
+        
+    }
     
     
     
@@ -115,28 +125,7 @@ class PlayerCharacter: Object {
         }
     }
     
-    func setSavingThrows() {
-        
-        guard pc_abilityScores != nil else {
-            print("Error, no ability scores")
-            return
-        }
-        
-        try! realm!.write {
-            
-            let conMod = self.CON.modifier
-            let dexMod = self.DEX.modifier
-            let wisMod = self.WIS.modifier
-            
-            guard classObject != nil else {
-                print("Error in setSavingThrows()")
-                return
-            }
-            pc_fortitude = conMod + classObject!.savingThrows!["Fort"]!
-            pc_reflex = dexMod + classObject!.savingThrows!["Ref"]!
-            pc_willpower = wisMod + classObject!.savingThrows!["Will"]!
-        }
-    }
+    
     
     
     
@@ -177,6 +166,15 @@ extension PlayerCharacter {
     }
     var CHA: AbilityScore {
         return pc_abilityScores!.getElementFromName("CHA")
+    }
+    var Fortitude: Int {
+        return pc_savingThrows["Fortitude"]!
+    }
+    var Reflex: Int {
+        return pc_savingThrows["Reflex"]!
+    }
+    var Willpower: Int {
+        return pc_savingThrows["Willpower"]!
     }
 }
 

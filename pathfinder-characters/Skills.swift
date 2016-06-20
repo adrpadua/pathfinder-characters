@@ -53,7 +53,6 @@ class Skill: Object {
     }
     
     func isClassSkill() -> Bool {
-//      let classObj = classObjFromString(parentPlayerCharacter.pc_class, level: parentPlayerCharacter.pc_level)
         let classObj = parentPlayerCharacter.classObject
         for classSkill in (classObj!.classSkills) {
             if classSkill == self.name {

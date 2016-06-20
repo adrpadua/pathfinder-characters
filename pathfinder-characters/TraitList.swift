@@ -34,7 +34,6 @@ protocol TraitList {
 
 class FeatsList: Object {
     
-    
     // MARK: TraitList Protocol
     typealias ItemType = Feat
     

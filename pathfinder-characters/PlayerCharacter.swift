@@ -30,9 +30,9 @@ class PlayerCharacter: Object {
     
     // MARK: To-one relationships
     let pc_skills = List<Skill>()
-    
-    dynamic var pc_abilityScores: AbilityScoreList?
-    dynamic var pc_feats: FeatsList?
+    let pc_abilityScores = List<AbilityScore>()
+    let pc_feats = List<Feat>()
+//    dynamic var pc_feats: FeatsList?
     
     // MARK: Reference Objects
     var classObject: CharacterClass? {
@@ -103,30 +103,74 @@ class PlayerCharacter: Object {
     }
     
     func setAbilityScores(values: [Int]) {
-        try! realm!.write {
-            pc_abilityScores = AbilityScoreList()
-            pc_abilityScores!.generateAbilityScores(values)
+        if values.count == 6 {
+            
+            let names = ["STR", "DEX", "CON", "INT", "WIS", "CHA"]
+            
+            try! realm!.write {
+                
+                for index in 1...6 {
+                    // TODO: Race Bonus
+                    let abilityName = names[index - 1]
+                    // let raceBonus = Race,(abilityName)
+                    let abilityValue = values[index - 1]
+                    let abilityObj = AbilityScore(name: abilityName, value: abilityValue)
+                    pc_abilityScores.append(abilityObj)
+                }
+            }
+            
+        } else {
+            print("Error setting scores")
         }
+        
     }
     
     func setBaseSkills() {
         
-        let skillNames = ["Acrobatics", "Appraise", "Bluff", "Climb", "Craft", "Diplomacy", "DisableDevice", "Disguise", "EscapeArtist", "Fly", "HandleAnimal", "Heal", "Intimidate", "Knowledge (Arcana)", "Knowledge (Dungeoneering)", "Knowledge (Engineering)", "Knowledge (History)", "Knowledge (Geography)", "Knowledge (Local)", "Knowledge (Nature)", "Knowledge (Nobility)", "Knowledge (Planes)", "Knowledge (Religion)", "Linguistics", "Perception", "Perform", "Profession", "Ride", "Sense Motive", "Sleight Of Hand", "Spellcraft", "Stealth", "Survival", "Swim", "Use Magic Device"]
+        let skillNames = ["Acrobatics"
+            , "Appraise"
+            , "Bluff"
+            , "Climb"
+            , "Craft"
+            , "Diplomacy"
+            , "Disable Device"
+            , "Disguise"
+            , "Escape Artist"
+            , "Fly"
+            , "Handle Animal"
+            , "Heal"
+            , "Intimidate"
+            , "Knowledge (Arcana)"
+            , "Knowledge (Dungeoneering)"
+            , "Knowledge (Engineering)"
+            , "Knowledge (History)"
+            , "Knowledge (Geography)"
+            , "Knowledge (Local)"
+            , "Knowledge (Nature)"
+            , "Knowledge (Nobility)"
+            , "Knowledge (Planes)"
+            , "Knowledge (Religion)"
+            , "Linguistics"
+            , "Perception"
+            , "Perform"
+            , "Profession"
+            , "Ride"
+            , "Sense Motive"
+            , "Sleight of Hand"
+            , "Spellcraft"
+            , "Stealth"
+            , "Survival"
+            , "Swim"
+            , "Use Magic Device"]
         
         try! realm!.write {
-            for index in 1...35 {
+            for index in 1...skillNames.count {
                 let skill = DBManager.getSkillObject(skillNames[index - 1])
                 pc_skills.append(skill)
             }
         }
     }
-    
-    func setEmptyFeatsList() {
-        
-        try! realm!.write {
-            pc_feats = FeatsList()
-        }
-    }
+
     
     func setMaxHitPoints() {
         if pc_level == 1 && pc_class != "" {
@@ -150,7 +194,8 @@ class PlayerCharacter: Object {
     // HELPER FUNCTIONS
     func addFeat(featName: String) {
         try! realm!.write {
-            pc_feats!.addFeat(featName)
+            let feat = DBManager.getFeatObject(featName)
+            pc_feats.append(feat)
         }
     }
     
@@ -163,29 +208,51 @@ class PlayerCharacter: Object {
         }
     }
     
-
+    func generateAbilityScores(values: [Int]) {
+        
+        if values.count == 6 {
+            
+            let names = ["STR", "DEX", "CON", "INT", "WIS", "CHA"]
+            
+            for index in 1...6 {
+                
+                // TODO: Fix this
+                let abilityName = names[index - 1]
+                
+                //                let raceBonus = Race,(abilityName)
+                //
+                let abilityValue = values[index - 1]
+                let abilityObj = AbilityScore(name: abilityName, value: abilityValue)
+                pc_abilityScores.append(abilityObj)
+            }
+            
+        } else {
+            print("Error setting scores")
+        }
+    }
 }
+
 
 
 // MARK: Extensions
 extension PlayerCharacter {
     var STR: AbilityScore {
-        return pc_abilityScores!.getElementFromName("STR")
+        return pc_abilityScores.getItemNamed("STR")
     }
     var DEX: AbilityScore {
-        return pc_abilityScores!.getElementFromName("DEX")
+        return pc_abilityScores.getItemNamed("DEX")
     }
     var CON: AbilityScore {
-        return pc_abilityScores!.getElementFromName("CON")
+        return pc_abilityScores.getItemNamed("CON")
     }
     var INT: AbilityScore {
-        return pc_abilityScores!.getElementFromName("INT")
+        return pc_abilityScores.getItemNamed("INT")
     }
     var WIS: AbilityScore {
-        return pc_abilityScores!.getElementFromName("WIS")
+        return pc_abilityScores.getItemNamed("WIS")
     }
     var CHA: AbilityScore {
-        return pc_abilityScores!.getElementFromName("CHA")
+        return pc_abilityScores.getItemNamed("CHA")
     }
     var Fortitude: Int {
         return pc_savingThrows["Fortitude"]!
@@ -198,7 +265,7 @@ extension PlayerCharacter {
     }
 }
 
-extension List where T:Skill {
+extension List {
     func getItemNamed(name: String) -> T {
         
         let object = self.filter("name == %@", "\(name)")[0]

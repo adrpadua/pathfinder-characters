@@ -12,7 +12,7 @@ import Darwin
 
 class AbilityScore: Object {
     
-    let partOfList = LinkingObjects(fromType: AbilityScoreList.self, property: "list")
+    let partOfList = LinkingObjects(fromType: PlayerCharacter.self, property: "pc_abilityScores")
     
     dynamic var name = ""
     dynamic var value = 10

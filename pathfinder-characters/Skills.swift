@@ -34,7 +34,7 @@ class Skill: Object {
     
     var abilityModifierBonus: Int {
         get {
-            return parentPlayerCharacter.pc_abilityScores!.getElementFromName(keyAbility).modifier
+            return parentPlayerCharacter.pc_abilityScores.getItemNamed(keyAbility).modifier
         }
     }
     

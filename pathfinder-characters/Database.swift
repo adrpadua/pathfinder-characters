@@ -9,14 +9,6 @@
 import Foundation
 import SwiftyJSON
 
-/*
- CURRENT DATABASES:
- Skills
- Feats
- Spells
- Classes
- */
-
 extension Database {
     static func indexOf(name: String) -> Int {
         for index in 1...self.database.count {
@@ -105,6 +97,10 @@ class ClassDB: Database {
 
 
 
+
+
+
+
 class SkillsDB: Database {
     
     typealias ItemType = Skill
@@ -124,6 +120,9 @@ class SkillsDB: Database {
         return Skill(name: name, ability: keyAbility)
     }
 }
+
+
+
 
 
 
@@ -161,6 +160,10 @@ class FeatsDB: Database {
     
     
 }
+
+
+
+
 
 
 

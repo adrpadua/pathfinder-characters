@@ -36,31 +36,3 @@ class CharacterClass {
         }
     }
 }
-
-/*
-class Cleric: CharacterClass {
-    
-    let name = "Cleric"
-    let startingGold = 140
-    let hitDie = 8
-    let skillRanksPerLevel = 2 // + INT Modifier
-    let classSkills = ["Appraise", "Craft", "Diplomacy", "Heal", "Knowlege (Arcana)", "Knowlege (History)", "Knowlege (Nobility)", "Knowlege (Planes)", "Knowlege (Religion)", "Linguistics", "Profession", "Sense Motive", "Spellcraft"]
-    var level: Int
-    var savingThrows: [String : Int]? {
-        get {
-            return ["Fort" : 2 + Int(floor(Double(level / 2))),
-             "Ref" : 0 + Int(floor(Double(level / 3))),
-             "Will" : 2 + Int(floor(Double(level / 2))),]
-        }
-    }
-    
-    init(level: Int) {
-        self.level = level
-    }
-    
-    // CLASS-SPECIFIC
-    
-    
-}
-
-*/

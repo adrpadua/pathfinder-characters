@@ -19,27 +19,31 @@ class ClassDB: Database {
     static var database = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)["Classes"]
     static var count = database.count
     
-    static func getElementFromNumber(index: Int) -> ClassDB.ItemType? {
-        
-        let name = parseJSONStringValue(index, subJSON: "name")
-        let gold = parseJSONIntValue(index, subJSON: "starting_gold")
-        let hitDie = parseJSONIntValue(index, subJSON: "hit_die")
-        let skillRanks = parseJSONIntValue(index, subJSON: "skill_ranks_per_level")
-        let classSkills = getClassSkills(index)
-        
-        return CharacterClass(name: name, gold: gold, hitDie: hitDie, level: 1, skillRanks: skillRanks, classSkills: classSkills)
+    
+    
+    
+    static func getName(json: JSON) -> String {
+        return json["name"].stringValue
     }
     
+    static func getStartingGold(json: JSON) -> Int {
+        return json["starting_gold"].intValue
+    }
     
+    static func getHitDie(json: JSON) -> Int {
+        return json["hit_die"].intValue
+    }
     
+    static func getSkillRanksPerLevel(json: JSON) -> Int {
+        return json["skill_ranks_per_level"].intValue
+    }
     
-    
-    static func getClassSkills(index: Int) -> [String] {
+    static func getClassSkills(json: JSON) -> [String] {
         
         var classSkills = [String]()
         
         // Create subJSON to get the thing
-        let classSkillsJSON = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)["Classes", "\(index)", "class_skills"]
+        let classSkillsJSON = json["class_skills"]
         
         // Do the thing
         for (key, _):(String, JSON) in classSkillsJSON {
@@ -53,6 +57,7 @@ class ClassDB: Database {
         
         return classSkills
     }
+
 }
 
 

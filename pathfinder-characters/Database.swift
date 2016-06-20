@@ -21,27 +21,52 @@ extension Database {
         return -1
     }
     
+    static func getJSONDirectoryOf(elementName: String) -> JSON {
+        let index = indexOf(elementName)
+        let json = database["\(index)"]
+        
+        return json
+    }
     
     static func getElementFromName(elementName: String) -> Self.ItemType? {
         
-        return getElementFromNumber(indexOf(elementName))
+//        return getElementFromNumber(indexOf(elementName))
+        return nil
     }
     
-    
-    static func parseJSONStringValue(index: Int, subJSON: String) -> String {
+    static func parseJSONStringValue(json: JSON, subJSON: String) -> String {
         
-        let value = database["\(index)", "\(subJSON)"].stringValue
+        let value = json["\(subJSON)"].stringValue
         
         return value
     }
     
     
-    static func parseJSONIntValue(index: Int, subJSON: String) -> Int {
+    static func parseJSONIntValue(json: JSON, subJSON: String) -> Int {
         
-        let value = database["\(index)", "\(subJSON)"].intValue
+        let value = json["\(subJSON)"].intValue
         
         return value
     }
+    
+    
+//    
+//    static func parseJSONStringValue(index: Int, subJSON: String) -> String {
+//        
+//        let value = database["\(index)", "\(subJSON)"].stringValue
+//        
+//        return value
+//    }
+//    
+//    
+//    static func parseJSONIntValue(index: Int, subJSON: String) -> Int {
+//        
+//        let value = database["\(index)", "\(subJSON)"].intValue
+//        
+//        return value
+//    }
+    
+    
     
 }
 
@@ -54,7 +79,7 @@ protocol Database {
     static var database: JSON { get set }
     static var count: Int { get set }
     
-    static func getElementFromNumber(index: Int) -> ItemType?
+//    static func getElementFromNumber(index: Int) -> ItemType?
 }
 
 

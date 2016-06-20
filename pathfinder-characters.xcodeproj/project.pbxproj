@@ -32,6 +32,7 @@
 		A0CA50911D18543500EC5EF7 /* SpellsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CA50901D18543500EC5EF7 /* SpellsDB.swift */; };
 		A0CA50931D18545D00EC5EF7 /* FeatsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CA50921D18545D00EC5EF7 /* FeatsDB.swift */; };
 		A0CA50951D18546C00EC5EF7 /* SkillsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CA50941D18546C00EC5EF7 /* SkillsDB.swift */; };
+		A0CA50991D1859A800EC5EF7 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CA50981D1859A800EC5EF7 /* DBManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		A0CA50901D18543500EC5EF7 /* SpellsDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellsDB.swift; sourceTree = "<group>"; };
 		A0CA50921D18545D00EC5EF7 /* FeatsDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatsDB.swift; sourceTree = "<group>"; };
 		A0CA50941D18546C00EC5EF7 /* SkillsDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsDB.swift; sourceTree = "<group>"; };
+		A0CA50981D1859A800EC5EF7 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		D76B410E28751C084F82C917 /* Pods-pathfinder-characters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pathfinder-characters.release.xcconfig"; path = "Pods/Target Support Files/Pods-pathfinder-characters/Pods-pathfinder-characters.release.xcconfig"; sourceTree = "<group>"; };
 		E40ADF857B9607952FB617F9 /* Pods_pathfinder_characters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pathfinder_characters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -161,8 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				A0BB93A61D12840700FCA996 /* Manager.swift */,
-				A0CA508D1D1853F100EC5EF7 /* Databases */,
 				A0277C851D14BC9F00D833DA /* TraitList.swift */,
+				A0CA508D1D1853F100EC5EF7 /* Databases */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				A0277C831D14A6A400D833DA /* Database.swift */,
+				A0CA50981D1859A800EC5EF7 /* DBManager.swift */,
 				A0CA508E1D18540D00EC5EF7 /* ClassDB.swift */,
 				A0CA50901D18543500EC5EF7 /* SpellsDB.swift */,
 				A0CA50921D18545D00EC5EF7 /* FeatsDB.swift */,
@@ -341,6 +344,7 @@
 				A0BB93B71D12840700FCA996 /* Races.swift in Sources */,
 				A0BB93B51D12840700FCA996 /* Manager.swift in Sources */,
 				A0BB93B11D12840700FCA996 /* Classes.swift in Sources */,
+				A0CA50991D1859A800EC5EF7 /* DBManager.swift in Sources */,
 				A0BB938F1D12837300FCA996 /* AppDelegate.swift in Sources */,
 				A0BB93B61D12840700FCA996 /* PlayerCharacter.swift in Sources */,
 				A0CA50931D18545D00EC5EF7 /* FeatsDB.swift in Sources */,

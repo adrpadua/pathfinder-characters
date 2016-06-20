@@ -44,7 +44,7 @@ class PlayerCharacter: Object {
             guard pc_class != "" else {
                 return nil
             }
-            return ClassDB.getElementFromName(pc_class)
+            return DBManager.getClassObject(pc_class, level: pc_level)
         }
     }
     

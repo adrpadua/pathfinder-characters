@@ -19,6 +19,15 @@ class CharacterClass {
     var skillRanksPerLevel: Int
     var classSkills: [String]
     
+    init () {
+        self.name = ""
+        self.startingGold = 0
+        self.hitDie = 0
+        self.level = 0
+        self.skillRanksPerLevel = 0
+        self.classSkills = [""]
+    }
+    
     init(name: String, gold: Int, hitDie: Int, level: Int, skillRanks: Int, classSkills: [String]) {
         self.name = name
         self.startingGold = gold

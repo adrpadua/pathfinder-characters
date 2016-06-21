@@ -36,9 +36,9 @@ class ClassDB: Database {
         return json["skill_ranks_per_level"].intValue
     }
     
-    static func getClassSkills(json: JSON) -> [String] {
+    static func getClassSkills(json: JSON) -> [String : Bool] {
         
-        var classSkills = [String]()
+        var classSkills = [String : Bool]()
         
         // Create subJSON to get the thing
         let classSkillsJSON = json["class_skills"]
@@ -46,13 +46,12 @@ class ClassDB: Database {
         // Do the thing
         for (key, _):(String, JSON) in classSkillsJSON {
             
-            guard classSkillsJSON[key].intValue != 0 else {
-                continue
+            if classSkillsJSON[key].intValue == 0 {
+                classSkills[key] = false
+            } else if classSkillsJSON[key].intValue == 1 {
+                classSkills[key] = true
             }
-            
-            classSkills.append(key)
         }
-        
         return classSkills
     }
 

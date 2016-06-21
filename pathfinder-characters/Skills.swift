@@ -47,17 +47,28 @@ class Skill: Object {
         return DBManager.getSkillObject(self.name).short_description
     }
     
-    func addRanks(num: Int) {
-        ranks += num
+    func addRank() {
+        ranks += 1
+        
+        if self.isClassSkill()  && ranks > 0 {
+            classSkillBonus = 3
+        }
     }
     
     func isClassSkill() -> Bool {
         let classObj = parentPlayerCharacter.classObject
-        for classSkill in (classObj!.classSkills) {
-            if classSkill == self.name {
-                return true
-            }
-        }
-        return false
+        
+        
+        return (classObj!.classSkills[self.name])!
+        
+//        for classSkill in (classObj!.classSkills) {
+//            print("Testing \(classSkill) against \(self.name)")
+//            if classSkill == self.name {
+//                print("\(self.name) is a class Skill")
+//                return true
+//            }
+//            print("\(self.name) is not a class Skill")
+//        }
+//        return false
     }
 }

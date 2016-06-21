@@ -17,7 +17,7 @@ class CharacterClass {
     var hitDie: Int
     var level: Int
     var skillRanksPerLevel: Int
-    var classSkills: [String]
+    var classSkills: [String : Bool]
     
     init () {
         self.name = ""
@@ -25,10 +25,10 @@ class CharacterClass {
         self.hitDie = 0
         self.level = 0
         self.skillRanksPerLevel = 0
-        self.classSkills = [""]
+        self.classSkills = [String : Bool]()
     }
     
-    init(name: String, gold: Int, hitDie: Int, level: Int, skillRanks: Int, classSkills: [String]) {
+    init(name: String, gold: Int, hitDie: Int, level: Int, skillRanks: Int, classSkills: [String : Bool]) {
         self.name = name
         self.startingGold = gold
         self.hitDie = hitDie

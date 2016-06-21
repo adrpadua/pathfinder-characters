@@ -31,9 +31,9 @@ class StartVC: UIViewController {
             let scores = [15, 13, 12, 8, 9, 10]
             character.setAbilityScores(scores)
             character.setBaseSkills()
-            character.modifySkill("Climb", byAmount: 1)
-            character.modifySkill("Perception", byAmount: 1)
-            character.modifySkill("Acrobatics", byAmount: 1)
+            character.addSkillRankTo("Climb")
+            character.addSkillRankTo("Perception")
+            character.addSkillRankTo("Knowledge (Arcana)")
             character.addFeat("Alignment Channel")
             character.addFeat("Penetrating Strike")
             character.setMaxHitPoints()
@@ -56,9 +56,7 @@ class StartVC: UIViewController {
             let scores = [11, 12, 6, 15, 18, 8]
             character.setAbilityScores(scores)
             character.setBaseSkills()
-            character.modifySkill("Disguise", byAmount: 1)
-            character.modifySkill("Use Magic Device", byAmount: 1)
-            character.modifySkill("Knowledge (Local)", byAmount: 1)
+            character.addSkillRankTo("Acrobatics")
             character.addFeat("Acrobatic")
             character.addFeat("Shatter Defenses")
             character.setMaxHitPoints()

@@ -32,7 +32,6 @@ class PlayerCharacter: Object {
     let pc_skills = List<Skill>()
     let pc_abilityScores = List<AbilityScore>()
     let pc_feats = List<Feat>()
-//    dynamic var pc_feats: FeatsList?
     
     // MARK: Reference Objects
     var classObject: CharacterClass? {
@@ -54,7 +53,7 @@ class PlayerCharacter: Object {
         let wisMod = self.WIS.modifier
     
         guard classObject != nil else {
-            print("Error in setSavingThrows()")
+            print("Error in savingThrows()")
             return [String : Int]()
         }
         
@@ -199,12 +198,12 @@ class PlayerCharacter: Object {
         }
     }
     
-    func modifySkill(name: String, byAmount: Int) {
+    func addSkillRankTo(name: String) {
         
         let skillObj = pc_skills.getItemNamed(name)
         
         try! realm!.write {
-            skillObj.addRanks(byAmount)
+            skillObj.addRank()
         }
     }
     

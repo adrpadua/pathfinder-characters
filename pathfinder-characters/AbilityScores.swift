@@ -12,8 +12,6 @@ import Darwin
 
 class AbilityScore: Object {
     
-//    let partOfList = LinkingObjects(fromType: PlayerCharacter.self, property: "pc_abilityScores")
-    
     dynamic var name = ""
     dynamic var value = 10
     dynamic var modifier = 0

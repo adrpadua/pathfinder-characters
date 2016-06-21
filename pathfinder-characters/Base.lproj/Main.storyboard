@@ -45,6 +45,13 @@
                                     <action selector="spellsTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KpV-Bz-ZXp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOw-gI-nJ3">
+                                <rect key="frame" x="219" y="209" width="162" height="30"/>
+                                <state key="normal" title="Check Active Character"/>
+                                <connections>
+                                    <action selector="checkActiveCharacter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0eN-Qe-ZW0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>

@@ -80,5 +80,8 @@ class StartVC: UIViewController {
         
     }
     
+    @IBAction func checkActiveCharacter(sender: UIButton) {
+        print(Manager.instance.active_pc?.name)
+    }
 }
 

@@ -62,4 +62,18 @@ class DBManager {
         
         return spellObj
     }
+    
+    static func getRaceObject(name: String) -> Race {
+        let jsonLocation = RaceDB.getJSONDirectoryOf(name)
+        
+        let raceObj = Race()
+        
+        raceObj.name = RaceDB.getName(jsonLocation)
+        raceObj.abilityScoreBonuses = RaceDB.getAbilityScoreBonuses(jsonLocation)
+        raceObj.speed = RaceDB.getSpeed(jsonLocation)
+        raceObj.size = RaceDB.getSize(jsonLocation)
+        raceObj.languages = RaceDB.getStartingLanguages(jsonLocation)
+        
+        return raceObj
+    }
 }

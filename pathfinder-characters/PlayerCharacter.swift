@@ -43,6 +43,15 @@ class PlayerCharacter: Object {
         }
     }
     
+    var raceObject: Race? {
+        get {
+            guard pc_race != "" else {
+                return nil
+            }
+            return DBManager.getRaceObject(pc_race)
+        }
+    }
+    
     // MARK: Computed Properties
     var pc_savingThrows: [String : Int] {
     
@@ -71,7 +80,9 @@ class PlayerCharacter: Object {
     
     // MARK: Getter functions
     var name: String {
-        return pc_name
+        get {
+            return pc_name
+        }
     }
     
     
@@ -111,8 +122,10 @@ class PlayerCharacter: Object {
                 for index in 1...6 {
                     // TODO: Race Bonus
                     let abilityName = names[index - 1]
-                    // let raceBonus = Race,(abilityName)
-                    let abilityValue = values[index - 1]
+                    print(raceObject!)
+                    let raceBonus = raceObject!.abilityScoreBonuses[abilityName]
+                    print(raceBonus!)
+                    let abilityValue = values[index - 1] + raceBonus!
                     let abilityObj = AbilityScore(name: abilityName, value: abilityValue)
                     pc_abilityScores.append(abilityObj)
                 }
@@ -218,9 +231,8 @@ class PlayerCharacter: Object {
                 // TODO: Fix this
                 let abilityName = names[index - 1]
                 
-                //                let raceBonus = Race,(abilityName)
-                //
-                let abilityValue = values[index - 1]
+                let raceBonus = raceObject!.abilityScoreBonuses[abilityName]
+                let abilityValue = values[index - 1] + raceBonus!
                 let abilityObj = AbilityScore(name: abilityName, value: abilityValue)
                 pc_abilityScores.append(abilityObj)
             }

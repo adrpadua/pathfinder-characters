@@ -1,0 +1,69 @@
+//
+//  RaceDB.swift
+//  pathfinder-characters
+//
+//  Created by Adrian Padua on 6/21/16.
+//  Copyright © 2016 Adrian Padua. All rights reserved.
+//
+
+import Foundation
+import SwiftyJSON
+
+class RaceDB: Database {
+    
+    static var fileName = "Races_PFRPG_Core"
+    static var path = NSBundle.mainBundle().pathForResource(fileName, ofType: "json")! as String
+    static var jsonData = NSData(data: NSData(contentsOfFile: path)!)
+    static var database = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)["Races"]
+    static var count = database.count
+    
+    
+    
+    // GETTERS
+    static func getName(json: JSON) -> String {
+        return json["name"].stringValue
+    }
+    
+    static func getAbilityScoreBonuses(json: JSON) -> [String : Int] {
+        
+        var scoreBonuses = [String : Int]()
+        
+        // Create subJSON to get the thing
+        let scoreBonusesJSON = json["ability_score_bonuses"]
+        
+        // Do the thing
+        for (key, _):(String, JSON) in scoreBonusesJSON {
+            scoreBonuses[key] = scoreBonusesJSON[key].intValue
+        }
+        return scoreBonuses
+    }
+    
+    static func getSpeed(json: JSON) -> (String, Int) {
+        let description = json["speed_description"].stringValue
+        let speedValue = json["speed"].intValue
+        
+        return (description, speedValue)
+    }
+    
+    static func getSize(json: JSON) -> String {
+        return json["size"].stringValue
+    }
+    
+    static func getStartingLanguages(json: JSON) -> [String] {
+        
+        var languages = [String]()
+        
+        let languagesJSON = json["starting_languages"]
+        
+        for (index,_):(String, JSON) in languagesJSON {
+            languages.append(index)
+        }
+        
+        return languages
+    }
+    
+    // TODO: Racial Traits
+    
+}
+
+

@@ -51,7 +51,6 @@ class Skill: Object {
     
     func isClassSkill() -> Bool {
         let classObj = parentPlayerCharacter.classObject
-        print(classObj!.classSkills[self.name])
         return (classObj!.classSkills[self.name])!
     }
 }

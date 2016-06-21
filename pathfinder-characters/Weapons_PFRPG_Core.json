@@ -1,3160 +1,2839 @@
-
-  {
-     "1": {
-        "name":"Gauntlet"
-        ,"weapon_category":"Simple"
-        ,"classification":"Unarmed Attacks"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"2 gp, 0 sp"
-            ,"cost_gp":"2"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d2"
-        ,"damage_m":"1d3"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"1"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"1"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "2": {
-        "name":"Unarmed Strike"
-        ,"weapon_category":"Simple"
-        ,"classification":"Unarmed Attacks"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"0 gp, 0 sp"
-            ,"cost_gp":"0"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d2"
-        ,"damage_m":"1d3"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"0"
-        ,"special":
-        {
-            "oneLine":"nonlethal"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"1"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"1"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "3": {
-        "name":"Dagger"
-        ,"weapon_category":"Simple"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"2 gp, 0 sp"
-            ,"cost_gp":"2"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d3"
-        ,"damage_m":"1d4"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"19"
-        ,"range":"10"
-        ,"weight":"1"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P or S"
-            ,"B":"0"
-            ,"P":"1"
-            ,"S":"1"
-        }
-     }
-  },
-  {
-     "4": {
-        "name":"Dagger, punching"
-        ,"weapon_category":"Simple"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"2 gp, 0 sp"
-            ,"cost_gp":"2"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d3"
-        ,"damage_m":"1d4"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"1"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P or S"
-            ,"B":"0"
-            ,"P":"1"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "5": {
-        "name":"Gauntlet, spiked"
-        ,"weapon_category":"Simple"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"5 gp, 0 sp"
-            ,"cost_gp":"5"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d3"
-        ,"damage_m":"1d4"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"1"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P or S"
-            ,"B":"0"
-            ,"P":"1"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "6": {
-        "name":"Mace, light"
-        ,"weapon_category":"Simple"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"5 gp, 0 sp"
-            ,"cost_gp":"5"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"4"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"1"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "7": {
-        "name":"Sickle"
-        ,"weapon_category":"Simple"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"6 gp, 0 sp"
-            ,"cost_gp":"6"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"2"
-        ,"special":
-        {
-            "oneLine":"trip"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"1"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"1"
-        }
-     }
-  },
-  {
-     "8": {
-        "name":"Club"
-        ,"weapon_category":"Simple"
-        ,"classification":"One-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"0 gp, 0 sp"
-            ,"cost_gp":"0"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"10"
-        ,"weight":"3"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"1"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "9": {
-        "name":"Mace, heavy"
-        ,"weapon_category":"Simple"
-        ,"classification":"One-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"12 gp, 0 sp"
-            ,"cost_gp":"12"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"1d8"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"8"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"1"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "10": {
-        "name":"Morningstar"
-        ,"weapon_category":"Simple"
-        ,"classification":"One-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"8 gp, 0 sp"
-            ,"cost_gp":"8"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"1d8"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"6"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B and P"
-            ,"B":"1"
-            ,"P":"1"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "11": {
-        "name":"Shortspear"
-        ,"weapon_category":"Simple"
-        ,"classification":"One-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"1 gp, 0 sp"
-            ,"cost_gp":"1"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"20"
-        ,"weight":"3"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"1"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "12": {
-        "name":"Longspear"
-        ,"weapon_category":"Simple"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"5 gp, 0 sp"
-            ,"cost_gp":"5"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"1d8"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"9"
-        ,"special":
-        {
-            "oneLine":"brace, reach"
-            ,"brace":"1"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"1"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"1"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "13": {
-        "name":"Quarterstaff"
-        ,"weapon_category":"Simple"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"0 gp, 0 sp"
-            ,"cost_gp":"0"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4/1d4"
-        ,"damage_m":"1d6/1d6"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"4"
-        ,"special":
-        {
-            "oneLine":"double, monk"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"1"
-            ,"monk":"1"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"1"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "14": {
-        "name":"Spear"
-        ,"weapon_category":"Simple"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"2 gp, 0 sp"
-            ,"cost_gp":"2"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"1d8"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"20"
-        ,"weight":"6"
-        ,"special":
-        {
-            "oneLine":"brace, reach"
-            ,"brace":"1"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"1"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "15": {
-        "name":"Blowgun"
-        ,"weapon_category":"Simple"
-        ,"classification":"Ranged"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"2 gp, 0 sp"
-            ,"cost_gp":"2"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d1"
-        ,"damage_m":"1d2"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"20"
-        ,"weight":"1"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"1"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "16": {
-        "name":"Crossbow, heavy"
-        ,"weapon_category":"Simple"
-        ,"classification":"Ranged"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"50 gp, 0 sp"
-            ,"cost_gp":"50"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d8"
-        ,"damage_m":"1d10"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"19"
-        ,"range":"120"
-        ,"weight":"8"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"1"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "17": {
-        "name":"Crossbow, light"
-        ,"weapon_category":"Simple"
-        ,"classification":"Ranged"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"35 gp, 0 sp"
-            ,"cost_gp":"35"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"1d8"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"19"
-        ,"range":"80"
-        ,"weight":"4"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"1"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "18": {
-        "name":"Dart"
-        ,"weapon_category":"Simple"
-        ,"classification":"Ranged"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"0 gp, 5 sp"
-            ,"cost_gp":"0"
-            ,"cost_sp":"5"
-        }
-        ,"damage_s":"1d3"
-        ,"damage_m":"1d4"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"20"
-        ,"weight":"0.5"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"1"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "19": {
-        "name":"Javelin"
-        ,"weapon_category":"Simple"
-        ,"classification":"Ranged"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"1 gp, 0 sp"
-            ,"cost_gp":"1"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"30"
-        ,"weight":"2"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"1"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "20": {
-        "name":"Sling"
-        ,"weapon_category":"Simple"
-        ,"classification":"Ranged"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"0 gp, 0 sp"
-            ,"cost_gp":"0"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d3"
-        ,"damage_m":"1d4"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"50"
-        ,"weight":"0"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"1"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "21": {
-        "name":"Axe, throwing"
-        ,"weapon_category":"Martial"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"8 gp, 0 sp"
-            ,"cost_gp":"8"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d66"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"10"
-        ,"weight":"2"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "22": {
-        "name":"Hammer, light"
-        ,"weapon_category":"Martial"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"1 gp, 0 sp"
-            ,"cost_gp":"1"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d3"
-        ,"damage_m":"1d4"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"20"
-        ,"weight":"2"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "23": {
-        "name":"Handaxe"
-        ,"weapon_category":"Martial"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"6 gp, 0 sp"
-            ,"cost_gp":"6"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"3"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "24": {
-        "name":"Kukri"
-        ,"weapon_category":"Martial"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"8 gp, 0 sp"
-            ,"cost_gp":"8"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d3"
-        ,"damage_m":"1d4"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"18"
-        ,"range":"Melee"
-        ,"weight":"2"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "25": {
-        "name":"Pick, light"
-        ,"weapon_category":"Martial"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"4 gp, 0 sp"
-            ,"cost_gp":"4"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d3"
-        ,"damage_m":"1d4"
-        ,"crit_multiplier":"4"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"3"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "26": {
-        "name":"Sap"
-        ,"weapon_category":"Martial"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"1 gp, 0 sp"
-            ,"cost_gp":"1"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"2"
-        ,"special":
-        {
-            "oneLine":"nonlethal"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"1"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "27": {
-        "name":"Shield, light"
-        ,"weapon_category":"Martial"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"special gp, special sp"
-            ,"cost_gp":"special"
-            ,"cost_sp":"special"
-        }
-        ,"damage_s":"1d2"
-        ,"damage_m":"1d3"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"special"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "28": {
-        "name":"Spiked armor"
-        ,"weapon_category":"Martial"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"special gp, special sp"
-            ,"cost_gp":"special"
-            ,"cost_sp":"special"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"special"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "29": {
-        "name":"Spiked shield, light"
-        ,"weapon_category":"Martial"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"special gp, special sp"
-            ,"cost_gp":"special"
-            ,"cost_sp":"special"
-        }
-        ,"damage_s":"1d3"
-        ,"damage_m":"1d4"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"special"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "30": {
-        "name":"Starknife"
-        ,"weapon_category":"Martial"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"24 gp, 0 sp"
-            ,"cost_gp":"24"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d3"
-        ,"damage_m":"1d4"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"20"
-        ,"weight":"3"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "31": {
-        "name":"Sword, short"
-        ,"weapon_category":"Martial"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"10 gp, 0 sp"
-            ,"cost_gp":"10"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"19"
-        ,"range":"Melee"
-        ,"weight":"2"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "32": {
-        "name":"Battleaxe"
-        ,"weapon_category":"Martial"
-        ,"classification":"One-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"10 gp, 0 sp"
-            ,"cost_gp":"10"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"1d8"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"6"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "33": {
-        "name":"Flail"
-        ,"weapon_category":"Martial"
-        ,"classification":"One-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"8 gp, 0 sp"
-            ,"cost_gp":"8"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"1d8"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"5"
-        ,"special":
-        {
-            "oneLine":"disarm, trip"
-            ,"brace":"0"
-            ,"disarm":"1"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"1"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "34": {
-        "name":"Longsword"
-        ,"weapon_category":"Martial"
-        ,"classification":"One-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"15 gp, 0 sp"
-            ,"cost_gp":"15"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"1d8"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"19"
-        ,"range":"Melee"
-        ,"weight":"4"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "35": {
-        "name":"Pick, heavy"
-        ,"weapon_category":"Martial"
-        ,"classification":"One-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"8 gp, 0 sp"
-            ,"cost_gp":"8"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"4"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"6"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "36": {
-        "name":"Rapier"
-        ,"weapon_category":"Martial"
-        ,"classification":"One-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"20 gp, 0 sp"
-            ,"cost_gp":"20"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"18"
-        ,"range":"Melee"
-        ,"weight":"2"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "37": {
-        "name":"Scimitar"
-        ,"weapon_category":"Martial"
-        ,"classification":"One-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"15 gp, 0 sp"
-            ,"cost_gp":"15"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"18"
-        ,"range":"Melee"
-        ,"weight":"4"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "38": {
-        "name":"Shield, heavy"
-        ,"weapon_category":"Martial"
-        ,"classification":"One-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"special gp, special sp"
-            ,"cost_gp":"special"
-            ,"cost_sp":"special"
-        }
-        ,"damage_s":"1d3"
-        ,"damage_m":"1d4"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"special"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "39": {
-        "name":"Spiked shield, heavy"
-        ,"weapon_category":"Martial"
-        ,"classification":"One-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"special gp, special sp"
-            ,"cost_gp":"special"
-            ,"cost_sp":"special"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"special"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "40": {
-        "name":"Trident"
-        ,"weapon_category":"Martial"
-        ,"classification":"One-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"15 gp, 0 sp"
-            ,"cost_gp":"15"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"1d8"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"10"
-        ,"weight":"4"
-        ,"special":
-        {
-            "oneLine":"brace"
-            ,"brace":"1"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "41": {
-        "name":"Warhammer"
-        ,"weapon_category":"Martial"
-        ,"classification":"One-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"12 gp, 0 sp"
-            ,"cost_gp":"12"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"1d8"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"5"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "42": {
-        "name":"Falchion"
-        ,"weapon_category":"Martial"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"75 gp, 0 sp"
-            ,"cost_gp":"75"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"2d4"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"18"
-        ,"range":"Melee"
-        ,"weight":"8"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "43": {
-        "name":"Glaive"
-        ,"weapon_category":"Martial"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"8 gp, 0 sp"
-            ,"cost_gp":"8"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d8"
-        ,"damage_m":"1d10"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"10"
-        ,"special":
-        {
-            "oneLine":"reach"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"1"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "44": {
-        "name":"Greataxe"
-        ,"weapon_category":"Martial"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"20 gp, 0 sp"
-            ,"cost_gp":"20"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d10"
-        ,"damage_m":"1d12"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"12"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "45": {
-        "name":"Greatclub"
-        ,"weapon_category":"Martial"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"5 gp, 0 sp"
-            ,"cost_gp":"5"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d8"
-        ,"damage_m":"1d10"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"8"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "46": {
-        "name":"Flail, heavy"
-        ,"weapon_category":"Martial"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"15 gp, 0 sp"
-            ,"cost_gp":"15"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d8"
-        ,"damage_m":"1d10"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"19"
-        ,"range":"Melee"
-        ,"weight":"10"
-        ,"special":
-        {
-            "oneLine":"disarm, trip"
-            ,"brace":"0"
-            ,"disarm":"1"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"1"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "47": {
-        "name":"Greatsword"
-        ,"weapon_category":"Martial"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"50 gp, 0 sp"
-            ,"cost_gp":"50"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d10"
-        ,"damage_m":"2d6"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"19"
-        ,"range":"Melee"
-        ,"weight":"8"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "48": {
-        "name":"Guisarme"
-        ,"weapon_category":"Martial"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"9 gp, 0 sp"
-            ,"cost_gp":"9"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"2d4"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"12"
-        ,"special":
-        {
-            "oneLine":"reach, trip"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"1"
-            ,"trip":"1"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "49": {
-        "name":"Halberd"
-        ,"weapon_category":"Martial"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"10 gp, 0 sp"
-            ,"cost_gp":"10"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d8"
-        ,"damage_m":"1d10"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"12"
-        ,"special":
-        {
-            "oneLine":"brace, trip"
-            ,"brace":"1"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"1"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P or S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "50": {
-        "name":"Lance"
-        ,"weapon_category":"Martial"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"10 gp, 0 sp"
-            ,"cost_gp":"10"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"1d8"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"10"
-        ,"special":
-        {
-            "oneLine":"reach"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"1"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "51": {
-        "name":"Ranseur"
-        ,"weapon_category":"Martial"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"10 gp, 0 sp"
-            ,"cost_gp":"10"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"2d4"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"12"
-        ,"special":
-        {
-            "oneLine":"disarm, reach"
-            ,"brace":"0"
-            ,"disarm":"1"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"1"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "52": {
-        "name":"Scythe"
-        ,"weapon_category":"Martial"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"18 gp, 0 sp"
-            ,"cost_gp":"18"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"2d4"
-        ,"crit_multiplier":"4"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"10"
-        ,"special":
-        {
-            "oneLine":"trip"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"1"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P or S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "53": {
-        "name":"Longbow"
-        ,"weapon_category":"Martial"
-        ,"classification":"Ranged"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"75 gp, 0 sp"
-            ,"cost_gp":"75"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"1d8"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"100"
-        ,"weight":"3"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "54": {
-        "name":"Longbow, composite"
-        ,"weapon_category":"Martial"
-        ,"classification":"Ranged"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"100 gp, 0 sp"
-            ,"cost_gp":"100"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"1d8"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"110"
-        ,"weight":"3"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "55": {
-        "name":"Shortbow"
-        ,"weapon_category":"Martial"
-        ,"classification":"Ranged"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"30 gp, 0 sp"
-            ,"cost_gp":"30"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"60"
-        ,"weight":"2"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "56": {
-        "name":"Shortbow, composite"
-        ,"weapon_category":"Martial"
-        ,"classification":"Ranged"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"75 gp, 0 sp"
-            ,"cost_gp":"75"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"70"
-        ,"weight":"2"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "57": {
-        "name":"Kama"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"2 gp, 0 sp"
-            ,"cost_gp":"2"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"2"
-        ,"special":
-        {
-            "oneLine":"monk, trip"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"1"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"1"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "58": {
-        "name":"Nunchaku"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"2 gp, 0 sp"
-            ,"cost_gp":"2"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"2"
-        ,"special":
-        {
-            "oneLine":"disarm, monk"
-            ,"brace":"0"
-            ,"disarm":"1"
-            ,"double":"0"
-            ,"monk":"1"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "59": {
-        "name":"Sai"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"1 gp, 0 sp"
-            ,"cost_gp":"1"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d3"
-        ,"damage_m":"1d4"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"1"
-        ,"special":
-        {
-            "oneLine":"disarm, monk"
-            ,"brace":"0"
-            ,"disarm":"1"
-            ,"double":"0"
-            ,"monk":"1"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "60": {
-        "name":"Siangham"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Light Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"3 gp, 0 sp"
-            ,"cost_gp":"3"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d4"
-        ,"damage_m":"1d6"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"1"
-        ,"special":
-        {
-            "oneLine":"monk"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"1"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "61": {
-        "name":"Sword, bastard"
-        ,"weapon_category":"Exotic"
-        ,"classification":"One-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"35 gp, 0 sp"
-            ,"cost_gp":"35"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d8"
-        ,"damage_m":"1d10"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"19"
-        ,"range":"Melee"
-        ,"weight":"6"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "62": {
-        "name":"Waraxe, dwarven"
-        ,"weapon_category":"Exotic"
-        ,"classification":"One-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"30 gp, 0 sp"
-            ,"cost_gp":"30"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d8"
-        ,"damage_m":"1d10"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"8"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "63": {
-        "name":"Whip"
-        ,"weapon_category":"Exotic"
-        ,"classification":"One-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"1 gp, 0 sp"
-            ,"cost_gp":"1"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d2"
-        ,"damage_m":"1d3"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"2"
-        ,"special":
-        {
-            "oneLine":"disarm, nonlethal, reach, trip"
-            ,"brace":"0"
-            ,"disarm":"1"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"1"
-            ,"reach":"1"
-            ,"trip":"1"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "64": {
-        "name":"Axe, orc double"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"60 gp, 0 sp"
-            ,"cost_gp":"60"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6/1d6"
-        ,"damage_m":"1d8/1d8"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"15"
-        ,"special":
-        {
-            "oneLine":"double, monk"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"1"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "65": {
-        "name":"Chain, spiked"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"25 gp, 0 sp"
-            ,"cost_gp":"25"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"2d4"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"10"
-        ,"special":
-        {
-            "oneLine":"disarm, trip"
-            ,"brace":"0"
-            ,"disarm":"1"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"1"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "66": {
-        "name":"Curve blade, elven"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"80 gp, 0 sp"
-            ,"cost_gp":"80"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d8"
-        ,"damage_m":"1d10"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"18"
-        ,"range":"Melee"
-        ,"weight":"7"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "67": {
-        "name":"Flail, fire"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"90 gp, 0 sp"
-            ,"cost_gp":"90"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6/1d6"
-        ,"damage_m":"1d8/1d8"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"0"
-        ,"special":
-        {
-            "oneLine":"disarm, double, trip"
-            ,"brace":"0"
-            ,"disarm":"1"
-            ,"double":"1"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"1"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "68": {
-        "name":"Hammer, gnome hooked"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"20 gp, 0 sp"
-            ,"cost_gp":"20"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6/1d4"
-        ,"damage_m":"1d8/1d6"
-        ,"crit_multiplier":"4"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"6"
-        ,"special":
-        {
-            "oneLine":"double, trip"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"1"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"1"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B or P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "69": {
-        "name":"Sword, two-bladed"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"100 gp, 0 sp"
-            ,"cost_gp":"100"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6/1d6"
-        ,"damage_m":"1d8/1d8"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"19"
-        ,"range":"Melee"
-        ,"weight":"10"
-        ,"special":
-        {
-            "oneLine":"double"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"1"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "70": {
-        "name":"Urgosh, dwarven"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Two-Handed Melee"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"50 gp, 0 sp"
-            ,"cost_gp":"50"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6/1d4"
-        ,"damage_m":"1d8/1d6"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"Melee"
-        ,"weight":"12"
-        ,"special":
-        {
-            "oneLine":"brace, double"
-            ,"brace":"1"
-            ,"disarm":"0"
-            ,"double":"1"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P or S"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "71": {
-        "name":"Bolas"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Ranged"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"5 gp, 0 sp"
-            ,"cost_gp":"5"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d3"
-        ,"damage_m":"1d4"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"10"
-        ,"weight":"2"
-        ,"special":
-        {
-            "oneLine":"nonlethal, trip"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"1"
-            ,"reach":"0"
-            ,"trip":"1"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "72": {
-        "name":"Crossbow, hand"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Ranged"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"100 gp, 0 sp"
-            ,"cost_gp":"100"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d3"
-        ,"damage_m":"1d4"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"19"
-        ,"range":"30"
-        ,"weight":"2"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "73": {
-        "name":"Crossbow, repeating heavy"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Ranged"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"400 gp, 0 sp"
-            ,"cost_gp":"400"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d8"
-        ,"damage_m":"1d10"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"19"
-        ,"range":"120"
-        ,"weight":"12"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "74": {
-        "name":"Crossbow, repeating light"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Ranged"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"250 gp, 0 sp"
-            ,"cost_gp":"250"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"1d8"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"19"
-        ,"range":"80"
-        ,"weight":"6"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "75": {
-        "name":"Net"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Ranged"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"20 gp, 0 sp"
-            ,"cost_gp":"20"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"0d1"
-        ,"damage_m":"0d1"
-        ,"crit_multiplier":"0"
-        ,"crit_roll":"0"
-        ,"range":"10"
-        ,"weight":"6"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":""
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "76": {
-        "name":"Shuriken"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Ranged"
-        ,"quantity":"5"
-        ,"cost" : 
-        {
-            "oneLine":"1 gp, 0 sp"
-            ,"cost_gp":"1"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d1"
-        ,"damage_m":"1d2"
-        ,"crit_multiplier":"2"
-        ,"crit_roll":"20"
-        ,"range":"10"
-        ,"weight":"0.5"
-        ,"special":
-        {
-            "oneLine":"monk"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"1"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"P"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "77": {
-        "name":"Sling staff, halfling"
-        ,"weapon_category":"Exotic"
-        ,"classification":"Ranged"
-        ,"quantity":"1"
-        ,"cost" : 
-        {
-            "oneLine":"20 gp, 0 sp"
-            ,"cost_gp":"20"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":"1d6"
-        ,"damage_m":"1d8"
-        ,"crit_multiplier":"3"
-        ,"crit_roll":"20"
-        ,"range":"80"
-        ,"weight":"3"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":"B"
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "78": {
-        "name":"Darts, blowgun"
-        ,"weapon_category":"Ammunition"
-        ,"classification":"Ammunition"
-        ,"quantity":"10"
-        ,"cost" : 
-        {
-            "oneLine":"0 gp, 5 sp"
-            ,"cost_gp":"0"
-            ,"cost_sp":"5"
-        }
-        ,"damage_s":""
-        ,"damage_m":""
-        ,"crit_multiplier":""
-        ,"crit_roll":""
-        ,"range":""
-        ,"weight":"0"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":""
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "79": {
-        "name":"Bolts, crossbow"
-        ,"weapon_category":"Ammunition"
-        ,"classification":"Ammunition"
-        ,"quantity":"10"
-        ,"cost" : 
-        {
-            "oneLine":"1 gp, 0 sp"
-            ,"cost_gp":"1"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":""
-        ,"damage_m":""
-        ,"crit_multiplier":""
-        ,"crit_roll":""
-        ,"range":""
-        ,"weight":"1"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":""
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "80": {
-        "name":"Bullets, sling"
-        ,"weapon_category":"Ammunition"
-        ,"classification":"Ammunition"
-        ,"quantity":"10"
-        ,"cost" : 
-        {
-            "oneLine":"0 gp, 1 sp"
-            ,"cost_gp":"0"
-            ,"cost_sp":"1"
-        }
-        ,"damage_s":""
-        ,"damage_m":""
-        ,"crit_multiplier":""
-        ,"crit_roll":""
-        ,"range":""
-        ,"weight":"5"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":"0"
-            ,"disarm":"0"
-            ,"double":"0"
-            ,"monk":"0"
-            ,"nonlethal":"0"
-            ,"reach":"0"
-            ,"trip":"0"
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":""
-            ,"B":"0"
-            ,"P":"0"
-            ,"S":"0"
-        }
-     }
-  },
-  {
-     "81": {
-        "name":"Arrows"
-        ,"weapon_category":"Ammunition"
-        ,"classification":"Ammunition"
-        ,"quantity":"20"
-        ,"cost" : 
-        {
-            "oneLine":"1 gp, 0 sp"
-            ,"cost_gp":"1"
-            ,"cost_sp":"0"
-        }
-        ,"damage_s":""
-        ,"damage_m":""
-        ,"crit_multiplier":""
-        ,"crit_roll":""
-        ,"range":""
-        ,"weight":"3"
-        ,"special":
-        {
-            "oneLine":"-"
-            ,"brace":""
-            ,"disarm":""
-            ,"double":""
-            ,"monk":""
-            ,"nonlethal":""
-            ,"reach":""
-            ,"trip":""
-        }
-        ,"source":"PFRPG Core"
-        ,"damage_type":
-        {
-            "oneLine":""
-            ,"B":""
-            ,"P":""
-            ,"S":""
-        }
-     }
-  }
+{
+    "Weapons" : {
+        
+        "1": {
+            "name":"Gauntlet"
+            ,"weapon_category":"Simple"
+            ,"classification":"Unarmed Attacks"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"2"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d2"
+            ,"damage_m":"1d3"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"1"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"1"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "2": {
+            "name":"Unarmed Strike"
+            ,"weapon_category":"Simple"
+            ,"classification":"Unarmed Attacks"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"0"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d2"
+            ,"damage_m":"1d3"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"0"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"1"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"1"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "3": {
+            "name":"Dagger"
+            ,"weapon_category":"Simple"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"2"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d3"
+            ,"damage_m":"1d4"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"19"
+            ,"range":"10"
+            ,"weight":"1"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"1"
+                ,"S":"1"
+            }
+        },
+        
+        "4": {
+            "name":"Dagger, punching"
+            ,"weapon_category":"Simple"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"2"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d3"
+            ,"damage_m":"1d4"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"1"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"1"
+                ,"S":"0"
+            }
+        },
+        
+        "5": {
+            "name":"Gauntlet, spiked"
+            ,"weapon_category":"Simple"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"5"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d3"
+            ,"damage_m":"1d4"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"1"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"1"
+                ,"S":"0"
+            }
+        },
+        
+        "6": {
+            "name":"Mace, light"
+            ,"weapon_category":"Simple"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"5"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"4"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"1"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "7": {
+            "name":"Sickle"
+            ,"weapon_category":"Simple"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"6"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"2"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"1"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"1"
+            }
+        },
+        
+        "8": {
+            "name":"Club"
+            ,"weapon_category":"Simple"
+            ,"classification":"One-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"0"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"10"
+            ,"weight":"3"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"1"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "9": {
+            "name":"Mace, heavy"
+            ,"weapon_category":"Simple"
+            ,"classification":"One-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"12"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"1d8"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"8"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"1"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "10": {
+            "name":"Morningstar"
+            ,"weapon_category":"Simple"
+            ,"classification":"One-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"8"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"1d8"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"6"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"1"
+                ,"P":"1"
+                ,"S":"0"
+            }
+        },
+        
+        "11": {
+            "name":"Shortspear"
+            ,"weapon_category":"Simple"
+            ,"classification":"One-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"1"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"20"
+            ,"weight":"3"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"1"
+                ,"S":"0"
+            }
+        },
+        
+        "12": {
+            "name":"Longspear"
+            ,"weapon_category":"Simple"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"5"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"1d8"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"9"
+            ,"special":
+            {
+                "brace":"1"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"1"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"1"
+                ,"S":"0"
+            }
+        },
+        
+        "13": {
+            "name":"Quarterstaff"
+            ,"weapon_category":"Simple"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"0"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4/1d4"
+            ,"damage_m":"1d6/1d6"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"4"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"1"
+                ,"monk":"1"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"1"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "14": {
+            "name":"Spear"
+            ,"weapon_category":"Simple"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"2"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"1d8"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"20"
+            ,"weight":"6"
+            ,"special":
+            {
+                "brace":"1"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"1"
+                ,"S":"0"
+            }
+        },
+        
+        "15": {
+            "name":"Blowgun"
+            ,"weapon_category":"Simple"
+            ,"classification":"Ranged"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"2"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d1"
+            ,"damage_m":"1d2"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"20"
+            ,"weight":"1"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"1"
+                ,"S":"0"
+            }
+        },
+        
+        "16": {
+            "name":"Crossbow, heavy"
+            ,"weapon_category":"Simple"
+            ,"classification":"Ranged"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"50"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d8"
+            ,"damage_m":"1d10"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"19"
+            ,"range":"120"
+            ,"weight":"8"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"1"
+                ,"S":"0"
+            }
+        },
+        
+        "17": {
+            "name":"Crossbow, light"
+            ,"weapon_category":"Simple"
+            ,"classification":"Ranged"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"35"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"1d8"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"19"
+            ,"range":"80"
+            ,"weight":"4"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"1"
+                ,"S":"0"
+            }
+        },
+        
+        "18": {
+            "name":"Dart"
+            ,"weapon_category":"Simple"
+            ,"classification":"Ranged"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"0"
+                ,"cost_sp":"5"
+            }
+            ,"damage_s":"1d3"
+            ,"damage_m":"1d4"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"20"
+            ,"weight":"0.5"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"1"
+                ,"S":"0"
+            }
+        },
+        
+        "19": {
+            "name":"Javelin"
+            ,"weapon_category":"Simple"
+            ,"classification":"Ranged"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"1"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"30"
+            ,"weight":"2"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"1"
+                ,"S":"0"
+            }
+        },
+        
+        "20": {
+            "name":"Sling"
+            ,"weapon_category":"Simple"
+            ,"classification":"Ranged"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"0"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d3"
+            ,"damage_m":"1d4"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"50"
+            ,"weight":"0"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"1"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "21": {
+            "name":"Axe, throwing"
+            ,"weapon_category":"Martial"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"8"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d66"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"10"
+            ,"weight":"2"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "22": {
+            "name":"Hammer, light"
+            ,"weapon_category":"Martial"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"1"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d3"
+            ,"damage_m":"1d4"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"20"
+            ,"weight":"2"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "23": {
+            "name":"Handaxe"
+            ,"weapon_category":"Martial"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"6"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"3"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "24": {
+            "name":"Kukri"
+            ,"weapon_category":"Martial"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"8"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d3"
+            ,"damage_m":"1d4"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"18"
+            ,"range":"Melee"
+            ,"weight":"2"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "25": {
+            "name":"Pick, light"
+            ,"weapon_category":"Martial"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"4"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d3"
+            ,"damage_m":"1d4"
+            ,"crit_multiplier":"4"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"3"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "26": {
+            "name":"Sap"
+            ,"weapon_category":"Martial"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"1"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"2"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"1"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "27": {
+            "name":"Shield, light"
+            ,"weapon_category":"Martial"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"special"
+                ,"cost_sp":"special"
+            }
+            ,"damage_s":"1d2"
+            ,"damage_m":"1d3"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"special"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "28": {
+            "name":"Spiked armor"
+            ,"weapon_category":"Martial"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"special"
+                ,"cost_sp":"special"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"special"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "29": {
+            "name":"Spiked shield, light"
+            ,"weapon_category":"Martial"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"special"
+                ,"cost_sp":"special"
+            }
+            ,"damage_s":"1d3"
+            ,"damage_m":"1d4"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"special"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "30": {
+            "name":"Starknife"
+            ,"weapon_category":"Martial"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"24"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d3"
+            ,"damage_m":"1d4"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"20"
+            ,"weight":"3"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "31": {
+            "name":"Sword, short"
+            ,"weapon_category":"Martial"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"10"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"19"
+            ,"range":"Melee"
+            ,"weight":"2"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "32": {
+            "name":"Battleaxe"
+            ,"weapon_category":"Martial"
+            ,"classification":"One-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"10"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"1d8"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"6"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "33": {
+            "name":"Flail"
+            ,"weapon_category":"Martial"
+            ,"classification":"One-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"8"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"1d8"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"5"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"1"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"1"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "34": {
+            "name":"Longsword"
+            ,"weapon_category":"Martial"
+            ,"classification":"One-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"15"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"1d8"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"19"
+            ,"range":"Melee"
+            ,"weight":"4"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "35": {
+            "name":"Pick, heavy"
+            ,"weapon_category":"Martial"
+            ,"classification":"One-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"8"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"4"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"6"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "36": {
+            "name":"Rapier"
+            ,"weapon_category":"Martial"
+            ,"classification":"One-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"20"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"18"
+            ,"range":"Melee"
+            ,"weight":"2"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "37": {
+            "name":"Scimitar"
+            ,"weapon_category":"Martial"
+            ,"classification":"One-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"15"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"18"
+            ,"range":"Melee"
+            ,"weight":"4"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "38": {
+            "name":"Shield, heavy"
+            ,"weapon_category":"Martial"
+            ,"classification":"One-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"special"
+                ,"cost_sp":"special"
+            }
+            ,"damage_s":"1d3"
+            ,"damage_m":"1d4"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"special"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "39": {
+            "name":"Spiked shield, heavy"
+            ,"weapon_category":"Martial"
+            ,"classification":"One-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"special"
+                ,"cost_sp":"special"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"special"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "40": {
+            "name":"Trident"
+            ,"weapon_category":"Martial"
+            ,"classification":"One-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"15"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"1d8"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"10"
+            ,"weight":"4"
+            ,"special":
+            {
+                "brace":"1"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "41": {
+            "name":"Warhammer"
+            ,"weapon_category":"Martial"
+            ,"classification":"One-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"12"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"1d8"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"5"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "42": {
+            "name":"Falchion"
+            ,"weapon_category":"Martial"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"75"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"2d4"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"18"
+            ,"range":"Melee"
+            ,"weight":"8"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "43": {
+            "name":"Glaive"
+            ,"weapon_category":"Martial"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"8"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d8"
+            ,"damage_m":"1d10"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"10"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"1"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "44": {
+            "name":"Greataxe"
+            ,"weapon_category":"Martial"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"20"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d10"
+            ,"damage_m":"1d12"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"12"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "45": {
+            "name":"Greatclub"
+            ,"weapon_category":"Martial"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"5"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d8"
+            ,"damage_m":"1d10"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"8"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "46": {
+            "name":"Flail, heavy"
+            ,"weapon_category":"Martial"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"15"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d8"
+            ,"damage_m":"1d10"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"19"
+            ,"range":"Melee"
+            ,"weight":"10"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"1"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"1"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "47": {
+            "name":"Greatsword"
+            ,"weapon_category":"Martial"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"50"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d10"
+            ,"damage_m":"2d6"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"19"
+            ,"range":"Melee"
+            ,"weight":"8"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "48": {
+            "name":"Guisarme"
+            ,"weapon_category":"Martial"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"9"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"2d4"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"12"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"1"
+                ,"trip":"1"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "49": {
+            "name":"Halberd"
+            ,"weapon_category":"Martial"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"10"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d8"
+            ,"damage_m":"1d10"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"12"
+            ,"special":
+            {
+                "brace":"1"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"1"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "50": {
+            "name":"Lance"
+            ,"weapon_category":"Martial"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"10"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"1d8"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"10"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"1"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "51": {
+            "name":"Ranseur"
+            ,"weapon_category":"Martial"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"10"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"2d4"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"12"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"1"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"1"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "52": {
+            "name":"Scythe"
+            ,"weapon_category":"Martial"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"18"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"2d4"
+            ,"crit_multiplier":"4"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"10"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"1"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "53": {
+            "name":"Longbow"
+            ,"weapon_category":"Martial"
+            ,"classification":"Ranged"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"75"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"1d8"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"100"
+            ,"weight":"3"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "54": {
+            "name":"Longbow, composite"
+            ,"weapon_category":"Martial"
+            ,"classification":"Ranged"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"100"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"1d8"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"110"
+            ,"weight":"3"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "55": {
+            "name":"Shortbow"
+            ,"weapon_category":"Martial"
+            ,"classification":"Ranged"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"30"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"60"
+            ,"weight":"2"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "56": {
+            "name":"Shortbow, composite"
+            ,"weapon_category":"Martial"
+            ,"classification":"Ranged"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"75"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"70"
+            ,"weight":"2"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "57": {
+            "name":"Kama"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"2"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"2"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"1"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"1"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "58": {
+            "name":"Nunchaku"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"2"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"2"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"1"
+                ,"double":"0"
+                ,"monk":"1"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "59": {
+            "name":"Sai"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"1"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d3"
+            ,"damage_m":"1d4"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"1"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"1"
+                ,"double":"0"
+                ,"monk":"1"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "60": {
+            "name":"Siangham"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Light Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"3"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d4"
+            ,"damage_m":"1d6"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"1"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"1"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "61": {
+            "name":"Sword, bastard"
+            ,"weapon_category":"Exotic"
+            ,"classification":"One-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"35"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d8"
+            ,"damage_m":"1d10"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"19"
+            ,"range":"Melee"
+            ,"weight":"6"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "62": {
+            "name":"Waraxe, dwarven"
+            ,"weapon_category":"Exotic"
+            ,"classification":"One-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"30"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d8"
+            ,"damage_m":"1d10"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"8"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "63": {
+            "name":"Whip"
+            ,"weapon_category":"Exotic"
+            ,"classification":"One-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"1"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d2"
+            ,"damage_m":"1d3"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"2"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"1"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"1"
+                ,"reach":"1"
+                ,"trip":"1"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "64": {
+            "name":"Axe, orc double"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"60"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6/1d6"
+            ,"damage_m":"1d8/1d8"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"15"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"1"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "65": {
+            "name":"Chain, spiked"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"25"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"2d4"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"10"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"1"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"1"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "66": {
+            "name":"Curve blade, elven"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"80"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d8"
+            ,"damage_m":"1d10"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"18"
+            ,"range":"Melee"
+            ,"weight":"7"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "67": {
+            "name":"Flail, fire"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"90"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6/1d6"
+            ,"damage_m":"1d8/1d8"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"0"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"1"
+                ,"double":"1"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"1"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "68": {
+            "name":"Hammer, gnome hooked"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" :
+            {
+                "cost_gp":"20"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6/1d4"
+            ,"damage_m":"1d8/1d6"
+            ,"crit_multiplier":"4"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"6"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"1"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"1"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "69": {
+            "name":"Sword, two-bladed"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" : 
+            {
+                "cost_gp":"100"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6/1d6"
+            ,"damage_m":"1d8/1d8"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"19"
+            ,"range":"Melee"
+            ,"weight":"10"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"1"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "70": {
+            "name":"Urgosh, dwarven"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Two-Handed Melee"
+            ,"quantity":"1"
+            ,"cost" : 
+            {
+                "cost_gp":"50"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6/1d4"
+            ,"damage_m":"1d8/1d6"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"Melee"
+            ,"weight":"12"
+            ,"special":
+            {
+                "brace":"1"
+                ,"disarm":"0"
+                ,"double":"1"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "71": {
+            "name":"Bolas"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Ranged"
+            ,"quantity":"1"
+            ,"cost" : 
+            {
+                "cost_gp":"5"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d3"
+            ,"damage_m":"1d4"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"10"
+            ,"weight":"2"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"1"
+                ,"reach":"0"
+                ,"trip":"1"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "72": {
+            "name":"Crossbow, hand"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Ranged"
+            ,"quantity":"1"
+            ,"cost" : 
+            {
+                "cost_gp":"100"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d3"
+            ,"damage_m":"1d4"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"19"
+            ,"range":"30"
+            ,"weight":"2"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "73": {
+            "name":"Crossbow, repeating heavy"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Ranged"
+            ,"quantity":"1"
+            ,"cost" : 
+            {
+                "cost_gp":"400"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d8"
+            ,"damage_m":"1d10"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"19"
+            ,"range":"120"
+            ,"weight":"12"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "74": {
+            "name":"Crossbow, repeating light"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Ranged"
+            ,"quantity":"1"
+            ,"cost" : 
+            {
+                "cost_gp":"250"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"1d8"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"19"
+            ,"range":"80"
+            ,"weight":"6"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "75": {
+            "name":"Net"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Ranged"
+            ,"quantity":"1"
+            ,"cost" : 
+            {
+                "cost_gp":"20"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"0d1"
+            ,"damage_m":"0d1"
+            ,"crit_multiplier":"0"
+            ,"crit_roll":"0"
+            ,"range":"10"
+            ,"weight":"6"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "76": {
+            "name":"Shuriken"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Ranged"
+            ,"quantity":"5"
+            ,"cost" : 
+            {
+                "cost_gp":"1"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d1"
+            ,"damage_m":"1d2"
+            ,"crit_multiplier":"2"
+            ,"crit_roll":"20"
+            ,"range":"10"
+            ,"weight":"0.5"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"1"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "77": {
+            "name":"Sling staff, halfling"
+            ,"weapon_category":"Exotic"
+            ,"classification":"Ranged"
+            ,"quantity":"1"
+            ,"cost" : 
+            {
+                "cost_gp":"20"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":"1d6"
+            ,"damage_m":"1d8"
+            ,"crit_multiplier":"3"
+            ,"crit_roll":"20"
+            ,"range":"80"
+            ,"weight":"3"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "78": {
+            "name":"Darts, blowgun"
+            ,"weapon_category":"Ammunition"
+            ,"classification":"Ammunition"
+            ,"quantity":"10"
+            ,"cost" : 
+            {
+                "cost_gp":"0"
+                ,"cost_sp":"5"
+            }
+            ,"damage_s":""
+            ,"damage_m":""
+            ,"crit_multiplier":""
+            ,"crit_roll":""
+            ,"range":""
+            ,"weight":"0"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "79": {
+            "name":"Bolts, crossbow"
+            ,"weapon_category":"Ammunition"
+            ,"classification":"Ammunition"
+            ,"quantity":"10"
+            ,"cost" : 
+            {
+                "cost_gp":"1"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":""
+            ,"damage_m":""
+            ,"crit_multiplier":""
+            ,"crit_roll":""
+            ,"range":""
+            ,"weight":"1"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "80": {
+            "name":"Bullets, sling"
+            ,"weapon_category":"Ammunition"
+            ,"classification":"Ammunition"
+            ,"quantity":"10"
+            ,"cost" : 
+            {
+                "cost_gp":"0"
+                ,"cost_sp":"1"
+            }
+            ,"damage_s":""
+            ,"damage_m":""
+            ,"crit_multiplier":""
+            ,"crit_roll":""
+            ,"range":""
+            ,"weight":"5"
+            ,"special":
+            {
+                "brace":"0"
+                ,"disarm":"0"
+                ,"double":"0"
+                ,"monk":"0"
+                ,"nonlethal":"0"
+                ,"reach":"0"
+                ,"trip":"0"
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":"0"
+                ,"P":"0"
+                ,"S":"0"
+            }
+        },
+        
+        "81": {
+            "name":"Arrows"
+            ,"weapon_category":"Ammunition"
+            ,"classification":"Ammunition"
+            ,"quantity":"20"
+            ,"cost" : 
+            {
+                "cost_gp":"1"
+                ,"cost_sp":"0"
+            }
+            ,"damage_s":""
+            ,"damage_m":""
+            ,"crit_multiplier":""
+            ,"crit_roll":""
+            ,"range":""
+            ,"weight":"3"
+            ,"special":
+            {
+                "brace":""
+                ,"disarm":""
+                ,"double":""
+                ,"monk":""
+                ,"nonlethal":""
+                ,"reach":""
+                ,"trip":""
+            }
+            ,"source":"PFRPG Core"
+            ,"damage_type":
+            {
+                "B":""
+                ,"P":""
+                ,"S":""
+            }
+        }
+    }
+}

@@ -76,4 +76,19 @@ class DBManager {
         
         return raceObj
     }
+    
+    static func getWeaponObject(name: String) -> Weapon {
+        let jsonLocation = WeaponDB.getJSONDirectoryOf(name)
+        
+        let weaponObj = Weapon()
+        
+        weaponObj.name = WeaponDB.getName(jsonLocation)
+        weaponObj.weapon_category = WeaponDB.getCategory(jsonLocation)
+        weaponObj.classification = WeaponDB.getClassification(jsonLocation)
+        
+        // TODO: Finish Implementation
+        
+        print("Found \(weaponObj.name)")
+        return weaponObj
+    }
 }

@@ -77,7 +77,7 @@ class StartVC: UIViewController {
         
         let _ = DBManager.getFeatObject("Acrobatic")
         
-        
+        let _ = DBManager.getWeaponObject("Dagger")
     }
     
     @IBAction func checkActiveCharacter(sender: UIButton) {

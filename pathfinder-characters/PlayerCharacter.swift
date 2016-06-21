@@ -52,6 +52,7 @@ class PlayerCharacter: Object {
     let pc_skills = List<Skill>()
     let pc_abilityScores = List<AbilityScore>()
     let pc_feats = List<Feat>()
+    let pc_inventory = List<Equipment>()
     
     
     // MARK: Computed Properties

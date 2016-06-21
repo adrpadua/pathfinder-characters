@@ -10,7 +10,6 @@ import Foundation
 import RealmSwift
 import Darwin
 
-let realm = Manager.instance.realm
 
 class PlayerCharacter: Object {
     
@@ -35,7 +34,7 @@ class PlayerCharacter: Object {
             guard pc_class != "" else {
                 return nil
             }
-            return DBManager.getClassObject(pc_class, level: pc_level)
+            return DBManager.getClassObjectFromDB(pc_class, level: pc_level)
         }
     }
     
@@ -44,7 +43,7 @@ class PlayerCharacter: Object {
             guard pc_race != "" else {
                 return nil
             }
-            return DBManager.getRaceObject(pc_race)
+            return DBManager.getRaceObjectFromDB(pc_race)
         }
     }
     
@@ -52,7 +51,7 @@ class PlayerCharacter: Object {
     let pc_skills = List<Skill>()
     let pc_abilityScores = List<AbilityScore>()
     let pc_feats = List<Feat>()
-    let pc_inventory = List<Equipment>()
+    let pc_inventory = List<EquipmentName>()
     
     
     // MARK: Computed Properties
@@ -208,7 +207,7 @@ class PlayerCharacter: Object {
         
         try! realm!.write {
             for index in 1...skillNames.count {
-                let skill = DBManager.getSkillObject(skillNames[index - 1])
+                let skill = DBManager.getSkillObjectFromDB(skillNames[index - 1])
                 pc_skills.append(skill)
             }
         }
@@ -242,7 +241,7 @@ class PlayerCharacter: Object {
     // MODIFYING FUNCTIONS
     func addFeat(featName: String) {
         try! realm!.write {
-            let feat = DBManager.getFeatObject(featName)
+            let feat = DBManager.getFeatObjectFromDB(featName)
             pc_feats.append(feat)
         }
     }
@@ -254,6 +253,16 @@ class PlayerCharacter: Object {
         try! realm!.write {
             skillObj.addRank()
         }
+    }
+    
+    func addEquipmentToInventory(name: String) {
+        
+        let weaponObj = DBManager.getEquipmentObjectFromDB(name)
+        
+        try! realm!.write {
+            pc_inventory.append(EquipmentName(name: weaponObj.name))
+        }
+        
     }
 }
 

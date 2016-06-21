@@ -34,6 +34,7 @@ class AbilityScore: Object {
     }
 
 }
+
 extension Int {
     var modifier: Int {
         return (self - 10) / 2

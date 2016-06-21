@@ -38,7 +38,7 @@ class Skill: Object {
     }
     
     var short_description: String {
-        return DBManager.getSkillObject(self.name).short_description
+        return DBManager.getSkillObjectFromDB(self.name).short_description
     }
     
     func addRank() {

@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class WeaponDB: Database {
     
-    static var fileName = "Weapons_PFRPG_Core"
+    static var fileName = "Equipment_PFRPG_Core"
     static var path = NSBundle.mainBundle().pathForResource(fileName, ofType: "json")! as String
     static var jsonData = NSData(data: NSData(contentsOfFile: path)!)
     static var database = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)["Weapons"]
@@ -95,8 +95,6 @@ class WeaponDB: Database {
         }
         return damages
     }
-    
-    // TODO: Racial Traits
     
 }
 

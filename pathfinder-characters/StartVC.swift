@@ -37,6 +37,7 @@ class StartVC: UIViewController {
             character.addFeat("Alignment Channel")
             character.addFeat("Penetrating Strike")
             character.setMaxHitPoints()
+            character.addEquipmentToInventory("Dagger")
         }
         
         print(Manager.instance.active_pc!)
@@ -60,6 +61,8 @@ class StartVC: UIViewController {
             character.addFeat("Acrobatic")
             character.addFeat("Shatter Defenses")
             character.setMaxHitPoints()
+            character.addEquipmentToInventory("Sword, short")
+            character.addEquipmentToInventory("Hide")
         }
         
         print(Manager.instance.active_pc!)
@@ -73,11 +76,11 @@ class StartVC: UIViewController {
 
     @IBAction func spellsTest(sender: UIButton) {
         
-        let _ = DBManager.getSpellObject("Animate Dead")
+        let _ = DBManager.getSpellObjectFromDB("Animate Dead")
         
-        let _ = DBManager.getFeatObject("Acrobatic")
+        let _ = DBManager.getFeatObjectFromDB("Acrobatic")
         
-        let _ = DBManager.getWeaponObject("Dagger")
+        let _ = DBManager.getWeaponObjectFromDB("Dagger")
     }
     
     @IBAction func checkActiveCharacter(sender: UIButton) {

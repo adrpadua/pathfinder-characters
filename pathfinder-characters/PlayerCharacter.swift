@@ -28,12 +28,7 @@ class PlayerCharacter: Object {
     private dynamic var pc_hitPoints = 1
     private dynamic var pc_maxHitPoints = 1
     
-    // MARK: To-one relationships
-    let pc_skills = List<Skill>()
-    let pc_abilityScores = List<AbilityScore>()
-    let pc_feats = List<Feat>()
-    
-    // MARK: Reference Objects
+    // Unindexed properties
     var classObject: CharacterClass? {
         get {
             guard pc_class != "" else {
@@ -51,6 +46,12 @@ class PlayerCharacter: Object {
             return DBManager.getRaceObject(pc_race)
         }
     }
+    
+    // MARK: To-one relationships
+    let pc_skills = List<Skill>()
+    let pc_abilityScores = List<AbilityScore>()
+    let pc_feats = List<Feat>()
+    
     
     // MARK: Computed Properties
     var pc_savingThrows: [String : Int] {
@@ -74,16 +75,44 @@ class PlayerCharacter: Object {
     }
     
     
-    
-    
-    
-    
     // MARK: Getter functions
     var name: String {
         get {
             return pc_name
         }
     }
+    var race: String {
+        get {
+            return pc_name
+        }
+    }
+    var charClass: String {
+        get {
+            return pc_name
+        }
+    }
+    var level: Int {
+        get {
+            return pc_level
+        }
+    }
+    var currentHP: Int {
+        get {
+            return pc_hitPoints
+        }
+    }
+    var maxHP: Int {
+        get {
+            return pc_maxHitPoints
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
     
     
     // MARK: Setter functions
@@ -203,7 +232,12 @@ class PlayerCharacter: Object {
     
     
     
-    // HELPER FUNCTIONS
+    
+    
+    
+    
+    
+    // MODIFYING FUNCTIONS
     func addFeat(featName: String) {
         try! realm!.write {
             let feat = DBManager.getFeatObject(featName)
@@ -217,28 +251,6 @@ class PlayerCharacter: Object {
         
         try! realm!.write {
             skillObj.addRank()
-        }
-    }
-    
-    func generateAbilityScores(values: [Int]) {
-        
-        if values.count == 6 {
-            
-            let names = ["STR", "DEX", "CON", "INT", "WIS", "CHA"]
-            
-            for index in 1...6 {
-                
-                // TODO: Fix this
-                let abilityName = names[index - 1]
-                
-                let raceBonus = raceObject!.abilityScoreBonuses[abilityName]
-                let abilityValue = values[index - 1] + raceBonus!
-                let abilityObj = AbilityScore(name: abilityName, value: abilityValue)
-                pc_abilityScores.append(abilityObj)
-            }
-            
-        } else {
-            print("Error setting scores")
         }
     }
 }

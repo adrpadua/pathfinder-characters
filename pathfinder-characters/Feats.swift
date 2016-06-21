@@ -17,13 +17,4 @@ class Feat: Object {
     dynamic var type = ""
     dynamic var prereqs = ""
     dynamic var benefits = ""
-    
-    convenience init(name: String, prereqs: String, type: String, benefits: String) {
-        self.init()
-        self.name = name
-        self.type = type
-        self.prereqs = prereqs
-        self.benefits = benefits
-        
-    }
 }

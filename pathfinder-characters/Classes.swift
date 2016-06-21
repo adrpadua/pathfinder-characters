@@ -28,15 +28,6 @@ class CharacterClass {
         self.classSkills = [String : Bool]()
     }
     
-    init(name: String, gold: Int, hitDie: Int, level: Int, skillRanks: Int, classSkills: [String : Bool]) {
-        self.name = name
-        self.startingGold = gold
-        self.hitDie = hitDie
-        self.level = level
-        self.skillRanksPerLevel = skillRanks
-        self.classSkills = classSkills
-    }
-    
     var savingThrows: [String : Int]? {
         get {
             return ["Fort" : 2 + Int(floor(Double(level / 2))),

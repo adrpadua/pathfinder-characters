@@ -11,20 +11,14 @@ import RealmSwift
 
 class Skill: Object {
     
-    
     let partOfCharacter = LinkingObjects(fromType: PlayerCharacter.self, property: "pc_skills")
+    
     dynamic var name = ""
     dynamic var keyAbility = ""
     dynamic var classSkillBonus = 0
     dynamic var ranks = 0
     
-    convenience init(name: String, ability: String) {
-        self.init()
-        self.name = name
-        self.keyAbility = ability
-    }
     
-    // OTHER STUFF
     var parentPlayerCharacter: PlayerCharacter {
         get {
             return (partOfCharacter.first!)
@@ -59,15 +53,5 @@ class Skill: Object {
         let classObj = parentPlayerCharacter.classObject
         print(classObj!.classSkills[self.name])
         return (classObj!.classSkills[self.name])!
-        
-//        for classSkill in (classObj!.classSkills) {
-//            print("Testing \(classSkill) against \(self.name)")
-//            if classSkill == self.name {
-//                print("\(self.name) is a class Skill")
-//                return true
-//            }
-//            print("\(self.name) is not a class Skill")
-//        }
-//        return false
     }
 }

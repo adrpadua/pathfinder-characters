@@ -20,6 +20,7 @@ class PlayerCharacter: Object {
     //    return []
     //  }
     
+    
     // Properties
     private dynamic var pc_name = ""
     private dynamic var pc_race = ""

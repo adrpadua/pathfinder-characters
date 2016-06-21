@@ -23,11 +23,4 @@ class Spell {
         self.classLevels = [String : Int]()
         self.short_description = ""
     }
-    
-    init(name: String, school: String, classLevels: [String : Int], short_description: String) {
-        self.name = name
-        self.school = school
-        self.classLevels = classLevels
-        self.short_description = short_description
-    }
 }

@@ -26,8 +26,8 @@ class StartVC: UIViewController {
         
         if let character = Manager.instance.active_pc {
             character.setName("Largolass Largleaf")
-            character.setRace("Elf")
-            character.setClass("Cleric")
+            character.setRaceName("Elf")
+            character.setClassName("Cleric")
             let scores = [15, 13, 12, 8, 9, 10]
             character.setAbilityScores(scores)
             character.setBaseSkills()
@@ -52,8 +52,8 @@ class StartVC: UIViewController {
         
         if let character = Manager.instance.active_pc {
             character.setName("Bolbo Baggins")
-            character.setRace("Halfling")
-            character.setClass("Rogue")
+            character.setRaceName("Halfling")
+            character.setClassName("Rogue")
             let scores = [11, 12, 6, 15, 18, 8]
             character.setAbilityScores(scores)
             character.setBaseSkills()

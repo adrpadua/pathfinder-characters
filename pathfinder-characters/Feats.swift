@@ -10,9 +10,6 @@ import Foundation
 import RealmSwift
 
 class Feat: Object {
-    
-//    let partOfCharacter = LinkingObjects(fromType: PlayerCharacter.self, property: "pc_feats")
-    
     dynamic var name = ""
     dynamic var type = ""
     dynamic var prereqs = ""

@@ -22,28 +22,28 @@ class PlayerCharacter: Object {
     
     // Properties
     private dynamic var pc_name = ""
-    private dynamic var pc_race = ""
-    private dynamic var pc_class = ""
+    private dynamic var pc_raceName = ""
+    private dynamic var pc_className = ""
     private dynamic var pc_level = 1
     private dynamic var pc_hitPoints = 1
     private dynamic var pc_maxHitPoints = 1
     
     // Unindexed properties
-    var classObject: CharacterClass? {
+    var pc_class: CharacterClass? {
         get {
-            guard pc_class != "" else {
+            guard pc_className != "" else {
                 return nil
             }
-            return DBManager.getClassObjectFromDB(pc_class, level: pc_level)
+            return DBManager.getClassObjectFromDB(pc_className, level: pc_level)
         }
     }
     
-    var raceObject: Race? {
+    var pc_race: Race? {
         get {
-            guard pc_race != "" else {
+            guard pc_raceName != "" else {
                 return nil
             }
-            return DBManager.getRaceObjectFromDB(pc_race)
+            return DBManager.getRaceObjectFromDB(pc_raceName)
         }
     }
     
@@ -63,14 +63,14 @@ class PlayerCharacter: Object {
         let dexMod = self.DEX.modifier
         let wisMod = self.WIS.modifier
     
-        guard classObject != nil else {
+        guard pc_class != nil else {
             print("Error in savingThrows()")
             return [String : Int]()
         }
         
-        pc_savingThrows["Fortitude"] = conMod + classObject!.savingThrows!["Fort"]!
-        pc_savingThrows["Reflex"] = dexMod + classObject!.savingThrows!["Ref"]!
-        pc_savingThrows["Willpower"] = wisMod + classObject!.savingThrows!["Will"]!
+        pc_savingThrows["Fortitude"] = conMod + pc_class!.savingThrows!["Fort"]!
+        pc_savingThrows["Reflex"] = dexMod + pc_class!.savingThrows!["Ref"]!
+        pc_savingThrows["Willpower"] = wisMod + pc_class!.savingThrows!["Will"]!
         
         return pc_savingThrows
     }
@@ -123,15 +123,15 @@ class PlayerCharacter: Object {
         }
     }
     
-    func setRace(named: String) {
+    func setRaceName(name: String) {
         try! realm!.write {
-            self.pc_race = named
+            self.pc_raceName = name
         }
     }
     
-    func setClass(named: String) {
+    func setClassName(name: String) {
         try! realm!.write {
-            self.pc_class = named
+            self.pc_className = name
         }
         setMaxHitPoints()
     }
@@ -152,8 +152,7 @@ class PlayerCharacter: Object {
                 for index in 1...6 {
                     // TODO: Race Bonus
                     let abilityName = names[index - 1]
-                    print(raceObject!)
-                    let raceBonus = raceObject!.abilityScoreBonuses[abilityName]
+                    let raceBonus = pc_race!.abilityScoreBonuses[abilityName]
                     print(raceBonus!)
                     let abilityValue = values[index - 1] + raceBonus!
                     let abilityObj = AbilityScore(name: abilityName, value: abilityValue)
@@ -215,9 +214,9 @@ class PlayerCharacter: Object {
 
     
     func setMaxHitPoints() {
-        if pc_level == 1 && pc_class != "" {
+        if pc_level == 1 && pc_className != "" {
             try! realm!.write {
-                pc_maxHitPoints = classObject!.hitDie
+                pc_maxHitPoints = pc_class!.hitDie
             }
             setHitPoints(pc_maxHitPoints)
         }

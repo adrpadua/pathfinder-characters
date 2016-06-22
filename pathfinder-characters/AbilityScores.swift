@@ -27,6 +27,10 @@ class AbilityScore: Object {
         modifier = value.modifier
     }
     
+    func increment() {
+        self.value += 1
+    }
+    
     override var description: String {
         get {
             return "\(name): \(value) (\(modifier))"

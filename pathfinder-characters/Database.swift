@@ -20,41 +20,6 @@ protocol Database {
     
 }
 
-extension Database {
-    
-    static func indexOf(name: String) -> Int {
-        for index in 1...self.database.count {
-            if name == self.database["\(index)", "name"].stringValue {
-                return index
-            }
-        }
-        return -1
-    }
-    
-    static func includes(name: String) -> Bool {
-        if indexOf(name) == -1 {
-            return false
-        }
-        return true
-    }
-    
-    static func getJSONDirectoryOf(elementName: String) -> JSON {
-        let index = indexOf(elementName)
-        let json = database["\(index)"]
-        
-        return json
-    }
-    
-    
-}
-
-
-
-
-
-
-
-
 
 
 

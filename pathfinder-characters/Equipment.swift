@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class EquipmentName: Object {
+class EquipmentReferenceName: Object {
     dynamic var name = ""
     
     convenience init(name: String) {

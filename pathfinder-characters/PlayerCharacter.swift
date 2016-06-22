@@ -50,7 +50,7 @@ class PlayerCharacter: Object {
     let pc_skills = List<Skill>()
     let pc_abilityScores = List<AbilityScore>()
     let pc_feats = List<Feat>()
-    let pc_inventory = List<EquipmentName>()
+    let pc_inventory = List<EquipmentReferenceName>()
     
     
     // MARK: Computed Properties
@@ -255,65 +255,14 @@ class PlayerCharacter: Object {
     
     func addEquipmentToInventory(name: String) {
         
-        let weaponObj = DBManager.fetchEquipmentObjectFromDatabase(name)
+        let equipmentObj = DBManager.fetchEquipmentObjectFromDatabase(name)
         
         try! realm!.write {
-            pc_inventory.append(EquipmentName(name: weaponObj.name))
+            pc_inventory.append(EquipmentReferenceName(name: equipmentObj.name))
         }
         
     }
     
-}
-
-
-
-// MARK: Extensions
-extension PlayerCharacter {
-    var STR: AbilityScore {
-        return pc_abilityScores.getItemNamed("STR")
-    }
-    var DEX: AbilityScore {
-        return pc_abilityScores.getItemNamed("DEX")
-    }
-    var CON: AbilityScore {
-        return pc_abilityScores.getItemNamed("CON")
-    }
-    var INT: AbilityScore {
-        return pc_abilityScores.getItemNamed("INT")
-    }
-    var WIS: AbilityScore {
-        return pc_abilityScores.getItemNamed("WIS")
-    }
-    var CHA: AbilityScore {
-        return pc_abilityScores.getItemNamed("CHA")
-    }
-    var Fortitude: Int {
-        return pc_savingThrows["Fortitude"]!
-    }
-    var Reflex: Int {
-        return pc_savingThrows["Reflex"]!
-    }
-    var Willpower: Int {
-        return pc_savingThrows["Willpower"]!
-    }
-}
-
-extension List {
-    func getItemNamed(name: String) -> T {
-        
-        let object = self.filter("name == %@", "\(name)")[0]
-        
-        return object
-    }
-}
-
-extension String {
-    var isNotEmpty: Bool  {
-        if self == "" {
-            return false
-        }
-        return true
-    }
 }
 
 

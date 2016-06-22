@@ -12,15 +12,9 @@ import SwiftyJSON
 
 class Spell {
     
-    var name: String?
-    var school: String?
-    var classLevels: [String : Int]?
-    var short_description: String?
+    var name = ""
+    var school = ""
+    var classLevels = [String : Int]()
+    var short_description = ""
     
-    init() {
-        self.name = ""
-        self.school = ""
-        self.classLevels = [String : Int]()
-        self.short_description = ""
-    }
 }

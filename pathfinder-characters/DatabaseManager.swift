@@ -9,12 +9,6 @@
 import Foundation
 import SwiftyJSON
 
-protocol FetchableFromDatabase {
-    var name: String { get set }
-}
-
-
-
 class DBManager {
     
     static func fetchClassObjectFromDatabase(name: String, level: Int) -> CharacterClass {

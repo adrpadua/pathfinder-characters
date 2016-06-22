@@ -9,7 +9,6 @@
 import Foundation
 import Darwin
 
-
 class CharacterClass {
     
     var name: String

@@ -9,9 +9,15 @@
 import Foundation
 import SwiftyJSON
 
+protocol FetchableFromDatabase {
+    var name: String { get set }
+}
+
+
+
 class DBManager {
     
-    static func getClassObjectFromDB(name: String, level: Int) -> CharacterClass {
+    static func fetchClassObjectFromDatabase(name: String, level: Int) -> CharacterClass {
         let jsonLocation = ClassDB.getJSONDirectoryOf(name)
         
         let classObj = CharacterClass()
@@ -26,7 +32,7 @@ class DBManager {
         return classObj
     }
     
-    static func getSkillObjectFromDB(name: String) -> Skill {
+    static func fetchSkillObjectFromDatabase(name: String) -> Skill {
         let jsonLocation = SkillsDB.getJSONDirectoryOf(name)
         
         let skillObj = Skill()
@@ -37,7 +43,7 @@ class DBManager {
         return skillObj
     }
     
-    static func getFeatObjectFromDB(name: String) -> Feat {
+    static func fetchFeatObjectFromDatabase(name: String) -> Feat {
         let jsonLocation = FeatsDB.getJSONDirectoryOf(name)
         
         let featObj = Feat()
@@ -50,7 +56,7 @@ class DBManager {
         return featObj
     }
     
-    static func getSpellObjectFromDB(name: String) -> Spell {
+    static func fetchSpellObjectFromDatabase(name: String) -> Spell {
         let jsonLocation = SpellsDB.getJSONDirectoryOf(name)
         
         let spellObj = Spell()
@@ -63,7 +69,7 @@ class DBManager {
         return spellObj
     }
     
-    static func getRaceObjectFromDB(name: String) -> Race {
+    static func fetchRaceObjectFromDatabase(name: String) -> Race {
         let jsonLocation = RaceDB.getJSONDirectoryOf(name)
         
         let raceObj = Race()
@@ -77,18 +83,18 @@ class DBManager {
         return raceObj
     }
     
-    static func getEquipmentObjectFromDB(name: String) -> Equipment {
+    static func fetchEquipmentObjectFromDatabase(name: String) -> Equipment {
         
-        if WeaponDB.indexOf(name) != -1 {
-            return getWeaponObjectFromDB(name)
-        } else if ArmorDB.indexOf(name) != -1 {
-            return getArmorObjectFromDB(name)
+        if WeaponDB.includes(name){
+            return fetchWeaponObjectFromDatabase(name)
+        } else if ArmorDB.includes(name) {
+            return fetchArmorObjectFromDatabase(name)
         }
         
         return Equipment()
     }
     
-    static func getWeaponObjectFromDB(name: String) -> Weapon {
+    static func fetchWeaponObjectFromDatabase(name: String) -> Weapon {
         let jsonLocation = WeaponDB.getJSONDirectoryOf(name)
         
         let weaponObj = Weapon()
@@ -103,7 +109,7 @@ class DBManager {
         return weaponObj
     }
     
-    static func getArmorObjectFromDB(name: String) -> Armor {
+    static func fetchArmorObjectFromDatabase(name: String) -> Armor {
         let jsonLocation = ArmorDB.getJSONDirectoryOf(name)
         
         let armorObj = Armor()

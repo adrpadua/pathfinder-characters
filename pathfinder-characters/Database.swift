@@ -31,6 +31,13 @@ extension Database {
         return -1
     }
     
+    static func includes(name: String) -> Bool {
+        if indexOf(name) == -1 {
+            return false
+        }
+        return true
+    }
+    
     static func getJSONDirectoryOf(elementName: String) -> JSON {
         let index = indexOf(elementName)
         let json = database["\(index)"]

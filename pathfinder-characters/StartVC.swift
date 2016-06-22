@@ -76,11 +76,11 @@ class StartVC: UIViewController {
 
     @IBAction func spellsTest(sender: UIButton) {
         
-        let _ = DBManager.getSpellObjectFromDB("Animate Dead")
+        let _ = DBManager.fetchSpellObjectFromDatabase("Animate Dead")
         
-        let _ = DBManager.getFeatObjectFromDB("Acrobatic")
+        let _ = DBManager.fetchFeatObjectFromDatabase("Acrobatic")
         
-        let _ = DBManager.getWeaponObjectFromDB("Dagger")
+        let _ = DBManager.fetchWeaponObjectFromDatabase("Dagger")
     }
     
     @IBAction func checkActiveCharacter(sender: UIButton) {

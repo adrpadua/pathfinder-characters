@@ -31,19 +31,18 @@ class PlayerCharacter: Object {
     // Unindexed properties
     var pc_class: CharacterClass? {
         get {
-            guard pc_className != "" else {
+            guard pc_className.isNotEmpty else {
                 return nil
             }
-            return DBManager.getClassObjectFromDB(pc_className, level: pc_level)
+            return DBManager.fetchClassObjectFromDatabase(pc_className, level: pc_level)
         }
     }
-    
     var pc_race: Race? {
         get {
-            guard pc_raceName != "" else {
+            guard pc_raceName.isNotEmpty else {
                 return nil
             }
-            return DBManager.getRaceObjectFromDB(pc_raceName)
+            return DBManager.fetchRaceObjectFromDatabase(pc_raceName)
         }
     }
     
@@ -63,7 +62,7 @@ class PlayerCharacter: Object {
         let dexMod = self.DEX.modifier
         let wisMod = self.WIS.modifier
     
-        guard pc_class != nil else {
+        guard pc_className.isNotEmpty else {
             print("Error in savingThrows()")
             return [String : Int]()
         }
@@ -206,7 +205,7 @@ class PlayerCharacter: Object {
         
         try! realm!.write {
             for index in 1...skillNames.count {
-                let skill = DBManager.getSkillObjectFromDB(skillNames[index - 1])
+                let skill = DBManager.fetchSkillObjectFromDatabase(skillNames[index - 1])
                 pc_skills.append(skill)
             }
         }
@@ -240,7 +239,7 @@ class PlayerCharacter: Object {
     // MODIFYING FUNCTIONS
     func addFeat(featName: String) {
         try! realm!.write {
-            let feat = DBManager.getFeatObjectFromDB(featName)
+            let feat = DBManager.fetchFeatObjectFromDatabase(featName)
             pc_feats.append(feat)
         }
     }
@@ -256,13 +255,14 @@ class PlayerCharacter: Object {
     
     func addEquipmentToInventory(name: String) {
         
-        let weaponObj = DBManager.getEquipmentObjectFromDB(name)
+        let weaponObj = DBManager.fetchEquipmentObjectFromDatabase(name)
         
         try! realm!.write {
             pc_inventory.append(EquipmentName(name: weaponObj.name))
         }
         
     }
+    
 }
 
 
@@ -307,6 +307,13 @@ extension List {
     }
 }
 
-
+extension String {
+    var isNotEmpty: Bool  {
+        if self == "" {
+            return false
+        }
+        return true
+    }
+}
 
 

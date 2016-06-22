@@ -18,7 +18,7 @@ class EquipmentName: Object {
     }
     
     func toEquipmentObject() -> Equipment {
-        return DBManager.getEquipmentObjectFromDB(self.name)
+        return DBManager.fetchEquipmentObjectFromDatabase(self.name)
     }
 }
 
@@ -55,7 +55,7 @@ class Weapon: Equipment {
     var special = [String : Bool]()
     
     func reload() {
-        let weaponObj = DBManager.getWeaponObjectFromDB(self.name)
+        let weaponObj = DBManager.fetchWeaponObjectFromDatabase(self.name)
         
         self.classification = weaponObj.name
         self.cost_gp = weaponObj.cost_gp
@@ -85,7 +85,7 @@ class Armor: Equipment {
     var speed_20 = 0
     
     func reload() {
-        let armorObj = DBManager.getArmorObjectFromDB(self.name)
+        let armorObj = DBManager.fetchArmorObjectFromDatabase(self.name)
         
         self.classification = armorObj.name
         self.cost_gp = armorObj.cost_gp

@@ -11,21 +11,12 @@ import Darwin
 
 class CharacterClass {
     
-    var name: String
-    var startingGold: Int
-    var hitDie: Int
-    var level: Int
-    var skillRanksPerLevel: Int
-    var classSkills: [String : Bool]
-    
-    init () {
-        self.name = ""
-        self.startingGold = 0
-        self.hitDie = 0
-        self.level = 0
-        self.skillRanksPerLevel = 0
-        self.classSkills = [String : Bool]()
-    }
+    var name = ""
+    var startingGold = 0
+    var hitDie = 0
+    var level = 0
+    var skillRanksPerLevel = 0
+    var classSkills = [String : Bool]()
     
     var savingThrows: [String : Int]? {
         get {

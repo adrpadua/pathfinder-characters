@@ -88,7 +88,7 @@ class DBManager {
         return Equipment()
     }
     
-    static func fetchWeaponObjectFromDatabase(name: String) -> Weapon {
+    private static func fetchWeaponObjectFromDatabase(name: String) -> Weapon {
         let jsonLocation = WeaponDB.getJSONDirectoryOf(name)
         
         let weaponObj = Weapon()
@@ -96,22 +96,37 @@ class DBManager {
         weaponObj.name = WeaponDB.getName(jsonLocation)
         weaponObj.weapon_category = WeaponDB.getCategory(jsonLocation)
         weaponObj.classification = WeaponDB.getClassification(jsonLocation)
-        
-        // TODO: Finish Implementation
+        weaponObj.cost_gp = WeaponDB.getGPCost(jsonLocation)
+        weaponObj.cost_sp = WeaponDB.getSPCost(jsonLocation)
+        weaponObj.medWeight = WeaponDB.getWeight(jsonLocation)
+        weaponObj.weapon_category = WeaponDB.getCategory(jsonLocation)
+        weaponObj.damage_s = WeaponDB.getDamageS(jsonLocation)
+        weaponObj.damage_m = WeaponDB.getDamageM(jsonLocation)
+        weaponObj.crit_multiplier = WeaponDB.getCritMult(jsonLocation)
+        weaponObj.crit_roll = WeaponDB.getCritRoll(jsonLocation)
+        weaponObj.range = WeaponDB.getRange(jsonLocation)
+        weaponObj.damage_type = WeaponDB.getDamageTypes(jsonLocation)
+        weaponObj.special = WeaponDB.getSpecials(jsonLocation)
         
         print("Found \(weaponObj.name)")
         return weaponObj
     }
     
-    static func fetchArmorObjectFromDatabase(name: String) -> Armor {
+    private static func fetchArmorObjectFromDatabase(name: String) -> Armor {
         let jsonLocation = ArmorDB.getJSONDirectoryOf(name)
         
         let armorObj = Armor()
         
-        armorObj.name = WeaponDB.getName(jsonLocation)
-        armorObj.classification = WeaponDB.getClassification(jsonLocation)
-        
-        // TODO: Finish Implementation
+        armorObj.name = ArmorDB.getName(jsonLocation)
+        armorObj.classification = ArmorDB.getClassification(jsonLocation)
+        armorObj.cost_gp = ArmorDB.getGPCost(jsonLocation)
+        armorObj.medWeight = ArmorDB.getWeight(jsonLocation)
+        armorObj.ac_bonus = ArmorDB.getACBonus(jsonLocation)
+        armorObj.max_dex_bonus = ArmorDB.getMaxDexBonus(jsonLocation)
+        armorObj.armor_check_penalty = ArmorDB.getArmorCheckPenalty(jsonLocation)
+        armorObj.arcane_spell_fail_chance = ArmorDB.getArcaneSpellFailChance(jsonLocation)
+        armorObj.speed_30 = ArmorDB.getSpeed30(jsonLocation)
+        armorObj.speed_20 = ArmorDB.getSpeed20(jsonLocation)
         
         print("Found \(armorObj.name)")
         return armorObj

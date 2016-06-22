@@ -14,33 +14,20 @@ class AbilityScore: Object {
     
     dynamic var name = ""
     dynamic var value = 10
-    dynamic var modifier = 0
     
     convenience init(name: String, value: Int) {
         self.init()
         self.name = name
         self.value = value
-        refreshModifier()
-    }
-    
-    func refreshModifier() {
-        modifier = value.modifier
     }
     
     func increment() {
         self.value += 1
     }
-    
-    override var description: String {
-        get {
-            return "\(name): \(value) (\(modifier))"
-        }
-    }
-
 }
 
-extension Int {
+extension AbilityScore {
     var modifier: Int {
-        return (self - 10) / 2
+        return (self.value - 10) / 2
     }
 }

@@ -23,11 +23,10 @@ class FeatsDB: Database {
     }
     
     static func getPrerequisites(json: JSON) -> String {
-        if  json["prerequisites"].stringValue == "" {
+        if  json["prerequisites"].stringValue.isEmpty {
             return "None"
-        } else {
-            return json["prerequisites"].stringValue
         }
+        return json["prerequisites"].stringValue
     }
     
     static func getType(json: JSON) -> String {

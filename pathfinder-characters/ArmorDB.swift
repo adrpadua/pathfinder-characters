@@ -37,6 +37,9 @@ class ArmorDB: Database {
     static func getArcaneSpellFailChance(json: JSON) -> Double {
         return json["arcane_spell_failure_chance"].doubleValue
     }
+    static func getArmorCheckPenalty(json: JSON) -> Int {
+        return json["armor_check_penalty"].intValue
+    }
     static func getSpeed30(json: JSON) -> Int {
         return json["speed_30"].intValue
     }

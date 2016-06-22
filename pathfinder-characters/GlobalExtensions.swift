@@ -33,6 +33,38 @@ extension Database {
         let jsonDirectoryOfQuery = database["\(index)"]
         return jsonDirectoryOfQuery
     }
+    
+    static func createStringArrayFromJSONDirectory(subJson: JSON) -> [String] {
+        
+        var createdArray = [String]()
+        
+        for (index,_):(String, JSON) in subJson {
+            createdArray.append(index)
+        }
+        return createdArray
+    }
+    
+    static func createStringToIntDictionaryFromJSONDirectory(subJson: JSON) -> [String : Int] {
+        var createdDictionary = [String : Int]()
+        
+        for (key, _):(String, JSON) in subJson {
+            createdDictionary[key] = subJson[key].intValue
+        }
+        return createdDictionary
+    }
+    
+    static func createStringToBoolDictionaryFromJSONDirectory(subJson: JSON) -> [String : Bool] {
+        var createdDictionary = [String : Bool]()
+        for (key, _):(String, JSON) in subJson {
+            
+            if subJson[key].intValue == 0 {
+                createdDictionary[key] = false
+            } else if subJson[key].intValue == 1 {
+                createdDictionary[key] = true
+            }
+        }
+        return createdDictionary
+    }
 }
 
 

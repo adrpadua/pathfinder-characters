@@ -10,19 +10,12 @@ import Foundation
 
 class Race {
     
-    var name: String
-    var size: String
-    var speed: (String, Int)
-    var level: Int
-    var abilityScoreBonuses: [String : Int]
-    var languages: [String]
+    var name = ""
+    var size = ""
+    var speed = ("", 0)
+    var level = 0
+    var abilityScoreBonuses = [String : Int]()
+    var languages = [String]()
     
-    init () {
-        self.name = ""
-        self.size = ""
-        self.speed = ("", 0)
-        self.level = 0
-        self.abilityScoreBonuses = [String : Int]()
-        self.languages = [String]()
-    }
+    // TODO: Add Racial Traits
 }

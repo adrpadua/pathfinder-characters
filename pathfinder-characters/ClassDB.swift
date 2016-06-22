@@ -37,22 +37,8 @@ class ClassDB: Database {
     }
     
     static func getClassSkills(json: JSON) -> [String : Bool] {
-        
-        var classSkills = [String : Bool]()
-        
-        // Create subJSON to get the thing
         let classSkillsJSON = json["class_skills"]
-        
-        // Do the thing
-        for (key, _):(String, JSON) in classSkillsJSON {
-            
-            if classSkillsJSON[key].intValue == 0 {
-                classSkills[key] = false
-            } else if classSkillsJSON[key].intValue == 1 {
-                classSkills[key] = true
-            }
-        }
-        return classSkills
+        return createStringToBoolDictionaryFromJSONDirectory(classSkillsJSON)
     }
 
 }

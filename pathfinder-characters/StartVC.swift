@@ -39,8 +39,6 @@ class StartVC: UIViewController {
             character.setMaxHitPoints()
             character.addEquipmentToInventory("Dagger")
         }
-        
-        print(Manager.instance.active_pc!)
     }
     
     @IBAction func char_2_BtnPressed(sender: UIButton) {
@@ -64,8 +62,6 @@ class StartVC: UIViewController {
             character.addEquipmentToInventory("Sword, short")
             character.addEquipmentToInventory("Hide")
         }
-        
-        print(Manager.instance.active_pc!)
     }
     
     @IBAction func clearDataBtnPressed(sender: UIButton) {
@@ -80,7 +76,7 @@ class StartVC: UIViewController {
         
         let _ = DBManager.fetchFeatObjectFromDatabase("Acrobatic")
         
-        let _ = DBManager.fetchWeaponObjectFromDatabase("Dagger")
+        let _ = DBManager.fetchEquipmentObjectFromDatabase("Dagger")
     }
     
     @IBAction func checkActiveCharacter(sender: UIButton) {

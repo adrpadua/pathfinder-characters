@@ -25,23 +25,13 @@ class RaceDB: Database {
     }
     
     static func getAbilityScoreBonuses(json: JSON) -> [String : Int] {
-        
-        var scoreBonuses = [String : Int]()
-        
-        // Create subJSON to get the thing
         let scoreBonusesJSON = json["ability_score_bonuses"]
-        
-        // Do the thing
-        for (key, _):(String, JSON) in scoreBonusesJSON {
-            scoreBonuses[key] = scoreBonusesJSON[key].intValue
-        }
-        return scoreBonuses
+        return createStringToIntDictionaryFromJSONDirectory(scoreBonusesJSON)
     }
     
     static func getSpeed(json: JSON) -> (String, Int) {
         let description = json["speed_description"].stringValue
         let speedValue = json["speed"].intValue
-        
         return (description, speedValue)
     }
     
@@ -50,20 +40,10 @@ class RaceDB: Database {
     }
     
     static func getStartingLanguages(json: JSON) -> [String] {
-        
-        var languages = [String]()
-        
         let languagesJSON = json["starting_languages"]
-        
-        for (index,_):(String, JSON) in languagesJSON {
-            languages.append(index)
-        }
-        
-        return languages
+        return createStringArrayFromJSONDirectory(languagesJSON)
     }
     
     // TODO: Racial Traits
     
 }
-
-

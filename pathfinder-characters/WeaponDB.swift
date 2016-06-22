@@ -19,7 +19,7 @@ class WeaponDB: Database {
     
     
     
-    // GETTERS
+    // Property Getters
     static func getName(json: JSON) -> String {
         return json["name"].stringValue
     }
@@ -50,52 +50,22 @@ class WeaponDB: Database {
     static func getRange(json: JSON) -> Int {
         if json["crit_roll"].stringValue == "Melee" {
             return 0
-        } else {
-            return json["crit_roll"].intValue
         }
+        return json["crit_roll"].intValue
     }
     static func getWeight(json: JSON) -> Double {
         return json["weight"].doubleValue
     }
     
     static func getSpecials(json: JSON) -> [String : Bool] {
-
-        var specials = [String : Bool]()
-        
-        // Create subJSON to get the thing
         let specialsJSON = json["special"]
-        
-        // Do the thing
-        for (key, _):(String, JSON) in specialsJSON {
-            
-            if specialsJSON[key].intValue == 0 {
-                specials[key] = false
-            } else if specialsJSON[key].intValue == 1 {
-                specials[key] = true
-            }
-        }
-        return specials
+        return createStringToBoolDictionaryFromJSONDirectory(specialsJSON)
     }
     
     static func getDamageTypes(json: JSON) -> [String : Bool] {
-        
-        var damages = [String : Bool]()
-        
-        // Create subJSON to get the thing
         let damagesJSON = json["special"]
-        
-        // Do the thing
-        for (key, _):(String, JSON) in damagesJSON {
-            
-            if damagesJSON[key].intValue == 0 {
-                damages[key] = false
-            } else if damagesJSON[key].intValue == 1 {
-                damages[key] = true
-            }
-        }
-        return damages
+        return createStringToBoolDictionaryFromJSONDirectory(damagesJSON)
     }
-    
 }
 
 

@@ -31,19 +31,7 @@ class SpellsDB: Database {
     }
     
     static func getClassLevels(json: JSON) -> [String : Int] {
-        
-        var classLevels = [String : Int]()
-        
         let classLevelsJSON = json["spell_level"]
-        
-        for (key, _):(String, JSON) in classLevelsJSON {
-            
-            guard classLevelsJSON[key].stringValue != "NULL" else {
-                continue
-            }
-            classLevels[key] = classLevelsJSON[key].intValue
-        }
-        
-        return classLevels
+        return createStringToIntDictionaryFromJSONDirectory(classLevelsJSON)
     }
 }

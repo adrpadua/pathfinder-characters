@@ -69,7 +69,7 @@ class DBManager {
         let raceObj = Race()
         
         raceObj.name = RaceDB.getName(jsonLocation)
-        raceObj.abilityScoreBonuses = RaceDB.getAbilityScoreBonuses(jsonLocation)
+        raceObj.abilityScoreRacialBonuses = RaceDB.getAbilityScoreRacialBonuses(jsonLocation)
         raceObj.speed = RaceDB.getSpeed(jsonLocation)
         raceObj.size = RaceDB.getSize(jsonLocation)
         raceObj.languages = RaceDB.getStartingLanguages(jsonLocation)

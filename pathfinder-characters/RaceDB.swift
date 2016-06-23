@@ -24,7 +24,7 @@ class RaceDB: Database {
         return json["name"].stringValue
     }
     
-    static func getAbilityScoreBonuses(json: JSON) -> [String : Int] {
+    static func getAbilityScoreRacialBonuses(json: JSON) -> [String : Int] {
         let scoreBonusesJSON = json["ability_score_bonuses"]
         return createStringToIntDictionaryFromJSONDirectory(scoreBonusesJSON)
     }

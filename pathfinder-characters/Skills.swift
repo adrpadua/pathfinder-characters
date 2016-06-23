@@ -11,7 +11,7 @@ import RealmSwift
 
 class Skill: Object {
     
-    let partOfCharacter = LinkingObjects(fromType: PlayerCharacter.self, property: "pc_skills")
+    let partOfCharacter = LinkingObjects(fromType: CharacterSheet.self, property: "_skills")
     
     dynamic var name = ""
     dynamic var keyAbility = ""
@@ -19,7 +19,7 @@ class Skill: Object {
     dynamic var ranks = 0
     
     
-    var parentPlayerCharacter: PlayerCharacter {
+    var parentPlayerCharacter: CharacterSheet {
         get {
             return (partOfCharacter.first!)
         }
@@ -27,7 +27,7 @@ class Skill: Object {
     
     var abilityModifierBonus: Int {
         get {
-            return parentPlayerCharacter.pc_abilityScores.getItemNamed(keyAbility).modifier
+            return parentPlayerCharacter._abilityScores.getItemNamed(keyAbility).modifier
         }
     }
     
@@ -50,7 +50,7 @@ class Skill: Object {
     }
     
     func isClassSkill() -> Bool {
-        let classObj = parentPlayerCharacter.pc_class
-        return (classObj!.classSkills[self.name])!
+        let classObj = parentPlayerCharacter.classObj
+        return (classObj.classSkills[self.name])!
     }
 }

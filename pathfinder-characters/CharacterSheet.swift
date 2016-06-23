@@ -11,99 +11,54 @@ import RealmSwift
 import Darwin
 
 
-class PlayerCharacter: Object {
+class CharacterSheet: Object {
     
-    // Specify properties to ignore (Realm won't persist these)
+    ///// Saved to Realm ///////////////////////////////
+    private dynamic var _name = ""
+    private dynamic var _raceName = ""
+    private dynamic var _className = ""
+    private dynamic var _level = 1
+    private dynamic var _currentHitPoints = 1
+    private dynamic var _maxHitPoints = 1
     
-    //  override static func ignoredProperties() -> [String] {
-    //    return []
-    //  }
-    
-    
-    // Properties
-    private dynamic var pc_name = ""
-    private dynamic var pc_raceName = ""
-    private dynamic var pc_className = ""
-    private dynamic var pc_level = 1
-    private dynamic var pc_hitPoints = 1
-    private dynamic var pc_maxHitPoints = 1
-    
-    // Unindexed properties
-    var pc_class: CharacterClass? {
-        get {
-            guard pc_className.isNotEmpty else {
-                return nil
-            }
-            return DBManager.fetchClassObjectFromDatabase(pc_className, level: pc_level)
-        }
-    }
-    var pc_race: Race? {
-        get {
-            guard pc_raceName.isNotEmpty else {
-                return nil
-            }
-            return DBManager.fetchRaceObjectFromDatabase(pc_raceName)
-        }
-    }
-    
-    // MARK: To-one relationships
-    let pc_skills = List<Skill>()
-    let pc_abilityScores = List<AbilityScore>()
-    let pc_feats = List<Feat>()
-    let pc_inventory = List<EquipmentReferenceName>()
+    let _skills = List<Skill>()
+    let _abilityScores = List<AbilityScore>()
+    let _feats = List<Feat>()
+    let _inventory = List<EquipmentReferenceName>()
+    ////////////////////////////////////////////////////
     
     
-    // MARK: Computed Properties
-    var pc_savingThrows: [String : Int] {
-    
-        var pc_savingThrows = [String : Int]()
-        
-        let conMod = self.CON.modifier
-        let dexMod = self.DEX.modifier
-        let wisMod = self.WIS.modifier
-    
-        guard pc_className.isNotEmpty else {
-            print("Error in savingThrows()")
-            return [String : Int]()
+    // MODIFYING FUNCTIONS
+    func adjustHP(byAmount: Int) {
+        try! realm!.write {
+            _currentHitPoints += byAmount
         }
         
-        pc_savingThrows["Fortitude"] = conMod + pc_class!.savingThrows!["Fort"]!
-        pc_savingThrows["Reflex"] = dexMod + pc_class!.savingThrows!["Ref"]!
-        pc_savingThrows["Willpower"] = wisMod + pc_class!.savingThrows!["Will"]!
+    }
+    
+    func addFeat(featName: String) {
+        let featObj = DBManager.fetchFeatObjectFromDatabase(featName)
         
-        return pc_savingThrows
+        try! realm!.write {
+            _feats.append(featObj)
+        }
     }
     
+    func addSkillRankTo(name: String) {
+        let skillObj = _skills.getItemNamed(name)
+        
+        try! realm!.write {
+            skillObj.addRank()
+        }
+    }
     
-    // MARK: Getter functions
-    var name: String {
-        get {
-            return pc_name
-        }
-    }
-    var race: String {
-        get {
-            return pc_name
-        }
-    }
-    var charClass: String {
-        get {
-            return pc_name
-        }
-    }
-    var level: Int {
-        get {
-            return pc_level
-        }
-    }
-    var currentHP: Int {
-        get {
-            return pc_hitPoints
-        }
-    }
-    var maxHP: Int {
-        get {
-            return pc_maxHitPoints
+    func addEquipmentToInventory(name: String) {
+        
+        let equipmentObj = DBManager.fetchEquipmentObjectFromDatabase(name)
+        let equipmentReferenceName = EquipmentReferenceName(name: equipmentObj.name)
+        
+        try! realm!.write {
+            _inventory.append(equipmentReferenceName)
         }
     }
     
@@ -118,26 +73,26 @@ class PlayerCharacter: Object {
     // MARK: Setter functions
     func setName(name: String) {
         try! realm!.write {
-            self.pc_name = name
+            self._name = name
         }
     }
     
     func setRaceName(name: String) {
         try! realm!.write {
-            self.pc_raceName = name
+            self._raceName = name
         }
     }
     
     func setClassName(name: String) {
         try! realm!.write {
-            self.pc_className = name
+            self._className = name
         }
         setMaxHitPoints()
     }
     
     func setLevel(value: Int) {
         try! realm!.write {
-            self.pc_level = value
+            self._level = value
         }
     }
     
@@ -149,12 +104,16 @@ class PlayerCharacter: Object {
             try! realm!.write {
                 
                 for index in 1...6 {
-                    // TODO: Race Bonus
+                    let abilityObj = AbilityScore()
+                    
                     let abilityName = names[index - 1]
-                    let raceBonus = pc_race!.abilityScoreBonuses[abilityName]
+                    let raceBonus = raceObj.abilityScoreRacialBonuses[abilityName]
                     let abilityValue = values[index - 1] + raceBonus!
-                    let abilityObj = AbilityScore(name: abilityName, value: abilityValue)
-                    pc_abilityScores.append(abilityObj)
+                    
+                    abilityObj.name = abilityName
+                    abilityObj.value = abilityValue
+                    
+                    _abilityScores.append(abilityObj)
                 }
             }
             
@@ -166,102 +125,111 @@ class PlayerCharacter: Object {
     
     func setBaseSkills() {
         
-        let skillNames = ["Acrobatics"
-            , "Appraise"
-            , "Bluff"
-            , "Climb"
-            , "Craft"
-            , "Diplomacy"
-            , "Disable Device"
-            , "Disguise"
-            , "Escape Artist"
-            , "Fly"
-            , "Handle Animal"
-            , "Heal"
-            , "Intimidate"
-            , "Knowledge (Arcana)"
-            , "Knowledge (Dungeoneering)"
-            , "Knowledge (Engineering)"
-            , "Knowledge (History)"
-            , "Knowledge (Geography)"
-            , "Knowledge (Local)"
-            , "Knowledge (Nature)"
-            , "Knowledge (Nobility)"
-            , "Knowledge (Planes)"
-            , "Knowledge (Religion)"
-            , "Linguistics"
-            , "Perception"
-            , "Perform"
-            , "Profession"
-            , "Ride"
-            , "Sense Motive"
-            , "Sleight of Hand"
-            , "Spellcraft"
-            , "Stealth"
-            , "Survival"
-            , "Swim"
-            , "Use Magic Device"]
-        
         try! realm!.write {
             for index in 1...skillNames.count {
                 let skill = DBManager.fetchSkillObjectFromDatabase(skillNames[index - 1])
-                pc_skills.append(skill)
+                _skills.append(skill)
             }
         }
     }
-
     
     func setMaxHitPoints() {
-        if pc_level == 1 && pc_className != "" {
+        if _level == 1 && _className != "" {
             try! realm!.write {
-                pc_maxHitPoints = pc_class!.hitDie
+                _maxHitPoints = classObj.hitDie
             }
-            setHitPoints(pc_maxHitPoints)
+            setHitPoints(_maxHitPoints)
         }
     }
     
     func setHitPoints(newHP: Int) {
         try! realm!.write {
-            pc_hitPoints = newHP
+            _currentHitPoints = newHP
         }
     }
     
     
     
     
-    
-    
-    
-    
-    
-    
-    // MODIFYING FUNCTIONS
-    func addFeat(featName: String) {
-        try! realm!.write {
-            let feat = DBManager.fetchFeatObjectFromDatabase(featName)
-            pc_feats.append(feat)
-        }
-    }
-    
-    func addSkillRankTo(name: String) {
-        
-        let skillObj = pc_skills.getItemNamed(name)
-        
-        try! realm!.write {
-            skillObj.addRank()
-        }
-    }
-    
-    func addEquipmentToInventory(name: String) {
-        
-        let equipmentObj = DBManager.fetchEquipmentObjectFromDatabase(name)
-        
-        try! realm!.write {
-            pc_inventory.append(EquipmentReferenceName(name: equipmentObj.name))
-        }
-        
-    }
     
 }
 
+extension CharacterSheet {
+    var STR: AbilityScore {
+        return _abilityScores.getItemNamed("STR")
+    }
+    var DEX: AbilityScore {
+        return _abilityScores.getItemNamed("DEX")
+    }
+    var CON: AbilityScore {
+        return _abilityScores.getItemNamed("CON")
+    }
+    var INT: AbilityScore {
+        return _abilityScores.getItemNamed("INT")
+    }
+    var WIS: AbilityScore {
+        return _abilityScores.getItemNamed("WIS")
+    }
+    var CHA: AbilityScore {
+        return _abilityScores.getItemNamed("CHA")
+    }
+    var savingThrows: [String : Int] {
+        
+        var _savingThrows = [String : Int]()
+        
+        let conMod = self.CON.modifier
+        let dexMod = self.DEX.modifier
+        let wisMod = self.WIS.modifier
+        
+        guard _className.isNotEmpty else {
+            print("Error in savingThrows()")
+            return [String : Int]()
+        }
+        
+        _savingThrows["Fortitude"] = conMod + classObj.savingThrows!["Fort"]!
+        _savingThrows["Reflex"] = dexMod + classObj.savingThrows!["Ref"]!
+        _savingThrows["Willpower"] = wisMod + classObj.savingThrows!["Will"]!
+        
+        return _savingThrows
+    }
+    var Fortitude: Int {
+        return savingThrows["Fortitude"]!
+    }
+    var Reflex: Int {
+        return savingThrows["Reflex"]!
+    }
+    var Willpower: Int {
+        return savingThrows["Willpower"]!
+    }
+    var name: String {
+        get {
+            return _name
+        }
+    }
+    var classObj: CharacterClass {
+        get {
+            return DBManager.fetchClassObjectFromDatabase(_className, level: _level)
+        }
+    }
+    var raceObj: Race {
+        get {
+            return DBManager.fetchRaceObjectFromDatabase(_raceName)
+        }
+    }
+    var level: Int {
+        get {
+            return _level
+        }
+    }
+    var currentHP: Int {
+        get {
+            return _currentHitPoints
+        }
+    }
+    var maxHP: Int {
+        get {
+            return _maxHitPoints
+        }
+    }
+}
 

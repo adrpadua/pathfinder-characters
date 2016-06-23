@@ -9,18 +9,16 @@
 import Foundation
 import RealmSwift
 
-let realm = Manager.instance.realm
-
-class Manager {
+class RealmHandler {
     
-    static var instance = Manager()
+    static var instance = RealmHandler()
     
-    var active_pc: PlayerCharacter?
+    var active_pc: CharacterSheet?
     
     var realm: Realm
     
-    var characters: Results<PlayerCharacter> {
-        return realm.objects(PlayerCharacter)
+    var characters: Results<CharacterSheet> {
+        return realm.objects(CharacterSheet)
     }
     
     
@@ -28,7 +26,7 @@ class Manager {
         
         let URL: NSURL = NSURL(string: "file:///Users/adrpadua/Desktop/pathfinder-characters/Realm/default.realm")!
         var config = Realm.Configuration(fileURL: URL)
-        config.schemaVersion = 24
+        config.deleteRealmIfMigrationNeeded = true
         
         realm = try! Realm(configuration: config)
         
@@ -39,7 +37,7 @@ class Manager {
     }
     
     func createNewCharacter() {
-        active_pc = PlayerCharacter()
+        active_pc = CharacterSheet()
     }
     
     func saveActiveCharacter() {

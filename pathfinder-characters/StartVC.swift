@@ -9,22 +9,22 @@
 import UIKit
 
 class StartVC: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("Welcome. # of characters in database = \(Manager.instance.characters.count)")
+        print("Welcome. # of characters in database = \(RealmHandler.instance.characters.count)")
         
     }
     
     @IBAction func char_1_BtnPressed(sender: UIButton) {
-        Manager.instance.deActivateCurrentCharacter()
-        Manager.instance.createNewCharacter()
+        RealmHandler.instance.deActivateCurrentCharacter()
+        RealmHandler.instance.createNewCharacter()
         print("New Character created:")
-        Manager.instance.saveActiveCharacter()
-        print("# of characters in database = \(Manager.instance.characters.count)")
+        RealmHandler.instance.saveActiveCharacter()
+        print("# of characters in database = \(RealmHandler.instance.characters.count)")
         
-        if let character = Manager.instance.active_pc {
+        if let character = RealmHandler.instance.active_pc {
             character.setName("Largolass Largleaf")
             character.setRaceName("Elf")
             character.setClassName("Cleric")
@@ -42,16 +42,16 @@ class StartVC: UIViewController {
     }
     
     @IBAction func char_2_BtnPressed(sender: UIButton) {
-        Manager.instance.deActivateCurrentCharacter()
-        Manager.instance.createNewCharacter()
+        RealmHandler.instance.deActivateCurrentCharacter()
+        RealmHandler.instance.createNewCharacter()
         print("New Character created:")
-        Manager.instance.saveActiveCharacter()
-        print("# of characters in database = \(Manager.instance.characters.count)")
+        RealmHandler.instance.saveActiveCharacter()
+        print("# of characters in database = \(RealmHandler.instance.characters.count)")
         
-        if let character = Manager.instance.active_pc {
+        if let character = RealmHandler.instance.active_pc {
             character.setName("Bolbo Baggins")
             character.setRaceName("Halfling")
-            character.setClassName("Rogue")
+            character.setClassName("Fighter")
             let scores = [11, 12, 6, 15, 18, 8]
             character.setAbilityScores(scores)
             character.setBaseSkills()
@@ -65,11 +65,11 @@ class StartVC: UIViewController {
     }
     
     @IBAction func clearDataBtnPressed(sender: UIButton) {
-        Manager.instance.clearAllData()
+        RealmHandler.instance.clearAllData()
         print("Character database cleared.")
-        print("# of characters in database = \(Manager.instance.characters.count)")
+        print("# of characters in database = \(RealmHandler.instance.characters.count)")
     }
-
+    
     @IBAction func spellsTest(sender: UIButton) {
         
         let animDead = DBManager.fetchSpellObjectFromDatabase("Animate Dead")
@@ -81,7 +81,7 @@ class StartVC: UIViewController {
     }
     
     @IBAction func checkActiveCharacter(sender: UIButton) {
-        print(Manager.instance.active_pc?.name)
+        print(RealmHandler.instance.active_pc?.name)
     }
 }
 

@@ -14,7 +14,7 @@ class Race {
     var size = ""
     var speed = ("", 0)
     var level = 0
-    var abilityScoreBonuses = [String : Int]()
+    var abilityScoreRacialBonuses = [String : Int]()
     var languages = [String]()
     
     // TODO: Add Racial Traits

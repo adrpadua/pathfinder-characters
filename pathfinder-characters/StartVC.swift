@@ -72,7 +72,8 @@ class StartVC: UIViewController {
 
     @IBAction func spellsTest(sender: UIButton) {
         
-        let _ = DBManager.fetchSpellObjectFromDatabase("Animate Dead")
+        let animDead = DBManager.fetchSpellObjectFromDatabase("Animate Dead")
+        print(animDead.classLevels)
         
         let _ = DBManager.fetchFeatObjectFromDatabase("Acrobatic")
         

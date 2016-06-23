@@ -10,6 +10,7 @@
 		11AE6EE2C87A78EEFFED2A2C /* Pods_pathfinder_characters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40ADF857B9607952FB617F9 /* Pods_pathfinder_characters.framework */; };
 		A0277C811D149F3000D833DA /* Spells_PFRPG_Core.json in Resources */ = {isa = PBXBuildFile; fileRef = A0277C801D149F3000D833DA /* Spells_PFRPG_Core.json */; };
 		A0277C841D14A6A400D833DA /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0277C831D14A6A400D833DA /* Database.swift */; };
+		A0764ABC1D1B458A00D12301 /* pathfinder_charactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0764ABB1D1B458A00D12301 /* pathfinder_charactersTests.swift */; };
 		A0837CA51D1652B10070DD1F /* Skills_PFRPG_Master.json in Resources */ = {isa = PBXBuildFile; fileRef = A0837CA41D1652B10070DD1F /* Skills_PFRPG_Master.json */; };
 		A0BB938F1D12837300FCA996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB938E1D12837300FCA996 /* AppDelegate.swift */; };
 		A0BB93941D12837300FCA996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0BB93921D12837300FCA996 /* Main.storyboard */; };
@@ -20,7 +21,7 @@
 		A0BB93B31D12840700FCA996 /* Feats_PFRPG_Core.json in Resources */ = {isa = PBXBuildFile; fileRef = A0BB93A41D12840700FCA996 /* Feats_PFRPG_Core.json */; };
 		A0BB93B41D12840700FCA996 /* Feats.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB93A51D12840700FCA996 /* Feats.swift */; };
 		A0BB93B51D12840700FCA996 /* RealmCharacterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB93A61D12840700FCA996 /* RealmCharacterManager.swift */; };
-		A0BB93B61D12840700FCA996 /* PlayerCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB93A71D12840700FCA996 /* PlayerCharacter.swift */; };
+		A0BB93B61D12840700FCA996 /* CharacterSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB93A71D12840700FCA996 /* CharacterSheet.swift */; };
 		A0BB93B71D12840700FCA996 /* Races.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB93A81D12840700FCA996 /* Races.swift */; };
 		A0BB93B91D12840700FCA996 /* Skills.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB93AA1D12840700FCA996 /* Skills.swift */; };
 		A0BB93BB1D12840700FCA996 /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB93AC1D12840700FCA996 /* Spell.swift */; };
@@ -40,11 +41,24 @@
 		A0F7DB421D1A034A00E1F814 /* ArmorDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F7DB411D1A034A00E1F814 /* ArmorDB.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A0764ABE1D1B458A00D12301 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0BB93831D12837200FCA996 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0BB938A1D12837300FCA996;
+			remoteInfo = "pathfinder-characters";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		9C552874843CC4745745C59A /* Pods-pathfinder-characters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pathfinder-characters.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pathfinder-characters/Pods-pathfinder-characters.debug.xcconfig"; sourceTree = "<group>"; };
 		A0277C801D149F3000D833DA /* Spells_PFRPG_Core.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Spells_PFRPG_Core.json; sourceTree = "<group>"; };
 		A0277C831D14A6A400D833DA /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		A0277C881D14C0DD00D833DA /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = default.realm; path = Realm/default.realm; sourceTree = SOURCE_ROOT; };
+		A0764AB91D1B458A00D12301 /* pathfinder-charactersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pathfinder-charactersTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0764ABB1D1B458A00D12301 /* pathfinder_charactersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pathfinder_charactersTests.swift; sourceTree = "<group>"; };
+		A0764ABD1D1B458A00D12301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0837CA41D1652B10070DD1F /* Skills_PFRPG_Master.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Skills_PFRPG_Master.json; sourceTree = "<group>"; };
 		A0BB938B1D12837300FCA996 /* pathfinder-characters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pathfinder-characters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0BB938E1D12837300FCA996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +71,7 @@
 		A0BB93A41D12840700FCA996 /* Feats_PFRPG_Core.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Feats_PFRPG_Core.json; sourceTree = "<group>"; };
 		A0BB93A51D12840700FCA996 /* Feats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feats.swift; sourceTree = "<group>"; };
 		A0BB93A61D12840700FCA996 /* RealmCharacterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmCharacterManager.swift; sourceTree = "<group>"; };
-		A0BB93A71D12840700FCA996 /* PlayerCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCharacter.swift; sourceTree = "<group>"; };
+		A0BB93A71D12840700FCA996 /* CharacterSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSheet.swift; sourceTree = "<group>"; };
 		A0BB93A81D12840700FCA996 /* Races.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Races.swift; sourceTree = "<group>"; };
 		A0BB93AA1D12840700FCA996 /* Skills.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skills.swift; sourceTree = "<group>"; };
 		A0BB93AC1D12840700FCA996 /* Spell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
@@ -80,6 +94,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A0764AB61D1B458A00D12301 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A0BB93881D12837300FCA996 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,10 +129,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A0764ABA1D1B458A00D12301 /* pathfinder-charactersTests */ = {
+			isa = PBXGroup;
+			children = (
+				A0764ABB1D1B458A00D12301 /* pathfinder_charactersTests.swift */,
+				A0764ABD1D1B458A00D12301 /* Info.plist */,
+			);
+			path = "pathfinder-charactersTests";
+			sourceTree = "<group>";
+		};
 		A0BB93821D12837200FCA996 = {
 			isa = PBXGroup;
 			children = (
 				A0BB938D1D12837300FCA996 /* pathfinder-characters */,
+				A0764ABA1D1B458A00D12301 /* pathfinder-charactersTests */,
 				A0BB938C1D12837300FCA996 /* Products */,
 				8057CC555AFECE536F611B60 /* Pods */,
 				657DC7697C1667C31C340550 /* Frameworks */,
@@ -122,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				A0BB938B1D12837300FCA996 /* pathfinder-characters.app */,
+				A0764AB91D1B458A00D12301 /* pathfinder-charactersTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,7 +191,7 @@
 		A0BB93C01D12841C00FCA996 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A0BB93A71D12840700FCA996 /* PlayerCharacter.swift */,
+				A0BB93A71D12840700FCA996 /* CharacterSheet.swift */,
 				A0CA50A21D19CC2300EC5EF7 /* Character Sheet Object Models */,
 			);
 			name = Model;
@@ -232,6 +264,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A0764AB81D1B458A00D12301 /* pathfinder-charactersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0764AC01D1B458A00D12301 /* Build configuration list for PBXNativeTarget "pathfinder-charactersTests" */;
+			buildPhases = (
+				A0764AB51D1B458A00D12301 /* Sources */,
+				A0764AB61D1B458A00D12301 /* Frameworks */,
+				A0764AB71D1B458A00D12301 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0764ABF1D1B458A00D12301 /* PBXTargetDependency */,
+			);
+			name = "pathfinder-charactersTests";
+			productName = "pathfinder-charactersTests";
+			productReference = A0764AB91D1B458A00D12301 /* pathfinder-charactersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A0BB938A1D12837300FCA996 /* pathfinder-characters */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0BB939D1D12837300FCA996 /* Build configuration list for PBXNativeTarget "pathfinder-characters" */;
@@ -262,6 +312,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Adrian Padua";
 				TargetAttributes = {
+					A0764AB81D1B458A00D12301 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = A0BB938A1D12837300FCA996;
+					};
 					A0BB938A1D12837300FCA996 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -281,11 +335,19 @@
 			projectRoot = "";
 			targets = (
 				A0BB938A1D12837300FCA996 /* pathfinder-characters */,
+				A0764AB81D1B458A00D12301 /* pathfinder-charactersTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A0764AB71D1B458A00D12301 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A0BB93891D12837300FCA996 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,6 +415,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A0764AB51D1B458A00D12301 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0764ABC1D1B458A00D12301 /* pathfinder_charactersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A0BB93871D12837300FCA996 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,7 +444,7 @@
 				A0BB93B11D12840700FCA996 /* Classes.swift in Sources */,
 				A0CA50991D1859A800EC5EF7 /* DatabaseManager.swift in Sources */,
 				A0BB938F1D12837300FCA996 /* AppDelegate.swift in Sources */,
-				A0BB93B61D12840700FCA996 /* PlayerCharacter.swift in Sources */,
+				A0BB93B61D12840700FCA996 /* CharacterSheet.swift in Sources */,
 				A0CA50931D18545D00EC5EF7 /* FeatsDB.swift in Sources */,
 				A0BB93B41D12840700FCA996 /* Feats.swift in Sources */,
 				A0F7DB421D1A034A00E1F814 /* ArmorDB.swift in Sources */,
@@ -382,6 +452,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A0764ABF1D1B458A00D12301 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0BB938A1D12837300FCA996 /* pathfinder-characters */;
+			targetProxy = A0764ABE1D1B458A00D12301 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A0BB93921D12837300FCA996 /* Main.storyboard */ = {
@@ -403,6 +481,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A0764AC11D1B458A00D12301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "pathfinder-charactersTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adrpadua.pathfinder-charactersTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pathfinder-characters.app/pathfinder-characters";
+			};
+			name = Debug;
+		};
+		A0764AC21D1B458A00D12301 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "pathfinder-charactersTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adrpadua.pathfinder-charactersTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pathfinder-characters.app/pathfinder-characters";
+			};
+			name = Release;
+		};
 		A0BB939B1D12837300FCA996 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -515,6 +617,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A0764AC01D1B458A00D12301 /* Build configuration list for PBXNativeTarget "pathfinder-charactersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0764AC11D1B458A00D12301 /* Debug */,
+				A0764AC21D1B458A00D12301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A0BB93861D12837200FCA996 /* Build configuration list for PBXProject "pathfinder-characters" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

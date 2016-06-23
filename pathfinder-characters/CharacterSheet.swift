@@ -152,7 +152,6 @@ class PlayerCharacter: Object {
                     // TODO: Race Bonus
                     let abilityName = names[index - 1]
                     let raceBonus = pc_race!.abilityScoreBonuses[abilityName]
-                    print(raceBonus!)
                     let abilityValue = values[index - 1] + raceBonus!
                     let abilityObj = AbilityScore(name: abilityName, value: abilityValue)
                     pc_abilityScores.append(abilityObj)

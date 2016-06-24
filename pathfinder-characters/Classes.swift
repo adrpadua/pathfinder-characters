@@ -8,6 +8,7 @@
 
 import Foundation
 import Darwin
+import RealmSwift
 
 class ClassObject {
     
@@ -41,4 +42,16 @@ class Cleric: ClassObject {
 
 class DomainObject {
     
+    var name = ""
+    var specialAbility1 = SpecialAbilityObject()
+    var specialAbility2 = SpecialAbilityObject()
+    
+    var domainSpells = List<SpellReferenceName>()
+}
+
+class SpecialAbilityObject {
+    
+    var name = ""
+    var type = ""
+    var description = ""
 }

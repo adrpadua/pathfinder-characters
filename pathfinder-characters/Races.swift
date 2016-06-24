@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Race {
+class RaceObject {
     
     var name = ""
     var size = ""

@@ -11,6 +11,7 @@
 		A0277C811D149F3000D833DA /* Spells_PFRPG_Core.json in Resources */ = {isa = PBXBuildFile; fileRef = A0277C801D149F3000D833DA /* Spells_PFRPG_Core.json */; };
 		A0277C841D14A6A400D833DA /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0277C831D14A6A400D833DA /* Database.swift */; };
 		A0764AC41D1C8ACF00D12301 /* SpecialAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0764AC31D1C8ACF00D12301 /* SpecialAbility.swift */; };
+		A0764AC61D1C8B5F00D12301 /* ListReferenceName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0764AC51D1C8B5F00D12301 /* ListReferenceName.swift */; };
 		A0837CA51D1652B10070DD1F /* Skills_PFRPG_Master.json in Resources */ = {isa = PBXBuildFile; fileRef = A0837CA41D1652B10070DD1F /* Skills_PFRPG_Master.json */; };
 		A0BB938F1D12837300FCA996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB938E1D12837300FCA996 /* AppDelegate.swift */; };
 		A0BB93941D12837300FCA996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0BB93921D12837300FCA996 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		A0277C831D14A6A400D833DA /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		A0277C881D14C0DD00D833DA /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = default.realm; path = Realm/default.realm; sourceTree = SOURCE_ROOT; };
 		A0764AC31D1C8ACF00D12301 /* SpecialAbility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialAbility.swift; sourceTree = "<group>"; };
+		A0764AC51D1C8B5F00D12301 /* ListReferenceName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListReferenceName.swift; sourceTree = "<group>"; };
 		A0837CA41D1652B10070DD1F /* Skills_PFRPG_Master.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Skills_PFRPG_Master.json; sourceTree = "<group>"; };
 		A0BB938B1D12837300FCA996 /* pathfinder-characters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pathfinder-characters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0BB938E1D12837300FCA996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				A0BB93A71D12840700FCA996 /* CharacterSheet.swift */,
+				A0764AC51D1C8B5F00D12301 /* ListReferenceName.swift */,
 				A0CA50A21D19CC2300EC5EF7 /* Character Sheet Object Models */,
 			);
 			name = Model;
@@ -371,6 +374,7 @@
 				A0BB93AF1D12840700FCA996 /* AbilityScores.swift in Sources */,
 				A0CA50A11D19CB8300EC5EF7 /* Equipment.swift in Sources */,
 				A0CA50A41D19D25300EC5EF7 /* WeaponDB.swift in Sources */,
+				A0764AC61D1C8B5F00D12301 /* ListReferenceName.swift in Sources */,
 				A0BB93BD1D12840700FCA996 /* StartVC.swift in Sources */,
 				A0BB93B71D12840700FCA996 /* Races.swift in Sources */,
 				A0BB93B51D12840700FCA996 /* RealmHandler.swift in Sources */,

@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class Skill: Object {
+class SkillObject: Object {
     
     let partOfCharacter = LinkingObjects(fromType: CharacterSheet.self, property: "_skills")
     
@@ -27,7 +27,7 @@ class Skill: Object {
     
     var abilityModifierBonus: Int {
         get {
-            return parentPlayerCharacter._abilityScores.getItemNamed(keyAbility).modifier
+            return parentPlayerCharacter._abilityScores.getObjectNamed(keyAbility).modifier
         }
     }
     

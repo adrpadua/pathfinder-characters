@@ -48,10 +48,8 @@ let skillNames = ["Acrobatics"
     , "Swim"
     , "Use Magic Device"]
 
-
-
 extension List {
-    func getItemNamed(name: String) -> T {
+    func getObjectNamed(name: String) -> T {
         
         let object = self.filter("name == %@", "\(name)")[0]
         
@@ -67,10 +65,6 @@ extension String {
         return true
     }
 }
-
-
-
-
 
 
 

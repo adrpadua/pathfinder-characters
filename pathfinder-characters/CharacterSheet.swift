@@ -13,89 +13,91 @@ import Darwin
 
 class CharacterSheet: Object {
     
-    ///// Saved to Realm ///////////////////////////////
+    ///// SAVED TO REALM ///////////////////////////////
     private dynamic var _name = ""
     private dynamic var _raceName = ""
     private dynamic var _className = ""
     private dynamic var _level = 1
     private dynamic var _currentHitPoints = 1
     private dynamic var _maxHitPoints = 1
+    private dynamic var _alignment = ""
     
-    let _skills = List<Skill>()
+    let _skills = List<SkillObject>()
     let _abilityScores = List<AbilityScore>()
-    let _feats = List<Feat>()
+    let _feats = List<FeatReferenceName>()
     let _inventory = List<EquipmentReferenceName>()
-    ////////////////////////////////////////////////////
+    let _spells = List<SpellReferenceName>()
+    
+    ///// NOT SAVED TO REALM ///////////////////////////
+    override static func ignoredProperties() -> [String] {
+        return ["_preparedSpells"]
+    }
+    let _preparedSpells = List<SpellReferenceName>()
     
     
-    // MODIFYING FUNCTIONS
+    ///// MODIFYING FUNCTIONS //////////////////////////
     func adjustHP(byAmount: Int) {
         try! realm!.write {
             _currentHitPoints += byAmount
         }
-        
     }
-    
-    func addFeat(featName: String) {
-        let featObj = DBManager.fetchFeatObjectFromDatabase(featName)
+    func addFeat(name: String) {
+        let featReferenceName = FeatReferenceName(name: name)
         
         try! realm!.write {
-            _feats.append(featObj)
+            _feats.append(featReferenceName)
         }
     }
-    
+    func addSpellToSpellList(name: String) {
+        let spellReferenceName = SpellReferenceName(name: name)
+        
+        try! realm!.write {
+            _spells.append(spellReferenceName)
+        }
+    }
     func addSkillRankTo(name: String) {
-        let skillObj = _skills.getItemNamed(name)
+        let skillObj = _skills.getObjectNamed(name)
         
         try! realm!.write {
             skillObj.addRank()
         }
     }
-    
     func addEquipmentToInventory(name: String) {
         
-        let equipmentObj = DBManager.fetchEquipmentObjectFromDatabase(name)
-        let equipmentReferenceName = EquipmentReferenceName(name: equipmentObj.name)
+        let equipmentReferenceName = EquipmentReferenceName(name: name)
         
         try! realm!.write {
             _inventory.append(equipmentReferenceName)
         }
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    // MARK: Setter functions
+    ///// SETTER FUNCTIONS /////////////////////////////
     func setName(name: String) {
         try! realm!.write {
             self._name = name
         }
     }
-    
     func setRaceName(name: String) {
         try! realm!.write {
             self._raceName = name
         }
     }
-    
     func setClassName(name: String) {
         try! realm!.write {
             self._className = name
         }
         setMaxHitPoints()
     }
-    
     func setLevel(value: Int) {
         try! realm!.write {
             self._level = value
         }
     }
-    
+    func setAlignment(alignment: String) {
+        try! realm!.write {
+            self._alignment = alignment
+        }
+    }
     func setAbilityScores(values: [Int]) {
         if values.count == 6 {
             
@@ -122,7 +124,6 @@ class CharacterSheet: Object {
         }
         
     }
-    
     func setBaseSkills() {
         
         try! realm!.write {
@@ -132,7 +133,6 @@ class CharacterSheet: Object {
             }
         }
     }
-    
     func setMaxHitPoints() {
         if _level == 1 && _className != "" {
             try! realm!.write {
@@ -141,38 +141,40 @@ class CharacterSheet: Object {
             setHitPoints(_maxHitPoints)
         }
     }
-    
     func setHitPoints(newHP: Int) {
         try! realm!.write {
             _currentHitPoints = newHP
         }
     }
-    
-    
-    
-    
-    
+    // END CHARACTER SHEET
 }
+
+
+
+
+
+
 
 extension CharacterSheet {
     var STR: AbilityScore {
-        return _abilityScores.getItemNamed("STR")
+        return _abilityScores.getObjectNamed("STR")
     }
     var DEX: AbilityScore {
-        return _abilityScores.getItemNamed("DEX")
+        return _abilityScores.getObjectNamed("DEX")
     }
     var CON: AbilityScore {
-        return _abilityScores.getItemNamed("CON")
+        return _abilityScores.getObjectNamed("CON")
     }
     var INT: AbilityScore {
-        return _abilityScores.getItemNamed("INT")
+        return _abilityScores.getObjectNamed("INT")
     }
     var WIS: AbilityScore {
-        return _abilityScores.getItemNamed("WIS")
+        return _abilityScores.getObjectNamed("WIS")
     }
     var CHA: AbilityScore {
-        return _abilityScores.getItemNamed("CHA")
+        return _abilityScores.getObjectNamed("CHA")
     }
+    
     var savingThrows: [String : Int] {
         
         var _savingThrows = [String : Int]()
@@ -201,17 +203,18 @@ extension CharacterSheet {
     var Willpower: Int {
         return savingThrows["Willpower"]!
     }
+    
     var name: String {
         get {
             return _name
         }
     }
-    var classObj: CharacterClass {
+    var classObj: ClassObject {
         get {
             return DBManager.fetchClassObjectFromDatabase(_className, level: _level)
         }
     }
-    var raceObj: Race {
+    var raceObj: RaceObject {
         get {
             return DBManager.fetchRaceObjectFromDatabase(_raceName)
         }

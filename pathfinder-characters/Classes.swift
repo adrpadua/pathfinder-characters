@@ -9,7 +9,7 @@
 import Foundation
 import Darwin
 
-class CharacterClass {
+class ClassObject {
     
     var name = ""
     var startingGold = 0
@@ -25,4 +25,20 @@ class CharacterClass {
                     "Will" : 2 + Int(floor(Double(level / 2))),]
         }
     }
+}
+
+class Cleric: ClassObject {
+    
+    var firstDomain: DomainObject
+    var secondDomain: DomainObject
+    var numberOfSpellsPerLevel = [String : Int]()
+    
+    override init() {
+        firstDomain = DomainObject()
+        secondDomain = DomainObject()
+    }
+}
+
+class DomainObject {
+    
 }

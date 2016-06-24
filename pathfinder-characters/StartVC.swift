@@ -61,6 +61,8 @@ class StartVC: UIViewController {
             character.setMaxHitPoints()
             character.addEquipmentToInventory("Sword, short")
             character.addEquipmentToInventory("Hide")
+            
+            print(character._feats.getObjectNamed("Shatter Defenses").toObject())
         }
     }
     

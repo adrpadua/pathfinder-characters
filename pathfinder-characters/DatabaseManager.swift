@@ -11,10 +11,10 @@ import SwiftyJSON
 
 class DBManager {
     
-    static func fetchClassObjectFromDatabase(name: String, level: Int) -> CharacterClass {
+    static func fetchClassObjectFromDatabase(name: String, level: Int) -> ClassObject {
         let jsonLocation = ClassDB.getJSONDirectoryOf(name)
         
-        let classObj = CharacterClass()
+        let classObj = ClassObject()
         
         classObj.name = ClassDB.getName(jsonLocation)
         classObj.startingGold = ClassDB.getStartingGold(jsonLocation)
@@ -26,10 +26,10 @@ class DBManager {
         return classObj
     }
     
-    static func fetchSkillObjectFromDatabase(name: String) -> Skill {
+    static func fetchSkillObjectFromDatabase(name: String) -> SkillObject {
         let jsonLocation = SkillsDB.getJSONDirectoryOf(name)
         
-        let skillObj = Skill()
+        let skillObj = SkillObject()
         
         skillObj.name = SkillsDB.getName(jsonLocation)
         skillObj.keyAbility = SkillsDB.getKeyAbility(jsonLocation)
@@ -37,10 +37,10 @@ class DBManager {
         return skillObj
     }
     
-    static func fetchFeatObjectFromDatabase(name: String) -> Feat {
+    static func fetchFeatObjectFromDatabase(name: String) -> FeatObject {
         let jsonLocation = FeatsDB.getJSONDirectoryOf(name)
         
-        let featObj = Feat()
+        let featObj = FeatObject()
         
         featObj.name = FeatsDB.getName(jsonLocation)
         featObj.prereqs = FeatsDB.getPrerequisites(jsonLocation)
@@ -50,10 +50,10 @@ class DBManager {
         return featObj
     }
     
-    static func fetchSpellObjectFromDatabase(name: String) -> Spell {
+    static func fetchSpellObjectFromDatabase(name: String) -> SpellObject {
         let jsonLocation = SpellsDB.getJSONDirectoryOf(name)
         
-        let spellObj = Spell()
+        let spellObj = SpellObject()
         
         spellObj.name = SpellsDB.getName(jsonLocation)
         spellObj.school = SpellsDB.getSchool(jsonLocation)
@@ -63,10 +63,10 @@ class DBManager {
         return spellObj
     }
     
-    static func fetchRaceObjectFromDatabase(name: String) -> Race {
+    static func fetchRaceObjectFromDatabase(name: String) -> RaceObject {
         let jsonLocation = RaceDB.getJSONDirectoryOf(name)
         
-        let raceObj = Race()
+        let raceObj = RaceObject()
         
         raceObj.name = RaceDB.getName(jsonLocation)
         raceObj.abilityScoreRacialBonuses = RaceDB.getAbilityScoreRacialBonuses(jsonLocation)
@@ -77,7 +77,7 @@ class DBManager {
         return raceObj
     }
     
-    static func fetchEquipmentObjectFromDatabase(name: String) -> Equipment {
+    static func fetchEquipmentObjectFromDatabase(name: String) -> EquipmentObject {
         
         if WeaponDB.includes(name){
             return fetchWeaponObjectFromDatabase(name)
@@ -85,13 +85,13 @@ class DBManager {
             return fetchArmorObjectFromDatabase(name)
         }
         
-        return Equipment()
+        return EquipmentObject()
     }
     
-    private static func fetchWeaponObjectFromDatabase(name: String) -> Weapon {
+    private static func fetchWeaponObjectFromDatabase(name: String) -> WeaponObject {
         let jsonLocation = WeaponDB.getJSONDirectoryOf(name)
         
-        let weaponObj = Weapon()
+        let weaponObj = WeaponObject()
         
         weaponObj.name = WeaponDB.getName(jsonLocation)
         weaponObj.weapon_category = WeaponDB.getCategory(jsonLocation)
@@ -112,10 +112,10 @@ class DBManager {
         return weaponObj
     }
     
-    private static func fetchArmorObjectFromDatabase(name: String) -> Armor {
+    private static func fetchArmorObjectFromDatabase(name: String) -> ArmorObject {
         let jsonLocation = ArmorDB.getJSONDirectoryOf(name)
         
-        let armorObj = Armor()
+        let armorObj = ArmorObject()
         
         armorObj.name = ArmorDB.getName(jsonLocation)
         armorObj.classification = ArmorDB.getClassification(jsonLocation)

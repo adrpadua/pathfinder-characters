@@ -9,20 +9,8 @@
 import Foundation
 import RealmSwift
 
-class EquipmentReferenceName: Object {
-    dynamic var name = ""
-    
-    convenience init(name: String) {
-        self.init()
-        self.name = name
-    }
-    
-    func toEquipmentObject() -> Equipment {
-        return DBManager.fetchEquipmentObjectFromDatabase(self.name)
-    }
-}
 
-class Equipment {
+class EquipmentObject {
     
     var name = ""
     var classification = ""
@@ -44,7 +32,7 @@ class Equipment {
 
 }
 
-class Weapon: Equipment {
+class WeaponObject: EquipmentObject {
     var weapon_category = ""
     var damage_s = ""
     var damage_m = ""
@@ -56,7 +44,7 @@ class Weapon: Equipment {
     
 }
 
-class Armor: Equipment {
+class ArmorObject: EquipmentObject {
     
     var ac_bonus = 0
     var max_dex_bonus = 0
@@ -66,7 +54,7 @@ class Armor: Equipment {
     var speed_20 = 0
 }
 
-class Item: Equipment {
+class ItemObject: EquipmentObject {
     
     
 }

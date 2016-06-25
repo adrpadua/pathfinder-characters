@@ -11,15 +11,13 @@ import RealmSwift
 
 protocol ReferenceName {
     
-    associatedtype ItemType
     init(name: String)
     
-    func toObject() -> ItemType
+    func toObject() -> ReferenceObject
 }
 
 class EquipmentReferenceName: Object, ReferenceName {
     
-    typealias ItemType = EquipmentObject
     dynamic var name = ""
     
     convenience required init(name: String) {
@@ -27,14 +25,13 @@ class EquipmentReferenceName: Object, ReferenceName {
         self.name = name
     }
     
-    func toObject() -> EquipmentReferenceName.ItemType {
-        return DBManager.fetchEquipmentObjectFromDatabase(self.name)
+    func toObject() -> ReferenceObject {
+        return DBManager.fetchEquipmentObjectFromDatabase(name)
     }
 }
 
 class FeatReferenceName: Object, ReferenceName {
     
-    typealias ItemType = FeatObject
     dynamic var name = ""
     
     convenience required init(name: String) {
@@ -42,15 +39,14 @@ class FeatReferenceName: Object, ReferenceName {
         self.name = name
     }
     
-    func toObject() -> FeatReferenceName.ItemType {
-        return DBManager.fetchFeatObjectFromDatabase(self.name)
+    func toObject() -> ReferenceObject {
+        return DBManager.fetchFeatObjectFromDatabase(name)
     }
 }
 
 
 class SpellReferenceName: Object, ReferenceName {
     
-    typealias ItemType = SpellObject
     dynamic var name = ""
     
     convenience required init(name: String) {
@@ -58,7 +54,7 @@ class SpellReferenceName: Object, ReferenceName {
         self.name = name
     }
     
-    func toObject() -> SpellReferenceName.ItemType {
-        return DBManager.fetchSpellObjectFromDatabase(self.name)
+    func toObject() -> ReferenceObject {
+        return DBManager.fetchSpellObjectFromDatabase(name)
     }
 }

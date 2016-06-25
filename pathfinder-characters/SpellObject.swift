@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SpellObject {
+class SpellObject: ReferenceObject {
     var name = ""
     var school = ""
     var classLevels = [String : Int]()

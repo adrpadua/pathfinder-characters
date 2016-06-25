@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class FeatObject {
+class FeatObject: ReferenceObject {
     dynamic var name = ""
     dynamic var type = ""
     dynamic var prereqs = ""

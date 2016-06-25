@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 
-class EquipmentObject {
+class EquipmentObject: ReferenceObject {
     
     var name = ""
     var classification = ""

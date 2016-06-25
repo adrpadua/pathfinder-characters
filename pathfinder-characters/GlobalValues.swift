@@ -49,7 +49,7 @@ let skillNames = ["Acrobatics"
     , "Use Magic Device"]
 
 extension List {
-    func getObjectNamed(name: String) -> T {
+    func getReferenceNamed(name: String) -> T {
         
         let object = self.filter("name == %@", "\(name)")[0]
         

@@ -29,7 +29,7 @@ class StartVC: UIViewController {
             character.setRaceName("Elf")
             character.setLevel(5)
             character.setClassName("Cleric")
-            let scores = [15, 13, 12, 8, 9, 10]
+            let scores = [15, 13, 12, 3, 9, 19]
             character.setAbilityScores(scores)
             character.setBaseSkills()
             character.addSkillRankTo("Climb")
@@ -39,12 +39,7 @@ class StartVC: UIViewController {
             character.addFeat("Penetrating Strike")
             character.setMaxHitPoints()
             character.addEquipmentToInventory("Dagger")
-            for stuff in character.specialAbilities {
-                print(stuff.name)
-                print(stuff.type)
-                print(stuff.description)
-                print("")
-            }
+            
         }
         
     }
@@ -70,7 +65,7 @@ class StartVC: UIViewController {
             character.addEquipmentToInventory("Sword, short")
             character.addEquipmentToInventory("Hide")
             
-            print(character._feats.getObjectNamed("Shatter Defenses").toObject())
+            print(character._feats.getReferenceNamed("Shatter Defenses").toObject())
         }
     }
     

@@ -28,6 +28,8 @@ class AbilityScore: Object {
 
 extension AbilityScore {
     var modifier: Int {
-        return (self.value - 10) / 2
+        let dblValue = Double(value)
+        let mod: Double  = (dblValue - 10) / 2
+        return Int(floor(mod))
     }
 }

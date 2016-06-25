@@ -23,7 +23,6 @@ class DBManager {
         classObj.skillRanksPerLevel = ClassDB.getSkillRanksPerLevel(jsonLocation)
         classObj.classSkills = ClassDB.getClassSkills(jsonLocation)
         classObj.baseAttackBonus = ClassDB.getBaseAttackBonus(jsonLocation, level: level)
-        classObj.specialAbilities = fetchSpecialAbilityArrayFromDatabase(name, level: level)
         
         return classObj
     }

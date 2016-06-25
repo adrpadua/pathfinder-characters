@@ -22,8 +22,9 @@ class CharacterSheet: Object {
     private dynamic var _maxHitPoints = 1
     private dynamic var _alignment = ""
     
-    let _skills = List<SkillObject>()
     let _abilityScores = List<AbilityScore>()
+    
+    let _skills = List<SkillReferenceName>()
     let _feats = List<FeatReferenceName>()
     let _inventory = List<EquipmentReferenceName>()
     let _spells = List<SpellReferenceName>()
@@ -56,10 +57,10 @@ class CharacterSheet: Object {
         }
     }
     func addSkillRankTo(name: String) {
-        let skillObj = _skills.getObjectNamed(name)
+        let skillRef = _skills.getReferenceNamed(name)
         
         try! realm!.write {
-            skillObj.addRank()
+            skillRef.ranks += 1
         }
     }
     func addEquipmentToInventory(name: String) {
@@ -128,8 +129,9 @@ class CharacterSheet: Object {
         
         try! realm!.write {
             for index in 1...skillNames.count {
-                let skill = DBManager.fetchSkillObjectFromDatabase(skillNames[index - 1])
-                _skills.append(skill)
+                let skillRefName = SkillReferenceName(name: skillNames[index - 1])
+                
+                _skills.append(skillRefName)
             }
         }
     }
@@ -157,22 +159,22 @@ class CharacterSheet: Object {
 
 extension CharacterSheet {
     var STR: AbilityScore {
-        return _abilityScores.getObjectNamed("STR")
+        return _abilityScores.getReferenceNamed("STR")
     }
     var DEX: AbilityScore {
-        return _abilityScores.getObjectNamed("DEX")
+        return _abilityScores.getReferenceNamed("DEX")
     }
     var CON: AbilityScore {
-        return _abilityScores.getObjectNamed("CON")
+        return _abilityScores.getReferenceNamed("CON")
     }
     var INT: AbilityScore {
-        return _abilityScores.getObjectNamed("INT")
+        return _abilityScores.getReferenceNamed("INT")
     }
     var WIS: AbilityScore {
-        return _abilityScores.getObjectNamed("WIS")
+        return _abilityScores.getReferenceNamed("WIS")
     }
     var CHA: AbilityScore {
-        return _abilityScores.getObjectNamed("CHA")
+        return _abilityScores.getReferenceNamed("CHA")
     }
     
     var savingThrows: [String : Int] {
@@ -243,6 +245,33 @@ extension CharacterSheet {
         get {
             return classObj.specialAbilities
         }
+    }
+    
+    func skillTotalFor(skillName: String) -> Int {
+        
+        let baseSkillValue = _skills.getReferenceNamed(skillName).ranks
+        let classSkillBonus = calcClassSkillBonus(skillName)
+        let abilityModifierBonus = calcAbilityModifierBonus(skillName)
+        
+        return baseSkillValue + classSkillBonus + abilityModifierBonus
+    }
+    
+    func calcClassSkillBonus(skillName: String) -> Int {
+
+        let classSkills = classObj.classSkills, currentRanks = _skills.getReferenceNamed(skillName).ranks
+        
+        if classSkills[skillName] == true  &&  currentRanks > 0 {
+            return 3
+        }
+        
+        return 0
+    }
+    
+    func calcAbilityModifierBonus(skillName: String) -> Int {
+        
+        let skillReference = _skills.getReferenceNamed(skillName)
+        let abilityModifierBonus = _abilityScores.getReferenceNamed(skillReference.getKeyAbilityName()).modifier
+        return abilityModifierBonus
     }
 }
 

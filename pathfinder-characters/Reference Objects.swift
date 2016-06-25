@@ -11,4 +11,5 @@ import RealmSwift
 
 protocol ReferenceObject {
     
+    var name: String { get }
 }

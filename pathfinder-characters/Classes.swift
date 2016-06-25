@@ -15,11 +15,17 @@ class ClassObject {
     var name = ""
     var startingGold = 0
     var hitDie = 0
-    var level = 0
+    var level = 1
     var skillRanksPerLevel = 0
     var classSkills = [String : Bool]()
     var baseAttackBonus = [Int]()
-    var specialAbilities = [SpecialAbilityObject]()
+    
+    
+    var specialAbilities: [SpecialAbilityObject] {
+        get {
+            return DBManager.fetchSpecialAbilityArrayFromDatabase(self.name, level: self.level)
+        }
+    }
     
     var savingThrows: [String : Int]? {
         get {
@@ -32,8 +38,8 @@ class ClassObject {
 }
 
 class SpecialAbilityObject {
-    
     var name = ""
     var type = ""
     var description = ""
 }
+

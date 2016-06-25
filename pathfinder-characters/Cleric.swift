@@ -23,9 +23,9 @@ class Cleric: ClassObject {
 }
 
 extension Cleric {
-    var availableDomainSpells: [Int : [SpellReferenceName]] {
+    var availableDomainSpells: [Int : [String]] {
         get {
-            var domainSpells = [Int : [SpellReferenceName]]()
+            var domainSpells = [Int : [String]]()
             
             for index in 1...9 {
                 domainSpells[index]?.append(self.firstDomain.domainSpells[index]!)
@@ -43,5 +43,5 @@ class DomainObject {
     var specialAbility1 = SpecialAbilityObject()
     var specialAbility2 = SpecialAbilityObject()
     
-    var domainSpells = [Int : SpellReferenceName]()
+    var domainSpells = [Int : String]()
 }

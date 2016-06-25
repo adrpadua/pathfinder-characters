@@ -40,7 +40,10 @@ class ClassDB: Database {
         let classSkillsJSON = json["class_skills"]
         return createStringToBoolDictionaryFromJSONDirectory(classSkillsJSON)
     }
+    
+    static func getBaseAttackBonus(json: JSON, level: Int) -> [Int] {
+        let baseAttackBonusJSON = json["level", "\(level)", "base_attack_bonus"]
+        return createIntArrayFromJSONDirectory(baseAttackBonusJSON)
+    }
 
 }
-
-

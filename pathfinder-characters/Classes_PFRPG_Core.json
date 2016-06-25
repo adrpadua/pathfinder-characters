@@ -3,11 +3,13 @@
         
         "1" : {
             "name" : "Cleric",
+            "spellcasting" : true,
             "role" : "More than capable of upholding the honor of their deities in battle, clerics often prove stalwart and capable combatants. Their true strength lies in their capability to draw upon the power of their deities, whether to increase their own and their allies' prowess in battle, to vex their foes with divine magic, or to lend healing to companions in need.",
             "starting_gold" : 140,
             "hit_die" : 8,
             "skill_ranks_per_level" : 2,
-            "class_skills" : {
+            "class_skills" :
+            {
                 "Acrobatics" : "0"
                 , "Appraise" : "1"
                 , "Bluff" : "0"
@@ -45,68 +47,753 @@
                 , "Use Magic Device" : "0"
             },
             "proficiencies" : "Clerics are proficient with all simple weapons, light armor, medium armor, and shields (except tower shields). Clerics are also proficient with the favored weapon of their deities.",
-            "base_attack_bonus" : {
-                "1" : {
-                    "bonuses" : [0]
+            "level" :
+            {
+                "1" :
+                {
+                    "base_attack_bonus" : [0]
+                    ,"special_abilities" :
+                    [
+                     {
+                     "name" : "Aura"
+                     ,"replaces" : "NULL"
+                     ,"type" : "Extraordinary"
+                     ,"description" : "A cleric of a chaotic, evil, good, or lawful deity has a particularly powerful aura corresponding to the deity's alignment (see detect evil for details)."
+                     },
+                     {
+                     "name" : "Channel Energy 1d6"
+                     ,"replaces" : "NULL"
+                     ,"type" : "Supernatural"
+                     ,"description" : "Regardless of alignment, any cleric can release a wave of energy by channeling the power of her faith through her holy (or unholy) symbol. This energy can be used to cause or heal damage, depending on the type of energy channeled and the creatures targeted.\n\nA good cleric (or a neutral cleric who worships a good deity) channels positive energy and can choose to deal damage to undead creatures or to heal living creatures. An evil cleric (or a neutral cleric who worships an evil deity) channels negative energy and can choose to deal damage to living creatures or to heal undead creatures. A neutral cleric of a neutral deity (or one who is not devoted to a particular deity) must choose whether she channels positive or negative energy. Once this choice is made, it cannot be reversed. This decision also determines whether the cleric can cast spontaneous cure or inflict spells (see spontaneous casting).\n\nChanneling energy causes a burst that affects all creatures of one type (either undead or living) in a 30-foot radius centered on the cleric. The amount of damage dealt or healed is equal to 1d6 points of damage plus 1d6 points of damage for every two cleric levels beyond 1st (2d6 at 3rd, 3d6 at 5th, and so on). Creatures that take damage from channeled energy receive a Will save to halve the damage. The DC of this save is equal to 10 + 1/2 the cleric's level + the cleric's Charisma modifier. Creatures healed by channel energy cannot exceed their maximum hit point total—all excess healing is lost. A cleric may channel energy a number of times per day equal to 3 + her Charisma modifier. This is a standard action that does not provoke an attack of opportunity. A cleric can choose whether or not to include herself in this effect.\n\nA cleric must be able to present her holy symbol to use this ability."
+                     },
+                     {
+                     "name" : "Domains"
+                     ,"replaces" : "NULL"
+                     ,"type" : "NULL"
+                     ,"description" : "A cleric's deity influences her alignment, what magic she can perform, her values, and how others see her. A cleric chooses two domains from among those belonging to her deity. A cleric can select an alignment domain (Chaos, Evil, Good, or Law) only if her alignment matches that domain. If a cleric is not devoted to a particular deity, she still selects two domains to represent her spiritual inclinations and abilities (subject to GM approval). The restriction on alignment domains still applies.\n\nEach domain grants a number of domain powers, dependent upon the level of the cleric, as well as a number of bonus spells. A cleric gains one domain spell slot for each level of cleric spell she can cast, from 1st on up. Each day, a cleric can prepare one of the spells from her two domains in that slot. If a domain spell is not on the cleric spell list, a cleric can prepare it only in her domain spell slot. Domain spells cannot be used to cast spells spontaneously.\n\nIn addition, a cleric gains the listed powers from both of her domains, if she is of a high enough level. Unless otherwise noted, activating a domain power is a standard action."
+                     },
+                     {
+                     "name" : "Spontaneous Casting"
+                     ,"replaces" : "NULL"
+                     ,"type" : "NULL"
+                     ,"description" : "A good cleric (or a neutral cleric of a good deity) can channel stored spell energy into healing spells that she did not prepare ahead of time. The cleric can “lose” any prepared spell that is not an orison or domain spell in order to cast any cure spell of the same spell level or lower (a cure spell is any spell with “cure” in its name).\n\nAn evil cleric (or a neutral cleric of an evil deity) can't convert prepared spells to cure spells but can convert them to inflict spells (an inflict spell is one with “inflict” in its name).\n\nA cleric who is neither good nor evil and whose deity is neither good nor evil can convert spells to either cure spells or inflict spells (player's choice). Once the player makes this choice, it cannot be reversed. This choice also determines whether the cleric channels positive or negative energy (see channel energy)."
+                     },
+                     {
+                     "name" : "Bonus Languages"
+                     ,"replaces" : "NULL"
+                     ,"type" : "NULL"
+                     ,"description" : "A cleric's bonus language options include Celestial, Abyssal, and Infernal (the languages of good, chaotic evil, and lawful evil outsiders, respectively). These choices are in addition to the bonus languages available to the character because of her race."
+                     }
+                     ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 3
+                        ,"level1" : 1
+                        ,"level2" : 0
+                        ,"level3" : 0
+                        ,"level4" : 0
+                        ,"level5" : 0
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 0
+                        ,"level3" : 0
+                        ,"level4" : 0
+                        ,"level5" : 0
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
                 }
-                ,"2" : {
-                    "bonuses" : [1]
+                ,"2" :
+                {
+                    "base_attack_bonus" : [1]
+                    ,"special_abilities" :
+                    [
+                    ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 2
+                        ,"level2" : 0
+                        ,"level3" : 0
+                        ,"level4" : 0
+                        ,"level5" : 0
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 0
+                        ,"level3" : 0
+                        ,"level4" : 0
+                        ,"level5" : 0
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
                 }
-                ,"3" : {
-                    "bonuses" : [2]
+                ,"3" :
+                {
+                    "base_attack_bonus" : [2]
+                    ,"special_abilities" :
+                    [
+                     {
+                     "name" : "Channel Energy 2d6"
+                     ,"replaces" : "Channel Energy 1d6"
+                     ,"type" : "Supernatural"
+                     ,"description" : "Regardless of alignment, any cleric can release a wave of energy by channeling the power of her faith through her holy (or unholy) symbol. This energy can be used to cause or heal damage, depending on the type of energy channeled and the creatures targeted.\n\nA good cleric (or a neutral cleric who worships a good deity) channels positive energy and can choose to deal damage to undead creatures or to heal living creatures. An evil cleric (or a neutral cleric who worships an evil deity) channels negative energy and can choose to deal damage to living creatures or to heal undead creatures. A neutral cleric of a neutral deity (or one who is not devoted to a particular deity) must choose whether she channels positive or negative energy. Once this choice is made, it cannot be reversed. This decision also determines whether the cleric can cast spontaneous cure or inflict spells (see spontaneous casting).\n\nChanneling energy causes a burst that affects all creatures of one type (either undead or living) in a 30-foot radius centered on the cleric. The amount of damage dealt or healed is equal to 1d6 points of damage plus 1d6 points of damage for every two cleric levels beyond 1st (2d6 at 3rd, 3d6 at 5th, and so on). Creatures that take damage from channeled energy receive a Will save to halve the damage. The DC of this save is equal to 10 + 1/2 the cleric's level + the cleric's Charisma modifier. Creatures healed by channel energy cannot exceed their maximum hit point total—all excess healing is lost. A cleric may channel energy a number of times per day equal to 3 + her Charisma modifier. This is a standard action that does not provoke an attack of opportunity. A cleric can choose whether or not to include herself in this effect.\n\nA cleric must be able to present her holy symbol to use this ability."
+                     }
+                     ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 2
+                        ,"level2" : 1
+                        ,"level3" : 0
+                        ,"level4" : 0
+                        ,"level5" : 0
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 0
+                        ,"level4" : 0
+                        ,"level5" : 0
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
                 }
-                ,"4" : {
-                    "bonuses" : [3]
+                ,"4" :
+                {
+                    "base_attack_bonus" : [3]
+                    ,"special_abilities" :
+                    [
+                    ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 3
+                        ,"level2" : 2
+                        ,"level3" : 0
+                        ,"level4" : 0
+                        ,"level5" : 0
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 0
+                        ,"level4" : 0
+                        ,"level5" : 0
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
                 }
-                ,"5" : {
-                    "bonuses" : [3]
+                ,"5" :
+                {
+                    "base_attack_bonus" : [3]
+                    ,"special_abilities" :
+                    [
+                     {
+                     "name" : "Channel Energy 3d6"
+                     ,"replaces" : "Channel Energy 2d6"
+                     ,"type" : "Supernatural"
+                     ,"description" : "Regardless of alignment, any cleric can release a wave of energy by channeling the power of her faith through her holy (or unholy) symbol. This energy can be used to cause or heal damage, depending on the type of energy channeled and the creatures targeted.\n\nA good cleric (or a neutral cleric who worships a good deity) channels positive energy and can choose to deal damage to undead creatures or to heal living creatures. An evil cleric (or a neutral cleric who worships an evil deity) channels negative energy and can choose to deal damage to living creatures or to heal undead creatures. A neutral cleric of a neutral deity (or one who is not devoted to a particular deity) must choose whether she channels positive or negative energy. Once this choice is made, it cannot be reversed. This decision also determines whether the cleric can cast spontaneous cure or inflict spells (see spontaneous casting).\n\nChanneling energy causes a burst that affects all creatures of one type (either undead or living) in a 30-foot radius centered on the cleric. The amount of damage dealt or healed is equal to 1d6 points of damage plus 1d6 points of damage for every two cleric levels beyond 1st (2d6 at 3rd, 3d6 at 5th, and so on). Creatures that take damage from channeled energy receive a Will save to halve the damage. The DC of this save is equal to 10 + 1/2 the cleric's level + the cleric's Charisma modifier. Creatures healed by channel energy cannot exceed their maximum hit point total—all excess healing is lost. A cleric may channel energy a number of times per day equal to 3 + her Charisma modifier. This is a standard action that does not provoke an attack of opportunity. A cleric can choose whether or not to include herself in this effect.\n\nA cleric must be able to present her holy symbol to use this ability."
+                     }
+                     ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 3
+                        ,"level2" : 2
+                        ,"level3" : 1
+                        ,"level4" : 0
+                        ,"level5" : 0
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 1
+                        ,"level4" : 0
+                        ,"level5" : 0
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
                 }
-                ,"6" : {
-                    "bonuses" : [4]
+                ,"6" :
+                {
+                    "base_attack_bonus" : [4]
+                    ,"special_abilities" :
+                    [
+                    ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 3
+                        ,"level2" : 3
+                        ,"level3" : 2
+                        ,"level4" : 0
+                        ,"level5" : 0
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 1
+                        ,"level4" : 0
+                        ,"level5" : 0
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
                 }
-                ,"7" : {
-                    "bonuses" : [5]
+                ,"7" :
+                {
+                    "base_attack_bonus" : [5]
+                    ,"special_abilities" :
+                    [
+                     {
+                     "name" : "Channel Energy 4d6"
+                     ,"replaces" : "Channel Energy 3d6"
+                     ,"type" : "Supernatural"
+                     ,"description" : "Regardless of alignment, any cleric can release a wave of energy by channeling the power of her faith through her holy (or unholy) symbol. This energy can be used to cause or heal damage, depending on the type of energy channeled and the creatures targeted.\n\nA good cleric (or a neutral cleric who worships a good deity) channels positive energy and can choose to deal damage to undead creatures or to heal living creatures. An evil cleric (or a neutral cleric who worships an evil deity) channels negative energy and can choose to deal damage to living creatures or to heal undead creatures. A neutral cleric of a neutral deity (or one who is not devoted to a particular deity) must choose whether she channels positive or negative energy. Once this choice is made, it cannot be reversed. This decision also determines whether the cleric can cast spontaneous cure or inflict spells (see spontaneous casting).\n\nChanneling energy causes a burst that affects all creatures of one type (either undead or living) in a 30-foot radius centered on the cleric. The amount of damage dealt or healed is equal to 1d6 points of damage plus 1d6 points of damage for every two cleric levels beyond 1st (2d6 at 3rd, 3d6 at 5th, and so on). Creatures that take damage from channeled energy receive a Will save to halve the damage. The DC of this save is equal to 10 + 1/2 the cleric's level + the cleric's Charisma modifier. Creatures healed by channel energy cannot exceed their maximum hit point total—all excess healing is lost. A cleric may channel energy a number of times per day equal to 3 + her Charisma modifier. This is a standard action that does not provoke an attack of opportunity. A cleric can choose whether or not to include herself in this effect.\n\nA cleric must be able to present her holy symbol to use this ability."
+                     }
+                     ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 4
+                        ,"level2" : 3
+                        ,"level3" : 2
+                        ,"level4" : 1
+                        ,"level5" : 0
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 1
+                        ,"level4" : 1
+                        ,"level5" : 0
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
                 }
-                ,"8" : {
-                    "bonuses" : [6, 1]
+                ,"8" :
+                {
+                    "base_attack_bonus" : [6, 1]
+                    ,"special_abilities" :
+                    [
+                    ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 4
+                        ,"level2" : 3
+                        ,"level3" : 3
+                        ,"level4" : 2
+                        ,"level5" : 0
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 1
+                        ,"level4" : 1
+                        ,"level5" : 0
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
                 }
-                ,"9" : {
-                    "bonuses" : [6, 1]
+                ,"9" :
+                {
+                    "base_attack_bonus" : [6, 1]
+                    ,"special_abilities" :
+                    [
+                     {
+                     "name" : "Channel Energy 5d6"
+                     ,"replaces" : "Channel Energy 4d6"
+                     ,"type" : "Supernatural"
+                     ,"description" : "Regardless of alignment, any cleric can release a wave of energy by channeling the power of her faith through her holy (or unholy) symbol. This energy can be used to cause or heal damage, depending on the type of energy channeled and the creatures targeted.\n\nA good cleric (or a neutral cleric who worships a good deity) channels positive energy and can choose to deal damage to undead creatures or to heal living creatures. An evil cleric (or a neutral cleric who worships an evil deity) channels negative energy and can choose to deal damage to living creatures or to heal undead creatures. A neutral cleric of a neutral deity (or one who is not devoted to a particular deity) must choose whether she channels positive or negative energy. Once this choice is made, it cannot be reversed. This decision also determines whether the cleric can cast spontaneous cure or inflict spells (see spontaneous casting).\n\nChanneling energy causes a burst that affects all creatures of one type (either undead or living) in a 30-foot radius centered on the cleric. The amount of damage dealt or healed is equal to 1d6 points of damage plus 1d6 points of damage for every two cleric levels beyond 1st (2d6 at 3rd, 3d6 at 5th, and so on). Creatures that take damage from channeled energy receive a Will save to halve the damage. The DC of this save is equal to 10 + 1/2 the cleric's level + the cleric's Charisma modifier. Creatures healed by channel energy cannot exceed their maximum hit point total—all excess healing is lost. A cleric may channel energy a number of times per day equal to 3 + her Charisma modifier. This is a standard action that does not provoke an attack of opportunity. A cleric can choose whether or not to include herself in this effect.\n\nA cleric must be able to present her holy symbol to use this ability."
+                     }
+                     ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 4
+                        ,"level2" : 4
+                        ,"level3" : 3
+                        ,"level4" : 2
+                        ,"level5" : 1
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 1
+                        ,"level4" : 1
+                        ,"level5" : 1
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
                 }
-                ,"10" : {
-                    "bonuses" : [7, 2]
+                ,"10" :
+                {
+                    "base_attack_bonus" : [7, 2]
+                    ,"special_abilities" :
+                    [
+                    ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 4
+                        ,"level2" : 4
+                        ,"level3" : 3
+                        ,"level4" : 3
+                        ,"level5" : 2
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 1
+                        ,"level4" : 1
+                        ,"level5" : 1
+                        ,"level6" : 0
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
                 }
-                ,"11" : {
-                    "bonuses" : [8, 3]
+                ,"11" :
+                {
+                    "base_attack_bonus" : [8, 3]
+                    ,"special_abilities" :
+                    [
+                     {
+                     "name" : "Channel Energy 6d6"
+                     ,"replaces" : "Channel Energy 5d6"
+                     ,"type" : "Supernatural"
+                     ,"description" : "Regardless of alignment, any cleric can release a wave of energy by channeling the power of her faith through her holy (or unholy) symbol. This energy can be used to cause or heal damage, depending on the type of energy channeled and the creatures targeted.\n\nA good cleric (or a neutral cleric who worships a good deity) channels positive energy and can choose to deal damage to undead creatures or to heal living creatures. An evil cleric (or a neutral cleric who worships an evil deity) channels negative energy and can choose to deal damage to living creatures or to heal undead creatures. A neutral cleric of a neutral deity (or one who is not devoted to a particular deity) must choose whether she channels positive or negative energy. Once this choice is made, it cannot be reversed. This decision also determines whether the cleric can cast spontaneous cure or inflict spells (see spontaneous casting).\n\nChanneling energy causes a burst that affects all creatures of one type (either undead or living) in a 30-foot radius centered on the cleric. The amount of damage dealt or healed is equal to 1d6 points of damage plus 1d6 points of damage for every two cleric levels beyond 1st (2d6 at 3rd, 3d6 at 5th, and so on). Creatures that take damage from channeled energy receive a Will save to halve the damage. The DC of this save is equal to 10 + 1/2 the cleric's level + the cleric's Charisma modifier. Creatures healed by channel energy cannot exceed their maximum hit point total—all excess healing is lost. A cleric may channel energy a number of times per day equal to 3 + her Charisma modifier. This is a standard action that does not provoke an attack of opportunity. A cleric can choose whether or not to include herself in this effect.\n\nA cleric must be able to present her holy symbol to use this ability."
+                     }
+                     ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 4
+                        ,"level2" : 4
+                        ,"level3" : 4
+                        ,"level4" : 3
+                        ,"level5" : 2
+                        ,"level6" : 1
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 1
+                        ,"level4" : 1
+                        ,"level5" : 1
+                        ,"level6" : 1
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
                 }
-                ,"12" : {
-                    "bonuses" : [9, 4]
+                ,"12" :
+                {
+                    "base_attack_bonus" : [9, 4]
+                    ,"special_abilities" :
+                    [
+                    ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 4
+                        ,"level2" : 4
+                        ,"level3" : 4
+                        ,"level4" : 3
+                        ,"level5" : 3
+                        ,"level6" : 2
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 1
+                        ,"level4" : 1
+                        ,"level5" : 1
+                        ,"level6" : 1
+                        ,"level7" : 0
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
                 }
-                ,"13" : {
-                    "bonuses" : [9, 4]
+                ,"13" :
+                {
+                    "base_attack_bonus" : [9, 4]
+                    ,"special_abilities" :
+                    [
+                     {
+                     "name" : "Channel Energy 7d6"
+                     ,"replaces" : "Channel Energy 6d6"
+                     ,"type" : "Supernatural"
+                     ,"description" : "Regardless of alignment, any cleric can release a wave of energy by channeling the power of her faith through her holy (or unholy) symbol. This energy can be used to cause or heal damage, depending on the type of energy channeled and the creatures targeted.\n\nA good cleric (or a neutral cleric who worships a good deity) channels positive energy and can choose to deal damage to undead creatures or to heal living creatures. An evil cleric (or a neutral cleric who worships an evil deity) channels negative energy and can choose to deal damage to living creatures or to heal undead creatures. A neutral cleric of a neutral deity (or one who is not devoted to a particular deity) must choose whether she channels positive or negative energy. Once this choice is made, it cannot be reversed. This decision also determines whether the cleric can cast spontaneous cure or inflict spells (see spontaneous casting).\n\nChanneling energy causes a burst that affects all creatures of one type (either undead or living) in a 30-foot radius centered on the cleric. The amount of damage dealt or healed is equal to 1d6 points of damage plus 1d6 points of damage for every two cleric levels beyond 1st (2d6 at 3rd, 3d6 at 5th, and so on). Creatures that take damage from channeled energy receive a Will save to halve the damage. The DC of this save is equal to 10 + 1/2 the cleric's level + the cleric's Charisma modifier. Creatures healed by channel energy cannot exceed their maximum hit point total—all excess healing is lost. A cleric may channel energy a number of times per day equal to 3 + her Charisma modifier. This is a standard action that does not provoke an attack of opportunity. A cleric can choose whether or not to include herself in this effect.\n\nA cleric must be able to present her holy symbol to use this ability."
+                     }
+                     ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 4
+                        ,"level2" : 4
+                        ,"level3" : 4
+                        ,"level4" : 4
+                        ,"level5" : 3
+                        ,"level6" : 2
+                        ,"level7" : 1
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 1
+                        ,"level4" : 1
+                        ,"level5" : 1
+                        ,"level6" : 1
+                        ,"level7" : 1
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
                 }
-                ,"14" : {
-                    "bonuses" : [10, 5]
+                ,"14" :
+                {
+                    "base_attack_bonus" : [10, 5]
+                    ,"special_abilities" :
+                    [
+                    ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 4
+                        ,"level2" : 4
+                        ,"level3" : 4
+                        ,"level4" : 4
+                        ,"level5" : 3
+                        ,"level6" : 3
+                        ,"level7" : 2
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 1
+                        ,"level4" : 1
+                        ,"level5" : 1
+                        ,"level6" : 1
+                        ,"level7" : 1
+                        ,"level8" : 0
+                        ,"level9" : 0
+                    }
                 }
-                ,"15" : {
-                    "bonuses" : [11, 6, 1]
+                ,"15" :
+                {
+                    "base_attack_bonus" : [11, 6, 1]
+                    ,"special_abilities" :
+                    [
+                     {
+                     "name" : "Channel Energy 8d6"
+                     ,"replaces" : "Channel Energy 7d6"
+                     ,"type" : "Supernatural"
+                     ,"description" : "Regardless of alignment, any cleric can release a wave of energy by channeling the power of her faith through her holy (or unholy) symbol. This energy can be used to cause or heal damage, depending on the type of energy channeled and the creatures targeted.\n\nA good cleric (or a neutral cleric who worships a good deity) channels positive energy and can choose to deal damage to undead creatures or to heal living creatures. An evil cleric (or a neutral cleric who worships an evil deity) channels negative energy and can choose to deal damage to living creatures or to heal undead creatures. A neutral cleric of a neutral deity (or one who is not devoted to a particular deity) must choose whether she channels positive or negative energy. Once this choice is made, it cannot be reversed. This decision also determines whether the cleric can cast spontaneous cure or inflict spells (see spontaneous casting).\n\nChanneling energy causes a burst that affects all creatures of one type (either undead or living) in a 30-foot radius centered on the cleric. The amount of damage dealt or healed is equal to 1d6 points of damage plus 1d6 points of damage for every two cleric levels beyond 1st (2d6 at 3rd, 3d6 at 5th, and so on). Creatures that take damage from channeled energy receive a Will save to halve the damage. The DC of this save is equal to 10 + 1/2 the cleric's level + the cleric's Charisma modifier. Creatures healed by channel energy cannot exceed their maximum hit point total—all excess healing is lost. A cleric may channel energy a number of times per day equal to 3 + her Charisma modifier. This is a standard action that does not provoke an attack of opportunity. A cleric can choose whether or not to include herself in this effect.\n\nA cleric must be able to present her holy symbol to use this ability."
+                     }
+                     ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 4
+                        ,"level2" : 4
+                        ,"level3" : 4
+                        ,"level4" : 4
+                        ,"level5" : 4
+                        ,"level6" : 3
+                        ,"level7" : 2
+                        ,"level8" : 1
+                        ,"level9" : 0
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 1
+                        ,"level4" : 1
+                        ,"level5" : 1
+                        ,"level6" : 1
+                        ,"level7" : 1
+                        ,"level8" : 1
+                        ,"level9" : 0
+                    }
                 }
-                ,"16" : {
-                    "bonuses" : [12, 7, 2]
+                ,"16" :
+                {
+                    "base_attack_bonus" : [12, 7, 2]
+                    ,"special_abilities" :
+                    [
+                    ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 4
+                        ,"level2" : 4
+                        ,"level3" : 4
+                        ,"level4" : 4
+                        ,"level5" : 4
+                        ,"level6" : 3
+                        ,"level7" : 3
+                        ,"level8" : 2
+                        ,"level9" : 0
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 1
+                        ,"level4" : 1
+                        ,"level5" : 1
+                        ,"level6" : 1
+                        ,"level7" : 1
+                        ,"level8" : 1
+                        ,"level9" : 0
+                    }
                 }
-                ,"17" : {
-                    "bonuses" : [12, 7, 2]
+                ,"17" :
+                {
+                    "base_attack_bonus" : [12, 7, 2]
+                    ,"special_abilities" :
+                    [
+                     {
+                     "name" : "Channel Energy 9d6"
+                     ,"replaces" : "Channel Energy 8d6"
+                     ,"type" : "Supernatural"
+                     ,"description" : "Regardless of alignment, any cleric can release a wave of energy by channeling the power of her faith through her holy (or unholy) symbol. This energy can be used to cause or heal damage, depending on the type of energy channeled and the creatures targeted.\n\nA good cleric (or a neutral cleric who worships a good deity) channels positive energy and can choose to deal damage to undead creatures or to heal living creatures. An evil cleric (or a neutral cleric who worships an evil deity) channels negative energy and can choose to deal damage to living creatures or to heal undead creatures. A neutral cleric of a neutral deity (or one who is not devoted to a particular deity) must choose whether she channels positive or negative energy. Once this choice is made, it cannot be reversed. This decision also determines whether the cleric can cast spontaneous cure or inflict spells (see spontaneous casting).\n\nChanneling energy causes a burst that affects all creatures of one type (either undead or living) in a 30-foot radius centered on the cleric. The amount of damage dealt or healed is equal to 1d6 points of damage plus 1d6 points of damage for every two cleric levels beyond 1st (2d6 at 3rd, 3d6 at 5th, and so on). Creatures that take damage from channeled energy receive a Will save to halve the damage. The DC of this save is equal to 10 + 1/2 the cleric's level + the cleric's Charisma modifier. Creatures healed by channel energy cannot exceed their maximum hit point total—all excess healing is lost. A cleric may channel energy a number of times per day equal to 3 + her Charisma modifier. This is a standard action that does not provoke an attack of opportunity. A cleric can choose whether or not to include herself in this effect.\n\nA cleric must be able to present her holy symbol to use this ability."
+                     }
+                     ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 4
+                        ,"level2" : 4
+                        ,"level3" : 4
+                        ,"level4" : 4
+                        ,"level5" : 4
+                        ,"level6" : 4
+                        ,"level7" : 3
+                        ,"level8" : 2
+                        ,"level9" : 1
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 1
+                        ,"level4" : 1
+                        ,"level5" : 1
+                        ,"level6" : 1
+                        ,"level7" : 1
+                        ,"level8" : 1
+                        ,"level9" : 0
+                    }
                 }
-                ,"18" : {
-                    "bonuses" : [13, 8, 3]
+                ,"18" :
+                {
+                    "base_attack_bonus" : [13, 8, 3]
+                    ,"special_abilities" :
+                    [
+                    ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 4
+                        ,"level2" : 4
+                        ,"level3" : 4
+                        ,"level4" : 4
+                        ,"level5" : 4
+                        ,"level6" : 4
+                        ,"level7" : 3
+                        ,"level8" : 3
+                        ,"level9" : 2
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 1
+                        ,"level4" : 1
+                        ,"level5" : 1
+                        ,"level6" : 1
+                        ,"level7" : 1
+                        ,"level8" : 1
+                        ,"level9" : 1
+                    }
                 }
-                ,"19" : {
-                    "bonuses" : [14, 9, 4]
+                ,"19" :
+                { 
+                    "base_attack_bonus" : [14, 9, 4]
+                    ,"special_abilities" :
+                    [
+                     {
+                     "name" : "Channel Energy 10d6"
+                     ,"replaces" : "Channel Energy 9d6"
+                     ,"type" : "Supernatural"
+                     ,"description" : "Regardless of alignment, any cleric can release a wave of energy by channeling the power of her faith through her holy (or unholy) symbol. This energy can be used to cause or heal damage, depending on the type of energy channeled and the creatures targeted.\n\nA good cleric (or a neutral cleric who worships a good deity) channels positive energy and can choose to deal damage to undead creatures or to heal living creatures. An evil cleric (or a neutral cleric who worships an evil deity) channels negative energy and can choose to deal damage to living creatures or to heal undead creatures. A neutral cleric of a neutral deity (or one who is not devoted to a particular deity) must choose whether she channels positive or negative energy. Once this choice is made, it cannot be reversed. This decision also determines whether the cleric can cast spontaneous cure or inflict spells (see spontaneous casting).\n\nChanneling energy causes a burst that affects all creatures of one type (either undead or living) in a 30-foot radius centered on the cleric. The amount of damage dealt or healed is equal to 1d6 points of damage plus 1d6 points of damage for every two cleric levels beyond 1st (2d6 at 3rd, 3d6 at 5th, and so on). Creatures that take damage from channeled energy receive a Will save to halve the damage. The DC of this save is equal to 10 + 1/2 the cleric's level + the cleric's Charisma modifier. Creatures healed by channel energy cannot exceed their maximum hit point total—all excess healing is lost. A cleric may channel energy a number of times per day equal to 3 + her Charisma modifier. This is a standard action that does not provoke an attack of opportunity. A cleric can choose whether or not to include herself in this effect.\n\nA cleric must be able to present her holy symbol to use this ability."
+                     }
+                     ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 4
+                        ,"level2" : 4
+                        ,"level3" : 4
+                        ,"level4" : 4
+                        ,"level5" : 4
+                        ,"level6" : 4
+                        ,"level7" : 4
+                        ,"level8" : 3
+                        ,"level9" : 3
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 1
+                        ,"level4" : 1
+                        ,"level5" : 1
+                        ,"level6" : 1
+                        ,"level7" : 1
+                        ,"level8" : 1
+                        ,"level9" : 1
+                    }
                 }
-                ,"20" : {
-                    "bonuses" : [15, 10, 5]
+                ,"20" :
+                {
+                    "base_attack_bonus" : [15, 10, 5]
+                    ,"special_abilities" :
+                    [
+                    ]
+                    , "spells_per_day" :
+                    {
+                        "level0" : 4
+                        ,"level1" : 4
+                        ,"level2" : 4
+                        ,"level3" : 4
+                        ,"level4" : 4
+                        ,"level5" : 4
+                        ,"level6" : 4
+                        ,"level7" : 4
+                        ,"level8" : 4
+                        ,"level9" : 4
+                    }
+                    , "domain_spells_per_day" :
+                    {
+                        "level0" : 0
+                        ,"level1" : 1
+                        ,"level2" : 1
+                        ,"level3" : 1
+                        ,"level4" : 1
+                        ,"level5" : 1
+                        ,"level6" : 1
+                        ,"level7" : 1
+                        ,"level8" : 1
+                        ,"level9" : 1
+                    }
                 }
-            }
+            },
         },
         
         "2" : {
@@ -153,72 +840,73 @@
                 , "Use Magic Device" : "0"
             },
             "proficiencies" : "A fighter is proficient with all simple and martial weapons and with all armor (heavy, light, and medium) and shields (including tower shields).",
-            "base_attack_bonus" : {
+            "level" : {
                 "1" : {
-                    "bonuses" : [1]
+                    "base_attack_bonus" : [1]
                 }
                 ,"2" : {
-                    "bonuses" : [2]
-                }
+                    "base_attack_bonus" : [2]
+                } 
                 ,"3" : {
-                    "bonuses" : [3]
-                }
+                    "base_attack_bonus" : [3]
+                } 
                 ,"4" : {
-                    "bonuses" : [4]
-                }
+                    "base_attack_bonus" : [4]
+                } 
                 ,"5" : {
-                    "bonuses" : [5]
-                }
+                    "base_attack_bonus" : [5]
+                } 
                 ,"6" : {
-                    "bonuses" : [6, 1]
-                }
+                    "base_attack_bonus" : [6, 1]
+                } 
                 ,"7" : {
-                    "bonuses" : [7, 2]
-                }
+                    "base_attack_bonus" : [7, 2]
+                } 
                 ,"8" : {
-                    "bonuses" : [8, 3]
-                }
+                    "base_attack_bonus" : [8, 3]
+                } 
                 ,"9" : {
-                    "bonuses" : [9, 4]
-                }
+                    "base_attack_bonus" : [9, 4]
+                } 
                 ,"10" : {
-                    "bonuses" : [10, 5]
-                }
+                    "base_attack_bonus" : [10, 5]
+                } 
                 ,"11" : {
-                    "bonuses" : [11, 6, 1]
-                }
+                    "base_attack_bonus" : [11, 6, 1]
+                } 
                 ,"12" : {
-                    "bonuses" : [12, 7, 2]
-                }
+                    "base_attack_bonus" : [12, 7, 2]
+                } 
                 ,"13" : {
-                    "bonuses" : [13, 8, 3]
-                }
+                    "base_attack_bonus" : [13, 8, 3]
+                } 
                 ,"14" : {
-                    "bonuses" : [14, 9, 4]
-                }
+                    "base_attack_bonus" : [14, 9, 4]
+                } 
                 ,"15" : {
-                    "bonuses" : [15, 10, 5]
-                }
+                    "base_attack_bonus" : [15, 10, 5]
+                } 
                 ,"16" : {
-                    "bonuses" : [16, 11, 6, 1]
-                }
+                    "base_attack_bonus" : [16, 11, 6, 1]
+                } 
                 ,"17" : {
-                    "bonuses" : [17, 12, 7, 2]
-                }
+                    "base_attack_bonus" : [17, 12, 7, 2]
+                } 
                 ,"18" : {
-                    "bonuses" : [18, 13, 8, 3]
-                }
+                    "base_attack_bonus" : [18, 13, 8, 3]
+                } 
                 ,"19" : {
-                    "bonuses" : [19, 14, 9, 4]
-                }
+                    "base_attack_bonus" : [19, 14, 9, 4]
+                } 
                 ,"20" : {
-                    "bonuses" : [20, 15, 10, 5]
+                    "base_attack_bonus" : [20, 15, 10, 5]
                 }
             }
         },
         
         "3" : {
             "name" : "Rogue",
+            "spellcasting" : false,
             "role" : "Rogues excel at moving about unseen and catching foes unaware, and tend to avoid head-to-head combat. Their varied skills and abilities allow them to be highly versatile, with great variations in expertise existing between different rogues. Most, however, excel in overcoming hindrances of all types, from unlocking doors and disarming traps to outwitting magical hazards and conning dull-witted opponents.",
             "starting_gold" : 140,
             "hit_die" : 8,
@@ -261,73 +949,74 @@
                 , "Use Magic Device" : "1"
             },
             "proficiencies" : "Rogues are proficient with all simple weapons, plus the hand crossbow, rapier, sap, shortbow, and short sword. They are proficient with light armor, but not with shields.",
-            "base_attack_bonus" : {
+            "level" : {
                 "1" : {
-                    "bonuses" : [0]
+                    "base_attack_bonus" : [0]
                 }
                 ,"2" : {
-                    "bonuses" : [1]
-                }
+                    "base_attack_bonus" : [1]
+                } 
                 ,"3" : {
-                    "bonuses" : [2]
-                }
+                    "base_attack_bonus" : [2]
+                } 
                 ,"4" : {
-                    "bonuses" : [3]
-                }
+                    "base_attack_bonus" : [3]
+                } 
                 ,"5" : {
-                    "bonuses" : [3]
-                }
+                    "base_attack_bonus" : [3]
+                } 
                 ,"6" : {
-                    "bonuses" : [4]
+                    "base_attack_bonus" : [4]
                 } 
                 ,"7" : {
-                    "bonuses" : [5]
+                    "base_attack_bonus" : [5]
                 } 
                 ,"8" : {
-                    "bonuses" : [6, 1]
+                    "base_attack_bonus" : [6, 1]
                 } 
                 ,"9" : {
-                    "bonuses" : [6, 1]
+                    "base_attack_bonus" : [6, 1]
                 } 
                 ,"10" : {
-                    "bonuses" : [7, 2]
+                    "base_attack_bonus" : [7, 2]
                 } 
                 ,"11" : {
-                    "bonuses" : [8, 3]
+                    "base_attack_bonus" : [8, 3]
                 } 
                 ,"12" : {
-                    "bonuses" : [9, 4]
+                    "base_attack_bonus" : [9, 4]
                 } 
                 ,"13" : {
-                    "bonuses" : [9, 4]
+                    "base_attack_bonus" : [9, 4]
                 } 
                 ,"14" : {
-                    "bonuses" : [10, 5]
+                    "base_attack_bonus" : [10, 5]
                 } 
                 ,"15" : {
-                    "bonuses" : [11, 6, 1]
+                    "base_attack_bonus" : [11, 6, 1]
                 } 
                 ,"16" : {
-                    "bonuses" : [12, 7, 2]
+                    "base_attack_bonus" : [12, 7, 2]
                 } 
                 ,"17" : {
-                    "bonuses" : [12, 7, 2]
+                    "base_attack_bonus" : [12, 7, 2]
                 } 
                 ,"18" : {
-                    "bonuses" : [13, 8, 3]
+                    "base_attack_bonus" : [13, 8, 3]
                 } 
                 ,"19" : {
-                    "bonuses" : [14, 9, 4]
+                    "base_attack_bonus" : [14, 9, 4]
                 } 
                 ,"20" : {
-                    "bonuses" : [15, 10, 5]
+                    "base_attack_bonus" : [15, 10, 5]
                 }
             }
         },
         
         "4" : {
             "name" : "Wizard",
-            "description" : "While universalist wizards might study to prepare themselves for any manner of danger, specialist wizards research schools of magic that make them exceptionally skilled within a specific focus. Yet no matter their specialty, all wizards are masters of the impossible and can aid their allies in overcoming any danger.",
+            "spellcasting" : true,
+            "role" : "While universalist wizards might study to prepare themselves for any manner of danger, specialist wizards research schools of magic that make them exceptionally skilled within a specific focus. Yet no matter their specialty, all wizards are masters of the impossible and can aid their allies in overcoming any danger.",
             "starting_gold" : 70,
             "hit_die" : 6,
             "skill_ranks_per_level" : 2,
@@ -369,66 +1058,66 @@
                 , "Use Magic Device" : "0"
             },
             "proficiencies" : "Wizards are proficient with the club, dagger, heavy crossbow, light crossbow, and quarterstaff, but not with any type of armor or shield. Armor interferes with a wizard's movements, which can cause his spells with somatic components to fail.",
-            "base_attack_bonus" : {
+            "level" : {
                 "1" : {
-                    "bonuses" : [0]
+                    "base_attack_bonus" : [0]
                 }
                 ,"2" : {
-                    "bonuses" : [1]
+                    "base_attack_bonus" : [1]
                 } 
                 ,"3" : {
-                    "bonuses" : [2]
+                    "base_attack_bonus" : [2]
                 } 
                 ,"4" : {
-                    "bonuses" : [3]
+                    "base_attack_bonus" : [3]
                 } 
                 ,"5" : {
-                    "bonuses" : [3]
+                    "base_attack_bonus" : [3]
                 } 
                 ,"6" : {
-                    "bonuses" : [4]
+                    "base_attack_bonus" : [4]
                 } 
                 ,"7" : {
-                    "bonuses" : [5]
+                    "base_attack_bonus" : [5]
                 } 
                 ,"8" : {
-                    "bonuses" : [6, 1]
+                    "base_attack_bonus" : [6, 1]
                 } 
                 ,"9" : {
-                    "bonuses" : [6, 1]
+                    "base_attack_bonus" : [6, 1]
                 } 
                 ,"10" : {
-                    "bonuses" : [7, 2]
+                    "base_attack_bonus" : [7, 2]
                 } 
                 ,"11" : {
-                    "bonuses" : [8, 3]
+                    "base_attack_bonus" : [8, 3]
                 } 
                 ,"12" : {
-                    "bonuses" : [9, 4]
+                    "base_attack_bonus" : [9, 4]
                 } 
                 ,"13" : {
-                    "bonuses" : [9, 4]
+                    "base_attack_bonus" : [9, 4]
                 } 
                 ,"14" : {
-                    "bonuses" : [10, 5]
+                    "base_attack_bonus" : [10, 5]
                 } 
                 ,"15" : {
-                    "bonuses" : [11, 6, 1]
+                    "base_attack_bonus" : [11, 6, 1]
                 } 
                 ,"16" : {
-                    "bonuses" : [12, 7, 2]
+                    "base_attack_bonus" : [12, 7, 2]
                 } 
                 ,"17" : {
-                    "bonuses" : [12, 7, 2]
+                    "base_attack_bonus" : [12, 7, 2]
                 } 
                 ,"18" : {
-                    "bonuses" : [13, 8, 3]
+                    "base_attack_bonus" : [13, 8, 3]
                 } 
                 ,"19" : {
-                    "bonuses" : [14, 9, 4]
+                    "base_attack_bonus" : [14, 9, 4]
                 } 
                 ,"20" : {
-                    "bonuses" : [15, 10, 5]
+                    "base_attack_bonus" : [15, 10, 5]
                 }
             }
         },

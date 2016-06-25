@@ -27,6 +27,7 @@ class StartVC: UIViewController {
         if let character = RealmHandler.instance.active_pc {
             character.setName("Largolass Largleaf")
             character.setRaceName("Elf")
+            character.setLevel(5)
             character.setClassName("Cleric")
             let scores = [15, 13, 12, 8, 9, 10]
             character.setAbilityScores(scores)
@@ -38,7 +39,14 @@ class StartVC: UIViewController {
             character.addFeat("Penetrating Strike")
             character.setMaxHitPoints()
             character.addEquipmentToInventory("Dagger")
+            for stuff in character.specialAbilities {
+                print(stuff.name)
+                print(stuff.type)
+                print(stuff.description)
+                print("")
+            }
         }
+        
     }
     
     @IBAction func char_2_BtnPressed(sender: UIButton) {

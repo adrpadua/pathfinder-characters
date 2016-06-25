@@ -22,8 +22,38 @@ class DBManager {
         classObj.level = level
         classObj.skillRanksPerLevel = ClassDB.getSkillRanksPerLevel(jsonLocation)
         classObj.classSkills = ClassDB.getClassSkills(jsonLocation)
+        classObj.baseAttackBonus = ClassDB.getBaseAttackBonus(jsonLocation, level: level)
+        classObj.specialAbilities = fetchSpecialAbilityArrayFromDatabase(name, level: level)
         
         return classObj
+    }
+    
+    static func fetchSpecialAbilityArrayFromDatabase(className: String, level: Int) -> [SpecialAbilityObject] {
+        let jsonLocation = ClassDB.getJSONDirectoryOf(className)["level"]
+        
+        var specialAbilities = [SpecialAbilityObject]()
+        
+        for index in 1...level {
+            let specialAbilitiesJSONDirectory = jsonLocation["\(index)", "special_abilities"]
+            
+            for (index,_):(String, JSON) in specialAbilitiesJSONDirectory {
+                let indexInt = Int(index)
+                
+                if specialAbilitiesJSONDirectory.arrayValue[indexInt!]["replaces"].stringValue != "NULL" {
+                    let newItemJSON = specialAbilitiesJSONDirectory.arrayValue[indexInt!]
+                    let nameToReplace = specialAbilitiesJSONDirectory.arrayValue[indexInt!]["replaces"].stringValue
+                    replaceSpecialAbilityFromJSON(nameToReplace, inCollection: specialAbilities, withJSON: newItemJSON)
+                    continue
+                }
+                
+                else {
+                    let newItemJSON = specialAbilitiesJSONDirectory.arrayValue[indexInt!]
+                    let newObj = createSpecialAbilityFromJSON(newItemJSON)
+                    specialAbilities.append(newObj)
+                }
+            }
+        }
+        return specialAbilities
     }
     
     static func fetchSkillObjectFromDatabase(name: String) -> SkillObject {
@@ -130,5 +160,33 @@ class DBManager {
         
         print("Found \(armorObj.name)")
         return armorObj
+    }
+}
+
+extension DBManager {
+    static func createSpecialAbilityFromJSON(json: JSON) -> SpecialAbilityObject {
+        
+        let object = SpecialAbilityObject()
+        
+        object.name = json["name"].stringValue
+        if json["type"].stringValue == "NULL" {
+            object.type = "(Standard)"
+        } else {
+            object.type = "(\(json["type"].stringValue))"
+        }
+        object.description = json["description"].stringValue
+        
+        return object
+    }
+    
+    static func replaceSpecialAbilityFromJSON(replace: String, inCollection: [SpecialAbilityObject] , withJSON: JSON) {
+        
+        for object in inCollection {
+            if object.isNamed(replace) {
+                object.name = withJSON["name"].stringValue
+                object.type = withJSON["type"].stringValue
+                object.description = withJSON["description"].stringValue
+            }
+        }
     }
 }

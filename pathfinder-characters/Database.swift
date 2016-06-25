@@ -55,6 +55,20 @@ extension Database {
         return createdArray
     }
     
+    
+    static func createIntArrayFromJSONDirectory(subJson: JSON) -> [Int] {
+        
+        var createdArray = [Int]()
+        
+        for (index, _):(String, JSON) in subJson {
+            let indexInt = Int(index)
+            let intValue = subJson.arrayValue[indexInt!].intValue
+            
+            createdArray.append(intValue)
+        }
+        return createdArray
+    }
+    
     static func createStringToIntDictionaryFromJSONDirectory(subJson: JSON) -> [String : Int] {
         var createdDictionary = [String : Int]()
         

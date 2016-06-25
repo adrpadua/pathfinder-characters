@@ -234,5 +234,15 @@ extension CharacterSheet {
             return _maxHitPoints
         }
     }
+    var baseAttackBonus: [Int] {
+        get {
+            return classObj.baseAttackBonus
+        }
+    }
+    var specialAbilities: [SpecialAbilityObject] {
+        get {
+            return classObj.specialAbilities
+        }
+    }
 }
 

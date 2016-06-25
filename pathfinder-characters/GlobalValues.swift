@@ -57,6 +57,12 @@ extension List {
     }
 }
 
+extension SpecialAbilityObject {
+    func isNamed(name: String) -> Bool {
+        return self.name == name
+    }
+}
+
 extension String {
     var isNotEmpty: Bool  {
         if self == "" {

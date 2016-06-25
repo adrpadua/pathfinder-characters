@@ -18,6 +18,8 @@ class ClassObject {
     var level = 0
     var skillRanksPerLevel = 0
     var classSkills = [String : Bool]()
+    var baseAttackBonus = [Int]()
+    var specialAbilities = [SpecialAbilityObject]()
     
     var savingThrows: [String : Int]? {
         get {
@@ -26,27 +28,7 @@ class ClassObject {
                     "Will" : 2 + Int(floor(Double(level / 2))),]
         }
     }
-}
-
-class Cleric: ClassObject {
     
-    var firstDomain: DomainObject
-    var secondDomain: DomainObject
-    var numberOfSpellsPerLevel = [String : Int]()
-    
-    override init() {
-        firstDomain = DomainObject()
-        secondDomain = DomainObject()
-    }
-}
-
-class DomainObject {
-    
-    var name = ""
-    var specialAbility1 = SpecialAbilityObject()
-    var specialAbility2 = SpecialAbilityObject()
-    
-    var domainSpells = List<SpellReferenceName>()
 }
 
 class SpecialAbilityObject {

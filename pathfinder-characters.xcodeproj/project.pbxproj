@@ -12,6 +12,9 @@
 		A0277C841D14A6A400D833DA /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0277C831D14A6A400D833DA /* Database.swift */; };
 		A0764AC41D1C8ACF00D12301 /* SpecialAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0764AC31D1C8ACF00D12301 /* SpecialAbility.swift */; };
 		A0764AC61D1C8B5F00D12301 /* ListReferenceName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0764AC51D1C8B5F00D12301 /* ListReferenceName.swift */; };
+		A0764AC91D1CB76F00D12301 /* Cleric.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0764AC81D1CB76F00D12301 /* Cleric.swift */; };
+		A0764ACB1D1E230B00D12301 /* Spellcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0764ACA1D1E230B00D12301 /* Spellcaster.swift */; };
+		A0764ACE1D1E26B600D12301 /* Reference Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0764ACD1D1E26B600D12301 /* Reference Objects.swift */; };
 		A0837CA51D1652B10070DD1F /* Skills_PFRPG_Master.json in Resources */ = {isa = PBXBuildFile; fileRef = A0837CA41D1652B10070DD1F /* Skills_PFRPG_Master.json */; };
 		A0BB938F1D12837300FCA996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB938E1D12837300FCA996 /* AppDelegate.swift */; };
 		A0BB93941D12837300FCA996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0BB93921D12837300FCA996 /* Main.storyboard */; };
@@ -49,6 +52,9 @@
 		A0277C881D14C0DD00D833DA /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = default.realm; path = Realm/default.realm; sourceTree = SOURCE_ROOT; };
 		A0764AC31D1C8ACF00D12301 /* SpecialAbility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialAbility.swift; sourceTree = "<group>"; };
 		A0764AC51D1C8B5F00D12301 /* ListReferenceName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListReferenceName.swift; sourceTree = "<group>"; };
+		A0764AC81D1CB76F00D12301 /* Cleric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cleric.swift; sourceTree = "<group>"; };
+		A0764ACA1D1E230B00D12301 /* Spellcaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spellcaster.swift; sourceTree = "<group>"; };
+		A0764ACD1D1E26B600D12301 /* Reference Objects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reference Objects.swift"; sourceTree = "<group>"; };
 		A0837CA41D1652B10070DD1F /* Skills_PFRPG_Master.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Skills_PFRPG_Master.json; sourceTree = "<group>"; };
 		A0BB938B1D12837300FCA996 /* pathfinder-characters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pathfinder-characters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0BB938E1D12837300FCA996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +116,27 @@
 				D76B410E28751C084F82C917 /* Pods-pathfinder-characters.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A0764AC71D1CB75D00D12301 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A0BB93A21D12840700FCA996 /* Classes.swift */,
+				A0764AC81D1CB76F00D12301 /* Cleric.swift */,
+				A0764ACA1D1E230B00D12301 /* Spellcaster.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		A0764ACC1D1E268F00D12301 /* Listed Ref. Objects */ = {
+			isa = PBXGroup;
+			children = (
+				A0BB93A51D12840700FCA996 /* Feats.swift */,
+				A0CA50A01D19CB8300EC5EF7 /* Equipment.swift */,
+				A0BB93AC1D12840700FCA996 /* Spell.swift */,
+				A0764ACD1D1E26B600D12301 /* Reference Objects.swift */,
+			);
+			name = "Listed Ref. Objects";
 			sourceTree = "<group>";
 		};
 		A0BB93821D12837200FCA996 = {
@@ -225,11 +252,9 @@
 			children = (
 				A0BB93A01D12840700FCA996 /* AbilityScores.swift */,
 				A0BB93A81D12840700FCA996 /* Races.swift */,
-				A0BB93A21D12840700FCA996 /* Classes.swift */,
+				A0764ACC1D1E268F00D12301 /* Listed Ref. Objects */,
+				A0764AC71D1CB75D00D12301 /* Classes */,
 				A0BB93AA1D12840700FCA996 /* Skills.swift */,
-				A0BB93A51D12840700FCA996 /* Feats.swift */,
-				A0CA50A01D19CB8300EC5EF7 /* Equipment.swift */,
-				A0BB93AC1D12840700FCA996 /* Spell.swift */,
 				A0764AC31D1C8ACF00D12301 /* SpecialAbility.swift */,
 			);
 			name = "Character Sheet Object Models";
@@ -364,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0BB93B91D12840700FCA996 /* Skills.swift in Sources */,
+				A0764AC91D1CB76F00D12301 /* Cleric.swift in Sources */,
 				A0CA509D1D19BD5100EC5EF7 /* RaceDB.swift in Sources */,
 				A0CA50951D18546C00EC5EF7 /* SkillsDB.swift in Sources */,
 				A0CA508F1D18540D00EC5EF7 /* ClassDB.swift in Sources */,
@@ -374,6 +400,7 @@
 				A0BB93AF1D12840700FCA996 /* AbilityScores.swift in Sources */,
 				A0CA50A11D19CB8300EC5EF7 /* Equipment.swift in Sources */,
 				A0CA50A41D19D25300EC5EF7 /* WeaponDB.swift in Sources */,
+				A0764ACB1D1E230B00D12301 /* Spellcaster.swift in Sources */,
 				A0764AC61D1C8B5F00D12301 /* ListReferenceName.swift in Sources */,
 				A0BB93BD1D12840700FCA996 /* StartVC.swift in Sources */,
 				A0BB93B71D12840700FCA996 /* Races.swift in Sources */,
@@ -384,6 +411,7 @@
 				A0BB938F1D12837300FCA996 /* AppDelegate.swift in Sources */,
 				A0BB93B61D12840700FCA996 /* CharacterSheet.swift in Sources */,
 				A0CA50931D18545D00EC5EF7 /* FeatsDB.swift in Sources */,
+				A0764ACE1D1E26B600D12301 /* Reference Objects.swift in Sources */,
 				A0BB93B41D12840700FCA996 /* Feats.swift in Sources */,
 				A0F7DB421D1A034A00E1F814 /* ArmorDB.swift in Sources */,
 			);

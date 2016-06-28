@@ -12,7 +12,7 @@ import SwiftyJSON
 
 let realm = RealmHandler.instance.realm
 
-let skillNames = ["Acrobatics"
+let SKILL_NAMES = ["Acrobatics"
     , "Appraise"
     , "Bluff"
     , "Climb"

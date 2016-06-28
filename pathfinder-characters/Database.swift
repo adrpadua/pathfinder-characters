@@ -78,6 +78,25 @@ extension Database {
         return createdDictionary
     }
     
+    static func createStringToStringDictionaryFromJSONDirectory(subJson: JSON) -> [String : String] {
+        var createdDictionary = [String : String]()
+        
+        for (key, _):(String, JSON) in subJson {
+            createdDictionary[key] = subJson[key].stringValue
+        }
+        return createdDictionary
+    }
+    
+    static func createIntToStringDictionaryFromJSONDirectory(subJson: JSON) -> [Int : String] {
+        var createdDictionary = [Int : String]()
+        
+        for (key, _):(String, JSON) in subJson {
+            let keyInt = Int(key)
+            createdDictionary[keyInt!] = subJson[key].stringValue
+        }
+        return createdDictionary
+    }
+    
     static func createStringToBoolDictionaryFromJSONDirectory(subJson: JSON) -> [String : Bool] {
         var createdDictionary = [String : Bool]()
         for (key, _):(String, JSON) in subJson {

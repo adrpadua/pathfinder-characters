@@ -77,12 +77,13 @@ class StartVC: UIViewController {
     
     @IBAction func spellsTest(sender: UIButton) {
         
-        let animDead = DBManager.fetchSpellObjectFromDatabase("Animate Dead")
-        print(animDead.classLevels)
+        let airDomain = DBManager.fetchDomainObjectFromDatabase("Air")
         
-        let _ = DBManager.fetchFeatObjectFromDatabase("Acrobatic")
+        let clericObj = Cleric(domain1: airDomain, domain2: airDomain)
+        clericObj.loadAvailableSpells()
         
-        let _ = DBManager.fetchEquipmentObjectFromDatabase("Dagger")
+        print(clericObj.availableSpells)
+        
     }
     
     @IBAction func checkActiveCharacter(sender: UIButton) {

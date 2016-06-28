@@ -79,6 +79,33 @@ class DBManager {
         return featObj
     }
     
+    static func fetchClassSpellsFromDatabase(className: String) -> [SpellReferenceName] {
+        let jsonLocation = SpellsDB.database
+        let lowerCaseClassName = className.lowercaseString
+        
+        var spellRefs = [SpellReferenceName]()
+        
+        for index in 1...jsonLocation.count {
+            let spellLevelJson = jsonLocation["\(index)", "spell_level"]
+            
+            for (classIndex,_):(String, JSON) in spellLevelJson {
+                
+                if classIndex == lowerCaseClassName && spellLevelJson[classIndex] != "NULL" {
+                    
+                    let spellRef = SpellReferenceName()
+                    
+                    spellRef.name = jsonLocation["\(index)", "name"].stringValue
+                    spellRef.level = spellLevelJson[classIndex].intValue
+                    spellRef.tag = SpellTags.ClassSpell.rawValue
+                    
+                    spellRefs.append(spellRef)
+                }
+            }
+        }
+        
+        return spellRefs
+    }
+    
     static func fetchSpellObjectFromDatabase(name: String) -> SpellObject {
         let jsonLocation = SpellsDB.getJSONDirectoryOf(name)
         
@@ -104,6 +131,24 @@ class DBManager {
         raceObj.languages = RaceDB.getStartingLanguages(jsonLocation)
         
         return raceObj
+    }
+    
+    static func fetchRacialAbilitiesFromDatabase(raceName: String) -> [SpecialAbilityObject] {
+        let jsonLocation = RaceDB.getJSONDirectoryOf(raceName)
+        
+        let racialTraitsDictionary = RaceDB.getRacialTraits(jsonLocation)
+        var specialAbilities = [SpecialAbilityObject]()
+        
+        
+        for (name, description) in racialTraitsDictionary {
+            let specialAbilityObj = SpecialAbilityObject()
+            specialAbilityObj.name = name
+            specialAbilityObj.tag = raceName
+            specialAbilityObj.description = description
+            specialAbilities.append(specialAbilityObj)
+        }
+        
+        return specialAbilities
     }
     
     static func fetchEquipmentObjectFromDatabase(name: String) -> EquipmentObject {
@@ -160,22 +205,52 @@ class DBManager {
         print("Found \(armorObj.name)")
         return armorObj
     }
+    
+    static func fetchDomainObjectFromDatabase(name: String) -> DomainObject {
+        let jsonLocation = DomainsDB.getJSONDirectoryOf(name)
+        
+        let domainObj = DomainObject()
+        
+        domainObj.name = DomainsDB.getName(jsonLocation)
+        domainObj.description = DomainsDB.getDescription(jsonLocation)
+        
+        let specialAbility1JSON = jsonLocation["special_abilities"].arrayValue[0]
+        let specialAbility2JSON = jsonLocation["special_abilities"].arrayValue[1]
+        
+        domainObj.specialAbility1 = createSpecialAbilityFromJSON(specialAbility1JSON)
+        domainObj.specialAbility2 = createSpecialAbilityFromJSON(specialAbility2JSON)
+        
+        var spellRefs = [SpellReferenceName]()
+        let domainSpells = DomainsDB.getDomainSpells(jsonLocation)
+        for index in 1...9 {
+            let spellRef = SpellReferenceName()
+            spellRef.level = index
+            spellRef.name = domainSpells[index]!
+            spellRef.tag = SpellTags.DomainSpell.rawValue
+            spellRefs.append(spellRef)
+            print(spellRef)
+        }
+        domainObj.domainSpells = spellRefs
+        
+        return domainObj
+    }
 }
 
 extension DBManager {
     static func createSpecialAbilityFromJSON(json: JSON) -> SpecialAbilityObject {
         
-        let object = SpecialAbilityObject()
+        let specialAbilityObj = SpecialAbilityObject()
         
-        object.name = json["name"].stringValue
+        specialAbilityObj.name = json["name"].stringValue
+        
         if json["type"].stringValue == "NULL" {
-            object.type = "(Standard)"
+            specialAbilityObj.type = "(Standard)"
         } else {
-            object.type = "(\(json["type"].stringValue))"
+            specialAbilityObj.type = "(\(json["type"].stringValue))"
         }
-        object.description = json["description"].stringValue
+        specialAbilityObj.description = json["description"].stringValue
         
-        return object
+        return specialAbilityObj
     }
     
     static func replaceSpecialAbilityFromJSON(replace: String, inCollection: [SpecialAbilityObject] , withJSON: JSON) {

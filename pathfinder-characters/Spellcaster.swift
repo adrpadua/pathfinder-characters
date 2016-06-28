@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+protocol Spellcaster {
+    
+    var availableSpells: [SpellReferenceName] { get set }
+    
+    func loadAvailableSpells()
+}

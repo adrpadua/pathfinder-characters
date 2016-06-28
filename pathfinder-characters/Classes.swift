@@ -36,10 +36,3 @@ class ClassObject {
     }
     
 }
-
-class SpecialAbilityObject {
-    var name = ""
-    var type = ""
-    var description = ""
-}
-

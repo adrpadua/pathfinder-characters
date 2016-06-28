@@ -16,6 +16,5 @@ class RaceObject {
     var level = 0
     var abilityScoreRacialBonuses = [String : Int]()
     var languages = [String]()
-    
-    // TODO: Add Racial Traits
+    var racialTraits = [SpecialAbilityObject]()
 }

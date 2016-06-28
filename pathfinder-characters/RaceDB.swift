@@ -44,6 +44,9 @@ class RaceDB: Database {
         return createStringArrayFromJSONDirectory(languagesJSON)
     }
     
-    // TODO: Racial Traits
+    static func getRacialTraits(json: JSON) -> [String : String] {
+        let racialTraitsJSON = json["racial_traits"]
+        return createStringToStringDictionaryFromJSONDirectory(racialTraitsJSON)
+    }
     
 }

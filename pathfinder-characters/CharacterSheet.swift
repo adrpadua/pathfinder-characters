@@ -128,8 +128,8 @@ class CharacterSheet: Object {
     func setBaseSkills() {
         
         try! realm!.write {
-            for index in 1...skillNames.count {
-                let skillRefName = SkillReferenceName(name: skillNames[index - 1])
+            for index in 1...SKILL_NAMES.count {
+                let skillRefName = SkillReferenceName(name: SKILL_NAMES[index - 1])
                 
                 _skills.append(skillRefName)
             }
@@ -244,6 +244,12 @@ extension CharacterSheet {
     var specialAbilities: [SpecialAbilityObject] {
         get {
             return classObj.specialAbilities
+        }
+    }
+    var spellsKnown: [SpellReferenceName] {
+        get {
+            // PLACEHOLDER
+            return [SpellReferenceName]()
         }
     }
     

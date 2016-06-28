@@ -1,0 +1,35 @@
+{
+    "Domains" :
+    {
+        "1" :
+        {
+            "name" : "Air"
+            ,"description" : "You can manipulate lightning, mist, and wind, traffic with air creatures, and are resistant to electricity damage."
+            ,"special_abilities" :
+            [
+             {
+             "name" : "Lightning Arc"
+             ,"type" : "Spell-Like"
+             ,"description" : "As a standard action, you can unleash an arc of electricity targeting any foe within 30 feet as a ranged touch attack. This arc of electricity deals 1d6 points of electricity damage + 1 point for every two cleric levels you possess. You can use this ability a number of times per day equal to 3 + your Wisdom modifier."
+             },
+             {
+             "name" : "Electricity Resistance"
+             ,"type" : "Extraordinary"
+             ,"description" : "At 6th level, you gain resist electricity 10. This resistance increases to 20 at 12th level. At 20th level, you gain immunity to electricity."
+             },
+             ]
+            ,"domain_spells" :
+            {
+                "1" : "Obscuring Mist"
+                ,"2" : "Wind Wall"
+                ,"3" : "Gaseous Form"
+                ,"4" : "Air Walk"
+                ,"5" : "Control Winds"
+                ,"6" : "Chain Lightning"
+                ,"7" : "Elemental Body IV"
+                ,"8" : "Whirlwind"
+                ,"9" : "Elemental Swarm"
+            }
+        }
+    }
+}

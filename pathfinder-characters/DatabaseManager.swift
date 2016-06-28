@@ -27,7 +27,7 @@ class DBManager {
         return classObj
     }
     
-    static func fetchSpecialAbilityArrayFromDatabase(className: String, level: Int) -> [SpecialAbilityObject] {
+    static func fetchClassAbilitiesArrayFromDatabase(className: String, level: Int) -> [SpecialAbilityObject] {
         let jsonLocation = ClassDB.getJSONDirectoryOf(className)["level"]
         
         var specialAbilities = [SpecialAbilityObject]()
@@ -134,21 +134,8 @@ class DBManager {
     }
     
     static func fetchRacialAbilitiesFromDatabase(raceName: String) -> [SpecialAbilityObject] {
-        let jsonLocation = RaceDB.getJSONDirectoryOf(raceName)
-        
-        let racialTraitsDictionary = RaceDB.getRacialTraits(jsonLocation)
-        var specialAbilities = [SpecialAbilityObject]()
-        
-        
-        for (name, description) in racialTraitsDictionary {
-            let specialAbilityObj = SpecialAbilityObject()
-            specialAbilityObj.name = name
-            specialAbilityObj.tag = raceName
-            specialAbilityObj.description = description
-            specialAbilities.append(specialAbilityObj)
-        }
-        
-        return specialAbilities
+        let jsonLocation = RaceDB.getJSONDirectoryOf(raceName)["racial_traits"]
+        return createSpecialAbilitiesArrayFromJSON(jsonLocation)
     }
     
     static func fetchEquipmentObjectFromDatabase(name: String) -> EquipmentObject {
@@ -237,6 +224,7 @@ class DBManager {
 }
 
 extension DBManager {
+    
     static func createSpecialAbilityFromJSON(json: JSON) -> SpecialAbilityObject {
         
         let specialAbilityObj = SpecialAbilityObject()
@@ -248,9 +236,35 @@ extension DBManager {
         } else {
             specialAbilityObj.type = "(\(json["type"].stringValue))"
         }
+        
+        specialAbilityObj.tag = json["tag"].stringValue
         specialAbilityObj.description = json["description"].stringValue
         
         return specialAbilityObj
+    }
+    
+    static func createSpecialAbilitiesArrayFromJSON(json: JSON) -> [SpecialAbilityObject] {
+        
+        var specialAbilityArray = [SpecialAbilityObject]()
+        
+        for (index,_):(String, JSON) in json {
+            let indexInt = Int(index)
+            
+            if json.arrayValue[indexInt!]["replaces"].stringValue != "NULL" {
+                let newItemJSON = json.arrayValue[indexInt!]
+                let nameToReplace = json.arrayValue[indexInt!]["replaces"].stringValue
+                replaceSpecialAbilityFromJSON(nameToReplace, inCollection: specialAbilityArray, withJSON: newItemJSON)
+                continue
+            }
+                
+            else {
+                let newItemJSON = json.arrayValue[indexInt!]
+                let newObj = createSpecialAbilityFromJSON(newItemJSON)
+                specialAbilityArray.append(newObj)
+            }
+        }
+        
+        return specialAbilityArray
     }
     
     static func replaceSpecialAbilityFromJSON(replace: String, inCollection: [SpecialAbilityObject] , withJSON: JSON) {

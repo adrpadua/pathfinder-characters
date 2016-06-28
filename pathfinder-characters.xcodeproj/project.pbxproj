@@ -144,9 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				A0BB93A21D12840700FCA996 /* Classes.swift */,
-				A0764ACA1D1E230B00D12301 /* Spellcaster.swift */,
 				A0764AC81D1CB76F00D12301 /* Cleric.swift */,
-				A0028C2A1D225E6000F55371 /* SpecialAbilities.swift */,
+				A0764ACA1D1E230B00D12301 /* Spellcaster.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -298,6 +297,7 @@
 			children = (
 				A0028C2C1D22657000F55371 /* Alignments.swift */,
 				A0BB93A01D12840700FCA996 /* AbilityScores.swift */,
+				A0028C2A1D225E6000F55371 /* SpecialAbilities.swift */,
 				A0028C2E1D2265A400F55371 /* Races */,
 				A0764AC71D1CB75D00D12301 /* Classes */,
 				A0764ACC1D1E268F00D12301 /* List Referencing */,

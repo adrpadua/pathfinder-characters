@@ -82,7 +82,23 @@ class StartVC: UIViewController {
         let clericObj = Cleric(domain1: airDomain, domain2: airDomain)
         clericObj.loadAvailableSpells()
         
-        print(clericObj.availableSpells)
+        let abilities = DBManager.fetchClassAbilitiesArrayFromDatabase("Cleric", level: 5)
+        
+        for specAbility in abilities {
+            print(specAbility.name)
+            print(specAbility.tag)
+            print(specAbility.description)
+            print("")
+        }
+        
+        let racials = DBManager.fetchRacialAbilitiesFromDatabase("Elf")
+        
+        for racialAbility in racials {
+            print(racialAbility.name)
+            print(racialAbility.tag)
+            print(racialAbility.description)
+            print("")
+        }
         
     }
     

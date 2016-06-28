@@ -23,7 +23,7 @@ class ClassObject {
     
     var specialAbilities: [SpecialAbilityObject] {
         get {
-            return DBManager.fetchSpecialAbilityArrayFromDatabase(self.name, level: self.level)
+            return DBManager.fetchClassAbilitiesArrayFromDatabase(self.name, level: self.level)
         }
     }
     
